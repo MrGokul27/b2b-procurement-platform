@@ -399,7 +399,8 @@ function setupFallbackHeader(container, isInPages) {
                         <li class="nav-item"><a class="nav-link px-3 py-2 fw-semibold" href="${pagesRel}gallery.html" id="nav-gallery">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link px-3 py-2 fw-semibold" href="${pagesRel}contact.html" id="nav-contact">Contact Us</a></li>
                     </ul>
-                    <div class="ms-lg-3">
+                    <div class="ms-lg-3 d-flex align-items-center gap-2">
+                        <a href="${pagesRel}login.html" class="btn btn-outline-primary px-3 py-2 fw-semibold rounded-pill" id="nav-login"><i class="fa-regular fa-user me-1"></i>Login</a>
                         <a href="${pagesRel}contact.html" class="btn btn-primary px-4 py-2 fw-semibold rounded-pill shadow-sm">Request Demo</a>
                     </div>
                 </div>
@@ -426,7 +427,10 @@ function setupFallbackHeader(container, isInPages) {
                 <div class="mobile-contact text-white-50 border-top border-secondary pt-4">
                     <p class="mb-2"><i class="fa-solid fa-phone text-primary me-2"></i>+91 9876543210</p>
                     <p class="mb-4"><i class="fa-solid fa-envelope text-primary me-2"></i>support@Stackly.co.in</p>
-                    <a href="${pagesRel}contact.html" class="btn btn-outline-light px-5 py-3 rounded-pill fw-semibold shadow-sm w-100">Request Demo</a>
+                    <div class="d-flex gap-2">
+                        <a href="${pagesRel}login.html" class="btn btn-primary px-4 py-3 rounded-pill fw-semibold shadow-sm w-50">Login</a>
+                        <a href="${pagesRel}register.html" class="btn btn-outline-light px-4 py-3 rounded-pill fw-semibold shadow-sm w-50">Register</a>
+                    </div>
                 </div>
             </div>
         </div>

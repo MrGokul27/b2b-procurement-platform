@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Stackly B2B Procurement Platform</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6 Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Shared Base Theme CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <!-- Dedicated Auth Styles -->
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body class="auth-body">
+    <!-- Ambient Background Lighting Orbs -->
+    <div class="auth-bg-decorations">
+      <div class="auth-orb auth-orb-1"></div>
+      <div class="auth-orb auth-orb-2"></div>
+      <div class="auth-orb auth-orb-3"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <header class="auth-header-bar">
+      <a
+        href="../index.html"
+        class="auth-brand-logo"
+        title="Stackly Procurement Home"
+      >
+        <img
+          src="../assets/images/logoStackly.webp"
+          alt="Stackly B2B Procurement Logo"
+        />
+      </a>
+
+      <!-- Back to Home Button -->
+      <a href="../index.html" class="btn-back-home" id="loginBackHomeBtn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Home</span>
+      </a>
+    </header>
+
+    <!-- Main Authentication Wrapper -->
+    <main class="auth-wrapper">
+      <div class="auth-card-container">
+        <!-- Left Side: Enterprise Showcase / Hero Panel -->
+        <section class="auth-hero-panel">
+          <div class="auth-hero-content">
+            <div class="auth-hero-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              Enterprise Secure Gateway
+            </div>
+
+            <h1 class="auth-hero-title">Powering Global B2B Procurement</h1>
+            <p class="auth-hero-desc">
+              Sign in to manage automated RFQs, monitor multi-tier supply chain
+              bids, review real-time spend analytics, and execute certified
+              vendor contracts.
+            </p>
+
+            <!-- Feature Highlight List -->
+            <div class="auth-features-list">
+              <div class="auth-feature-item">
+                <div class="auth-feature-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="auth-feature-text">
+                  <h4>Intelligent Spend Control</h4>
+                  <p>
+                    Consolidated multi-department procurement intelligence &
+                    reporting.
+                  </p>
+                </div>
+              </div>
+
+              <div class="auth-feature-item">
+                <div class="auth-feature-icon">
+                  <i class="fa-solid fa-handshake-simple"></i>
+                </div>
+                <div class="auth-feature-text">
+                  <h4>Automated Vendor Audits</h4>
+                  <p>
+                    ISO-standard compliance checkpoints and digital RFP
+                    processing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="auth-feature-item">
+                <div class="auth-feature-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="auth-feature-text">
+                  <h4>Bank-Grade 256-bit Security</h4>
+                  <p>
+                    Multi-factor authentication and role-based access
+                    governance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Metric Highlights -->
+          <div class="auth-hero-footer">
+            <div class="hero-metric-item">
+              <span class="metric-number">£2.4B+</span>
+              <span class="metric-label">Procured Spend</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="metric-number">12,500+</span>
+              <span class="metric-label">Vetted Suppliers</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="metric-number">99.98%</span>
+              <span class="metric-label">Platform Uptime</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Side: Login Form Panel -->
+        <section class="auth-form-panel">
+          <div class="auth-form-header">
+            <span class="sub-badge">Portal Access</span>
+            <h2>Sign In to Your Account</h2>
+            <p>
+              Enter your verified enterprise credentials to access the portal.
+            </p>
+          </div>
+
+          <!-- Global Dynamic Alert Box -->
+          <div class="auth-alert-container" id="loginAlertContainer"></div>
+
+          <!-- Login Form -->
+          <form id="loginAuthForm" class="auth-form" novalidate>
+            <!-- 1. Role Selection Field (Required) -->
+            <div class="form-group">
+              <label for="loginRole" class="form-label-custom">
+                <span
+                  >Select Organization Role
+                  <span class="required-star">*</span></span
+                >
+                <span class="field-hint">Required</span>
+              </label>
+              <div class="input-icon-group">
+                <i class="fa-solid fa-user-shield input-icon-left"></i>
+                <select id="loginRole" class="form-control-auth" required>
+                  <option value="" disabled selected>
+                    -- Select your portal role --
+                  </option>
+                  <option value="buyer">
+                    Procurement Officer / Enterprise Buyer
+                  </option>
+                  <option value="supplier">
+                    Certified Vendor / Supplier Partner
+                  </option>
+                  <option value="admin">
+                    Supply Chain Director / Platform Admin
+                  </option>
+                  <option value="auditor">
+                    Compliance Officer / Financial Auditor
+                  </option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <div class="field-error-msg"></div>
+            </div>
+
+            <!-- 2. Email Address Field (Required) -->
+            <div class="form-group">
+              <label for="loginEmail" class="form-label-custom">
+                <span
+                  >Corporate Email Address
+                  <span class="required-star">*</span></span
+                >
+                <span class="field-hint">e.g. name@company.com</span>
+              </label>
+              <div class="input-icon-group">
+                <i class="fa-regular fa-envelope input-icon-left"></i>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  class="form-control-auth"
+                  placeholder="officer@enterprise.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="field-error-msg"></div>
+            </div>
+
+            <!-- 3. Password Field (Required + Weak Password Validation) -->
+            <div class="form-group">
+              <div class="d-flex justify-content-between align-items-center">
+                <label for="loginPassword" class="form-label-custom mb-0">
+                  <span
+                    >Account Password <span class="required-star">*</span></span
+                  >
+                </label>
+                <a href="contact.html" class="auth-link small"
+                  >Forgot Password?</a
+                >
+              </div>
+              <div class="input-icon-group">
+                <i class="fa-solid fa-lock input-icon-left"></i>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  class="form-control-auth validate-strength-password"
+                  placeholder="Enter your security password"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle-btn"
+                  data-target="loginPassword"
+                  aria-label="Toggle password visibility"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <!-- Weak Password Validation Visual Indicator -->
+              <div class="password-strength-container">
+                <div class="strength-meter-bar">
+                  <div class="strength-meter-fill"></div>
+                </div>
+                <div class="strength-status-text">
+                  <span class="strength-label">Password Strength:</span>
+                  <span class="strength-value">Enter Password</span>
+                </div>
+              </div>
+              <div class="field-error-msg"></div>
+            </div>
+
+            <!-- 4. Remember Me (Required Checkbox) -->
+            <div class="form-options-row">
+              <label class="custom-checkbox-container" for="loginRemember">
+                <input type="checkbox" id="loginRemember" required />
+                <span class="checkmark"></span>
+                <span
+                  >Remember me on this trusted device
+                  <span class="required-star">*</span></span
+                >
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-auth-submit" id="loginSubmitBtn">
+              <span class="btn-text">Sign In to Procurement Portal</span>
+              <span class="btn-spinner"></span>
+              <i class="fa-solid fa-arrow-right ms-1"></i>
+            </button>
+          </form>
+
+          <!-- Footer Switch to Register -->
+          <div class="auth-form-footer">
+            <p>
+              Don't have an enterprise account?
+              <a href="register.html" class="auth-link">Create an Account</a>
+            </p>
+          </div>
+
+          <!-- Security Certification Badges -->
+          <div class="auth-security-badges">
+            <div class="badge-item">
+              <i class="fa-solid fa-shield-check"></i>
+              <span>ISO 27001 Certified</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-fingerprint"></i>
+              <span>2FA Ready</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-lock"></i>
+              <span>TLS 1.3 Encrypted</span>
+            </div>
+          </div>
+
+          <!-- Successful Login Redirect Overlay -->
+          <div class="auth-success-overlay" id="loginSuccessOverlay">
+            <div class="success-icon-wrap">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3>Authentication Successful!</h3>
+            <p>
+              Welcome back to Stackly B2B Procurement Portal. Loading your
+              personalized workspace...
+            </p>
+            <div class="redirect-progress-bar">
+              <div class="redirect-progress-fill"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Authentication Scripts -->
+    <script src="../assets/js/auth.js"></script>
+  </body>
+</html>
