@@ -322,7 +322,7 @@ footer .social-links a:hover {
   display: flex;
   align-items: center;
   padding: 0px 0 80px 0;
-  background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1920&auto=format&fit=crop");
+  background-image: url("../images/gallery/gallery-slideshow-slide-content-3.webp");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -660,42 +660,192 @@ footer .social-links a:hover {
   color: var(--b2b-accent) !important;
 }
 
-/* Section 5: How It Works */
-#section-process .row > div {
-  padding: 35px 25px;
-  border-radius: 20px;
+/* ==========================================================================
+   Section 5: Simple Workflows (How It Works)
+   ========================================================================== */
+.workflow-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--b2b-primary);
+  background: rgba(0, 71, 103, 0.08);
+  border: 1px solid rgba(0, 71, 103, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.workflow-card {
+  padding: 36px 24px 28px;
+  border-radius: 22px;
   background: #ffffff;
   border: 1px solid var(--b2b-border);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
 }
 
-#section-process .row > div:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 1.25rem 2.5rem rgba(0, 71, 103, 0.08);
-  border-color: var(--b2b-primary-light);
+.workflow-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 108, 155, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.workflow-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 71, 103, 0.12);
+  border-color: rgba(0, 108, 155, 0.4);
+}
+
+.workflow-card:hover::before {
+  opacity: 1;
+}
+
+.workflow-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.step-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--b2b-primary-light);
+  background: rgba(0, 71, 103, 0.08);
+  border: 1px solid rgba(0, 71, 103, 0.12);
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.step-badge-success {
+  color: #059669;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.workflow-card:hover .step-badge {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  border-color: var(--b2b-primary);
+}
+
+.workflow-card:hover .step-badge-success {
+  background: var(--b2b-accent);
+  color: #ffffff;
+  border-color: var(--b2b-accent);
 }
 
 .step-num {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: var(--b2b-primary);
-  color: white;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    var(--b2b-primary) 0%,
+    var(--b2b-primary-light) 100%
+  );
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  margin: 0 auto 24px auto;
+  font-size: 1.45rem;
+  margin: 0 auto 22px auto;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 10px rgba(0, 71, 103, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 71, 103, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
-#section-process .row > div:hover .step-num {
-  transform: scale(1.15);
-  background-color: var(--b2b-accent);
-  box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+.step-num-success {
+  background: linear-gradient(135deg, var(--b2b-accent) 0%, #059669 100%);
+  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.3);
+}
+
+.workflow-card:hover .step-num {
+  transform: scale(1.12) rotate(4deg);
+  background: linear-gradient(
+    135deg,
+    var(--b2b-primary-light) 0%,
+    var(--b2b-accent) 100%
+  );
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.35);
+}
+
+.workflow-card:hover .step-num-success {
+  transform: scale(1.12) rotate(-4deg);
+  background: linear-gradient(135deg, #059669 0%, var(--b2b-accent) 100%);
+}
+
+.workflow-tag {
+  margin-top: auto;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--b2b-slate-800);
+  background: var(--b2b-light);
+  border: 1px solid rgba(0, 71, 103, 0.1);
+  border-radius: 30px;
+  padding: 6px 14px;
+  transition: all 0.3s ease;
+}
+
+.workflow-card:hover .workflow-tag {
+  background: #ffffff;
+  border-color: var(--b2b-accent);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  color: var(--b2b-primary);
+}
+
+.workflow-card-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary) 0%,
+    var(--b2b-accent) 100%
+  );
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-origin: left;
+}
+
+.workflow-card-accent-bar.success-bar {
+  background: linear-gradient(90deg, #059669 0%, var(--b2b-accent) 100%);
+}
+
+.workflow-card:hover .workflow-card-accent-bar {
+  transform: scaleX(1);
+}
+
+.step-arrow-card {
+  overflow: visible;
 }
 
 .step-arrow-card::after {
@@ -705,28 +855,39 @@ footer .social-links a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -12px;
-  font-size: 1.25rem;
-  color: var(--b2b-border);
-  transition: all 0.3s ease;
+  right: -18px;
+  font-size: 0.95rem;
+  color: var(--b2b-primary);
+  background: #ffffff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--b2b-border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 10;
 }
 
 .step-arrow-card:hover::after {
-  transform: translateY(-50%) translateX(6px);
-  color: var(--b2b-accent);
+  transform: translateY(-50%) translateX(6px) scale(1.1);
+  background: var(--b2b-accent);
+  color: #ffffff;
+  border-color: var(--b2b-accent);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
 }
 
 @media (max-width: 991.98px) {
   .step-arrow-card::after {
     display: none;
   }
-  #section-process .row > div {
-    margin-bottom: 24px;
-  }
 }
 
-/* Section 6: Live Market Dashboard Widget */
+/* ==========================================================================
+   Section 6: Live Market Dashboard Widget
+   ========================================================================== */
 .dashboard-widget-card {
   background: linear-gradient(145deg, #0f172a 0%, #030712 100%);
   border-radius: 24px;
@@ -777,6 +938,44 @@ footer .social-links a:hover {
     transform: translateY(-50%) scale(0.8);
     opacity: 0.5;
   }
+}
+
+/* Horizontal scrollbar styling for Section 6 right side table */
+.dashboard-widget-card .table-responsive {
+  scrollbar-width: thin;
+  scrollbar-color: var(--b2b-primary-light) rgba(255, 255, 255, 0.06);
+  padding-bottom: 4px;
+}
+
+.dashboard-widget-card .table-responsive::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+.dashboard-widget-card .table-responsive::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin: 0 16px;
+}
+
+.dashboard-widget-card .table-responsive::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary-light) 0%,
+    var(--b2b-accent) 100%
+  );
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dashboard-widget-card .table-responsive::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary) 0%,
+    var(--b2b-accent) 100%
+  );
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
 }
 
 .live-table {
@@ -833,27 +1032,121 @@ footer .social-links a:hover {
   }
 }
 
-/* Section 7: Trusted Partner Logos */
-.partner-logo {
-  background: #ffffff;
-  border: 1px solid var(--b2b-border);
-  border-radius: 12px;
-  padding: 15px 25px;
-  max-height: 60px !important;
-  object-fit: contain;
-  width: 100%;
-  opacity: 0.55;
-  filter: grayscale(100%);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+/* ==========================================================================
+   Section 7: Trusted Partner Logos
+   ========================================================================== */
+.partner-heading-wrapper .badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.partner-logo:hover {
+.partner-brand-card {
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  border-radius: 18px;
+  padding: 24px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  height: 100%;
+  min-height: 145px;
+}
+
+.partner-brand-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(0, 108, 155, 0.06) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.partner-logo-icon {
+  font-size: 1.85rem;
+  color: var(--b2b-muted);
+  margin-bottom: 10px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.partner-brand-name {
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 1.5px;
+  color: var(--b2b-slate-800);
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.partner-badge-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--b2b-muted);
+  background: var(--b2b-light);
+  padding: 3px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.partner-hover-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary-light) 0%,
+    var(--b2b-accent) 100%
+  );
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+  transform-origin: center;
+}
+
+.partner-brand-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 108, 155, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 71, 103, 0.12);
+  background: #ffffff;
+}
+
+.partner-brand-card:hover::before {
   opacity: 1;
-  filter: grayscale(0%);
-  transform: translateY(-5px);
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 71, 103, 0.08);
-  border-color: var(--b2b-primary-light);
+}
+
+.partner-brand-card:hover .partner-hover-border {
+  transform: scaleX(1);
+}
+
+.partner-brand-card:hover .partner-logo-icon {
+  transform: scale(1.18);
+  color: var(--b2b-primary-light);
+  filter: drop-shadow(0 4px 8px rgba(0, 108, 155, 0.25));
+}
+
+.partner-brand-card:hover .partner-brand-name {
+  color: var(--b2b-primary);
+}
+
+.partner-brand-card:hover .partner-badge-pill {
+  background: rgba(16, 185, 129, 0.12);
+  color: #065f46;
+  font-weight: 700;
 }
 
 /* Section 8: Supply Chain Global Network */

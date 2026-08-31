@@ -583,7 +583,7 @@
             <div class="col-lg-6">
               <div class="about-image-wrap video-brief-wrapper">
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=600&auto=format&fit=crop"
+                  src="./assets/images/home/home-video-play-overlay-img.webp"
                   alt="Supply Chain Meeting"
                   class="img-fluid w-100 shadow-lg main-about-img"
                 />
@@ -643,44 +643,102 @@
       </section>
 
       <!-- Section 5: How It Works -->
-      <section id="section-process" class="bg-light">
+      <section
+        id="section-process"
+        class="py-5 bg-light position-relative overflow-hidden"
+      >
         <div class="container text-center">
           <div class="section-title">
-            <span>Simple Workflows</span>
+            <span class="workflow-pill"
+              ><i class="fa-solid fa-bolt text-primary me-1"></i> Simple
+              Workflows</span
+            >
             <h2>Four Steps to Smarter Sourcing</h2>
+            <p class="text-slate-500 max-w-600 mx-auto mt-2">
+              Accelerate procurement cycle times from specification to delivery
+              with our streamlined, transparent workflow.
+            </p>
           </div>
-          <div class="row g-4 mt-2">
-            <div class="col-lg-3 col-md-6 step-arrow-card">
-              <div class="step-num">1</div>
-              <h4 class="h5 fw-bold mb-2">Publish RFQ</h4>
-              <p class="text-slate-500 small">
-                Define procurement needs and upload technical blueprints onto
-                the platform.
-              </p>
-            </div>
-            <div class="col-lg-3 col-md-6 step-arrow-card">
-              <div class="step-num">2</div>
-              <h4 class="h5 fw-bold mb-2">Vendor Bidding</h4>
-              <p class="text-slate-500 small">
-                Pre-qualified suppliers submit competitive quotations via the
-                portal.
-              </p>
-            </div>
-            <div class="col-lg-3 col-md-6 step-arrow-card">
-              <div class="step-num">3</div>
-              <h4 class="h5 fw-bold mb-2">Evaluate & Select</h4>
-              <p class="text-slate-500 small">
-                Compare supplier scores, pricing tables, and logistics
-                timeframes.
-              </p>
+          <div class="row g-4 mt-2 workflow-process-grid">
+            <div class="col-lg-3 col-md-6">
+              <div class="workflow-card step-arrow-card">
+                <div class="workflow-card-top">
+                  <span class="step-badge">Step 01</span>
+                  <div class="step-num">
+                    <i class="fa-solid fa-file-signature"></i>
+                  </div>
+                </div>
+                <h4 class="h5 fw-bold mb-2">Publish RFQ</h4>
+                <p class="text-slate-500 small mb-3">
+                  Define procurement requirements, line items, and upload
+                  engineering blueprints with automated specs.
+                </p>
+                <div class="workflow-tag">
+                  <i class="fa-solid fa-cloud-arrow-up text-primary me-1"></i>
+                  Instant Spec Upload
+                </div>
+                <div class="workflow-card-accent-bar"></div>
+              </div>
             </div>
             <div class="col-lg-3 col-md-6">
-              <div class="step-num bg-success">4</div>
-              <h4 class="h5 fw-bold mb-2">Award & Sync</h4>
-              <p class="text-slate-500 small">
-                Issue purchase orders and trigger tracking integrations
-                automatically.
-              </p>
+              <div class="workflow-card step-arrow-card">
+                <div class="workflow-card-top">
+                  <span class="step-badge">Step 02</span>
+                  <div class="step-num">
+                    <i class="fa-solid fa-gavel"></i>
+                  </div>
+                </div>
+                <h4 class="h5 fw-bold mb-2">Vendor Bidding</h4>
+                <p class="text-slate-500 small mb-3">
+                  Pre-qualified suppliers submit competitive, sealed-rate
+                  quotations with dynamic compliance checks.
+                </p>
+                <div class="workflow-tag">
+                  <i class="fa-solid fa-shield-halved text-primary me-1"></i>
+                  Verified Suppliers
+                </div>
+                <div class="workflow-card-accent-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="workflow-card step-arrow-card">
+                <div class="workflow-card-top">
+                  <span class="step-badge">Step 03</span>
+                  <div class="step-num">
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </div>
+                </div>
+                <h4 class="h5 fw-bold mb-2">Evaluate &amp; Select</h4>
+                <p class="text-slate-500 small mb-3">
+                  Compare compliance scores, dynamic pricing breakdowns, and
+                  real-time freight lead times.
+                </p>
+                <div class="workflow-tag">
+                  <i class="fa-solid fa-sliders text-primary me-1"></i> Smart
+                  Matrix Compare
+                </div>
+                <div class="workflow-card-accent-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="workflow-card">
+                <div class="workflow-card-top">
+                  <span class="step-badge step-badge-success">Step 04</span>
+                  <div class="step-num step-num-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+                <h4 class="h5 fw-bold mb-2">Award &amp; Sync</h4>
+                <p class="text-slate-500 small mb-3">
+                  Issue digital purchase orders and synchronize procurement
+                  milestones automatically into your ERP.
+                </p>
+                <div class="workflow-tag">
+                  <i class="fa-solid fa-arrows-rotate text-success me-1"></i>
+                  Automated ERP Sync
+                </div>
+                <div class="workflow-card-accent-bar success-bar"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -754,50 +812,95 @@
       </section>
 
       <!-- Section 7: Trusted Partner Logos -->
-      <section id="section-partners" class="bg-light py-5">
+      <section id="section-partners" class="py-5 bg-light position-relative">
         <div class="container text-center">
-          <p
-            class="text-uppercase text-slate-500 small fw-bold tracking-widest mb-4"
-          >
-            Trusted by Leading Enterprises Worldwide
-          </p>
-          <div
-            class="row align-items-center justify-content-center g-4 partner-logo-grid"
-          >
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200&auto=format&fit=crop"
-                alt="Partner Logo 1"
-                class="img-fluid partner-logo"
-              />
+          <div class="partner-heading-wrapper mb-4">
+            <span
+              class="badge bg-white text-primary border px-3 py-2 rounded-pill shadow-xs mb-2"
+            >
+              <i class="fa-solid fa-handshake me-1 text-success"></i> Verified
+              Ecosystem
+            </span>
+            <h3 class="h4 fw-bold text-slate-800 mb-1">
+              Trusted by Leading Global Enterprises
+            </h3>
+            <p class="text-slate-500 small max-w-600 mx-auto">
+              Integrated across premier cloud architectures, ERP
+              infrastructures, and international logistics networks.
+            </p>
+          </div>
+
+          <div class="row g-3 g-lg-4 justify-content-center partner-logo-grid">
+            <!-- Partner 1: Siemens -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-solid fa-industry"></i>
+                </div>
+                <div class="partner-brand-name">SIEMENS</div>
+                <span class="partner-badge-pill">Industrial Tech</span>
+                <div class="partner-hover-border"></div>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1614036417651-efe5912149d8?q=80&w=200&auto=format&fit=crop"
-                alt="Partner Logo 2"
-                class="img-fluid partner-logo"
-              />
+
+            <!-- Partner 2: SAP -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="partner-brand-name">SAP SE</div>
+                <span class="partner-badge-pill">ERP Backbone</span>
+                <div class="partner-hover-border"></div>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=200&auto=format&fit=crop"
-                alt="Partner Logo 3"
-                class="img-fluid partner-logo"
-              />
+
+            <!-- Partner 3: Maersk -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-solid fa-ship"></i>
+                </div>
+                <div class="partner-brand-name">MAERSK</div>
+                <span class="partner-badge-pill">Global Freight</span>
+                <div class="partner-hover-border"></div>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=200&auto=format&fit=crop"
-                alt="Partner Logo 4"
-                class="img-fluid partner-logo"
-              />
+
+            <!-- Partner 4: Microsoft Azure -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-brands fa-microsoft"></i>
+                </div>
+                <div class="partner-brand-name">MICROSOFT</div>
+                <span class="partner-badge-pill">Cloud Infrastructure</span>
+                <div class="partner-hover-border"></div>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1626785774625-ddc7c8241520?q=80&w=200&auto=format&fit=crop"
-                alt="Partner Logo 5"
-                class="img-fluid partner-logo"
-              />
+
+            <!-- Partner 5: Oracle -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-brands fa-oracle"></i>
+                </div>
+                <div class="partner-brand-name">ORACLE</div>
+                <span class="partner-badge-pill">SCM Cloud</span>
+                <div class="partner-hover-border"></div>
+              </div>
+            </div>
+
+            <!-- Partner 6: Schneider -->
+            <div class="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div class="partner-brand-card">
+                <div class="partner-logo-icon">
+                  <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <div class="partner-brand-name">SCHNEIDER</div>
+                <span class="partner-badge-pill">Energy &amp; ESG</span>
+                <div class="partner-hover-border"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -809,7 +912,7 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
               <img
-                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop"
+                src="./assets/images/gallery/gallery-slideshow-slide-content-1.webp"
                 alt="Command Center Logistics Map"
                 class="img-fluid rounded-4 shadow-lg w-100"
               />
@@ -1230,7 +1333,7 @@
                 </p>
                 <div class="d-flex align-items-center gap-3">
                   <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+                    src="./assets/images/home/home-client-avatar-1.webp"
                     alt="Client Sarah"
                     class="client-avatar"
                   />
@@ -1254,7 +1357,7 @@
                 </p>
                 <div class="d-flex align-items-center gap-3">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                    src="./assets/images/home/home-client-avatar-2.webp"
                     alt="Client David"
                     class="client-avatar"
                   />
@@ -1278,7 +1381,7 @@
                 </p>
                 <div class="d-flex align-items-center gap-3">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop"
+                    src="./assets/images/home/home-client-avatar-3.webp"
                     alt="Client Marcus"
                     class="client-avatar"
                   />
@@ -1307,7 +1410,7 @@
               <div class="blog-card h-100 d-flex flex-column">
                 <div class="blog-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop"
+                    src="./assets/images/blog/blog-spotlight-img.webp"
                     alt="Blog Image 1"
                     class="w-100"
                   />
@@ -1341,7 +1444,7 @@
               <div class="blog-card h-100 d-flex flex-column">
                 <div class="blog-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop"
+                    src="./assets/images/blog/blog-card-img-wrap-2.webp"
                     alt="Blog Image 2"
                     class="w-100"
                   />
@@ -1376,7 +1479,7 @@
               <div class="blog-card h-100 d-flex flex-column">
                 <div class="blog-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop"
+                    src="./assets/images/blog/blog-card-img-wrap-1.webp"
                     alt="Blog Image 3"
                     class="w-100"
                   />
