@@ -86,7 +86,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-1.webp"
                     alt="Dashboard Spend Charts"
                   />
                   <div class="gallery-hover-overlay">
@@ -107,7 +107,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-2.webp"
                     alt="Warehouse logistics"
                   />
                   <div class="gallery-hover-overlay">
@@ -128,7 +128,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-3.webp"
                     alt="Supplier Summit Expo"
                   />
                   <div class="gallery-hover-overlay">
@@ -149,7 +149,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-4.webp"
                     alt="London HQ Office Room"
                   />
                   <div class="gallery-hover-overlay">
@@ -167,7 +167,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-5.webp"
                     alt="RFQ Interface Screen"
                   />
                   <div class="gallery-hover-overlay">
@@ -188,7 +188,7 @@
               <div class="gallery-item">
                 <div class="gallery-img-container">
                   <img
-                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600&auto=format&fit=crop"
+                    src="../assets/images/gallery/gallery-img-6.webp"
                     alt="Shipping Container Port"
                   />
                   <div class="gallery-hover-overlay">
@@ -206,48 +206,118 @@
       </section>
 
       <!-- Section 4: Featured Video Showcase -->
-      <section id="section-gallery-video">
-        <div class="container text-center">
-          <div class="section-title">
-            <span>Video Tour</span>
+      <section id="section-gallery-video" class="py-5">
+        <div class="container">
+          <div class="section-title text-center mb-4">
+            <span>Interactive Video Tour</span>
             <h2>Watch Platform Overview</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 620px">
+              Experience the end-to-end procurement lifecycle from instant RFQ
+              broadcasts to algorithmic reverse auctions and global cargo
+              tracking.
+            </p>
           </div>
-          <div class="row justify-content-center mt-4">
-            <div class="col-lg-8">
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Main Video Card -->
               <div
-                class="position-relative border rounded-4 overflow-hidden shadow"
-                style="
-                  height: 400px;
-                  background-image: url(&quot;https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop&quot;);
-                  background-size: cover;
-                  background-position: center;
-                "
+                class="video-showcase-card mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#videoTourModal"
               >
-                <div
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(15, 23, 42, 0.4);
-                  "
-                ></div>
-                <div
-                  class="position-absolute top-50 start-50 translate-middle text-white text-center"
-                  style="z-index: 10"
-                >
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-circle mb-3 d-flex align-items-center justify-content-center mx-auto"
-                    style="width: 80px; height: 80px; font-size: 1.5rem"
-                    aria-label="Play Video"
-                    ><i class="fa-solid fa-play"></i
-                  ></a>
-                  <h4 class="fw-bold mb-1">E-Procurement Platform Tour</h4>
-                  <p class="small text-white-50">
-                    Length: 3 mins &bull; Learn sourcing automation basics.
-                  </p>
+                <div class="video-thumbnail-wrapper">
+                  <img
+                    src="../assets/images/gallery/gallery-video-thumbnail-wrapper.webp"
+                    alt="Stackly Platform Tour Preview"
+                  />
+                  <div class="video-backdrop-overlay"></div>
+
+                  <!-- Top Badges -->
+                  <div
+                    class="position-absolute top-0 start-0 w-100 p-3 p-md-4 d-flex justify-content-between align-items-center"
+                    style="z-index: 10"
+                  >
+                    <span class="video-badge-pill pill-live">
+                      <i class="fa-solid fa-circle-play"></i> Product Showcase
+                      2026
+                    </span>
+                    <span class="video-badge-pill">
+                      <i class="fa-solid fa-clock"></i> 3:45 Mins &bull; 4K
+                      Ultra HD
+                    </span>
+                  </div>
+
+                  <!-- Central Play Button & Info -->
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3"
+                    style="z-index: 10"
+                  >
+                    <a
+                      href="#"
+                      class="video-play-btn-circle"
+                      aria-label="Play Platform Video"
+                    >
+                      <i class="fa-solid fa-play"></i>
+                    </a>
+                    <h3 class="fw-bold text-white mb-2 fs-4 fs-md-3">
+                      Enterprise Procurement in 3 Minutes
+                    </h3>
+                    <p class="text-white-50 small mb-0 d-none d-sm-block">
+                      Click anywhere to launch the interactive high-definition
+                      platform tour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Video Chapters / Highlights Row -->
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="video-chapter-card">
+                    <div class="video-chapter-icon">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold text-dark mb-1">01. AI RFQ Engine</h6>
+                      <p class="small text-slate-500 mb-0">
+                        Automate supplier RFP distribution &amp; compliance
+                        matching.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-chapter-card">
+                    <div class="video-chapter-icon">
+                      <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold text-dark mb-1">
+                        02. Live Reverse Auctions
+                      </h6>
+                      <p class="small text-slate-500 mb-0">
+                        Dynamic real-time supplier bidding with automated
+                        scoring.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="video-chapter-card">
+                    <div class="video-chapter-icon">
+                      <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold text-dark mb-1">
+                        03. Freight Telematics
+                      </h6>
+                      <p class="small text-slate-500 mb-0">
+                        Real-time GPS dispatch and multi-carrier customs
+                        tracking.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,46 +325,184 @@
         </div>
       </section>
 
-      <!-- Section 5: Client Success Photo Stories -->
-      <section id="section-gallery-stories" class="bg-light">
-        <div class="container">
-          <div class="section-title text-center">
-            <span>Visual Impact</span>
-            <h2>On-Site Case Photos</h2>
-          </div>
-          <div class="row g-4 mt-2">
-            <div class="col-md-6">
-              <div class="bg-white p-4 border rounded-4">
-                <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop"
-                  alt="Client Site Photo 1"
-                  class="img-fluid rounded mb-3 w-100"
-                  style="height: 250px; object-fit: cover"
-                />
-                <h4 class="fw-bold text-dark h5 mb-2">
-                  UK Metals Fulfillment Node
-                </h4>
-                <p class="small text-slate-500 mb-0">
-                  Our integration teams syncing SAP inventory levels with local
-                  warehouse dispatch docks in Manchester, UK.
-                </p>
+      <!-- Video Tour Modal -->
+      <!-- <div
+        class="modal fade"
+        id="videoTourModal"
+        tabindex="-1"
+        aria-labelledby="videoTourModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div
+            class="modal-content bg-dark border-0 rounded-4 overflow-hidden shadow-lg"
+          >
+            <div class="modal-header border-0 pb-0">
+              <h5
+                class="modal-title text-white fw-bold fs-6"
+                id="videoTourModalLabel"
+              >
+                <i class="fa-solid fa-play text-primary me-2"></i> Stackly
+                E-Procurement Tour
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body p-3 p-md-4">
+              <div
+                class="ratio ratio-16x9 rounded-3 overflow-hidden border border-secondary"
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0"
+                  title="Stackly Tour Video"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div
+                class="mt-3 text-white-50 small d-flex justify-content-between align-items-center"
+              >
+                <span
+                  ><i class="fa-solid fa-shield-halved text-success me-1"></i>
+                  Verified Enterprise Demo</span
+                >
+                <span>Version 4.2 Cloud Engine</span>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="bg-white p-4 border rounded-4">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop"
-                  alt="Client Site Photo 2"
-                  class="img-fluid rounded mb-3 w-100"
-                  style="height: 250px; object-fit: cover"
-                />
-                <h4 class="fw-bold text-dark h5 mb-2">
-                  Apex Cargo Operations Hub
-                </h4>
-                <p class="small text-slate-500 mb-0">
-                  Training session conducted with Apex Cargo coordinators to
-                  initialize automated carrier notifications.
-                </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Section 5: Client Success Photo Stories -->
+      <section id="section-gallery-stories" class="py-5">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <span>Visual Case Studies</span>
+            <h2>On-Site Client Success Stories</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 640px">
+              Real-world deployment photographs capturing how Fortune 500
+              enterprises and Tier-1 logistics hubs modernize operations with
+              Stackly.
+            </p>
+          </div>
+          <div class="row g-4">
+            <!-- Case Story 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="story-card">
+                <div class="story-img-wrapper">
+                  <img
+                    src="../assets/images/gallery/gallery-story-img-wrapper-1.webp"
+                    alt="UK Metals Fulfillment Node"
+                  />
+                  <div class="story-img-overlay"></div>
+                  <span class="story-floating-tag">
+                    <i class="fa-solid fa-warehouse text-success"></i> Smart Bay
+                  </span>
+                  <span class="story-floating-loc">
+                    <i class="fa-solid fa-location-dot"></i> Manchester, UK
+                  </span>
+                  <div class="story-metric-bar">
+                    <span class="story-metric-label">Dispatch Throughput</span>
+                    <span class="story-metric-value">+48% Velocity</span>
+                  </div>
+                </div>
+                <div class="story-card-body">
+                  <h4 class="fw-bold text-dark h5 mb-2">
+                    UK Metals Fulfillment Node
+                  </h4>
+                  <p class="small text-slate-500 mb-3">
+                    Synchronized high-velocity SAP inventory feeds directly with
+                    automated cross-docking dispatch bays across the Greater
+                    Manchester freight hub.
+                  </p>
+                  <a href="#" class="story-read-link">
+                    Explore Case Study
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Story 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="story-card">
+                <div class="story-img-wrapper">
+                  <img
+                    src="../assets/images/gallery/gallery-story-img-wrapper-2.webp"
+                    alt="Apex Cargo Operations Hub"
+                  />
+                  <div class="story-img-overlay"></div>
+                  <span class="story-floating-tag">
+                    <i class="fa-solid fa-truck-fast text-primary"></i> Freight
+                    Fleet
+                  </span>
+                  <span class="story-floating-loc">
+                    <i class="fa-solid fa-location-dot"></i> Rotterdam, NL
+                  </span>
+                  <div class="story-metric-bar">
+                    <span class="story-metric-label"
+                      >Transit Delay Reduction</span
+                    >
+                    <span class="story-metric-value">-35% Lead Time</span>
+                  </div>
+                </div>
+                <div class="story-card-body">
+                  <h4 class="fw-bold text-dark h5 mb-2">
+                    Apex Cargo Logistics Terminal
+                  </h4>
+                  <p class="small text-slate-500 mb-3">
+                    Orchestrated multi-carrier telematics and automated customs
+                    clearance manifests for over 18,000 monthly intermodal cargo
+                    containers.
+                  </p>
+                  <a href="#" class="story-read-link">
+                    Explore Case Study
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Story 3 -->
+            <div class="col-lg-4 col-md-12">
+              <div class="story-card">
+                <div class="story-img-wrapper">
+                  <img
+                    src="../assets/images/gallery/gallery-story-img-wrapper-3.webp"
+                    alt="Nordic Manufacturing Consortium"
+                  />
+                  <div class="story-img-overlay"></div>
+                  <span class="story-floating-tag">
+                    <i class="fa-solid fa-microchip text-warning"></i> Assembly
+                    Line
+                  </span>
+                  <span class="story-floating-loc">
+                    <i class="fa-solid fa-location-dot"></i> Gothenburg, SE
+                  </span>
+                  <div class="story-metric-bar">
+                    <span class="story-metric-label"
+                      >Procurement Cost Savings</span
+                    >
+                    <span class="story-metric-value">$2.4M Saved</span>
+                  </div>
+                </div>
+                <div class="story-card-body">
+                  <h4 class="fw-bold text-dark h5 mb-2">
+                    Nordic Heavy Industries Sourcing
+                  </h4>
+                  <p class="small text-slate-500 mb-3">
+                    Automated multi-tier raw material bidding and vendor ESG
+                    validation, eliminating 400+ hours of manual purchase order
+                    reconciliation.
+                  </p>
+                  <a href="#" class="story-read-link">
+                    Explore Case Study
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -302,94 +510,377 @@
       </section>
 
       <!-- Section 6: Logistics & Shipments Slideshow -->
-      <section id="section-gallery-slideshow">
+      <section id="section-gallery-slideshow" class="py-5">
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center mb-5">
             <span>Fulfillment In Action</span>
-            <h2>Freight & Operations Slideshow</h2>
+            <h2>Freight &amp; Global Operations Slideshow</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 620px">
+              Inspect our real-time multi-modal routing terminals, smart
+              robotics sortation bays, and control centers in action.
+            </p>
           </div>
-          <div
-            id="galleryCarousel"
-            class="carousel slide border rounded-4 overflow-hidden mt-4"
-            data-bs-ride="carousel"
-            style="max-height: 450px"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop"
-                  class="d-block w-100"
-                  style="height: 450px; object-fit: cover"
-                  alt="Logistics Flow Control Room"
-                />
+
+          <div class="luxury-slideshow-container">
+            <div
+              id="galleryCarousel"
+              class="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+              data-bs-interval="6000"
+            >
+              <!-- Expandable Indicators -->
+              <div class="carousel-indicators slideshow-custom-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#galleryCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#galleryCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#galleryCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
               </div>
-              <div class="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop"
-                  class="d-block w-100"
-                  style="height: 450px; object-fit: cover"
-                  alt="Supplier Negotiations"
-                />
+
+              <!-- Slides Inner -->
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="slideshow-slide-content">
+                    <img
+                      src="../assets/images/gallery/gallery-slideshow-slide-content-1.webp"
+                      alt="Logistics Flow Control Room"
+                    />
+                    <div class="slideshow-gradient-layer"></div>
+                    <div class="slideshow-glass-card">
+                      <span class="slideshow-pill-tag">
+                        <span class="pulse-live-dot"></span> 24/7 Global
+                        Telematics Hub
+                      </span>
+                      <h3 class="fw-bold text-white mb-2 fs-4">
+                        Centralized Command &amp; Flow Control
+                      </h3>
+                      <p class="small text-white-50 mb-0">
+                        Real-time algorithmic dispatch monitoring 4,800+ freight
+                        routes with dynamic weather and port congestion
+                        re-routing.
+                      </p>
+                      <div class="slideshow-specs-list">
+                        <span class="slideshow-spec-item"
+                          ><i
+                            class="fa-solid fa-satellite-dish text-accent"
+                          ></i>
+                          140+ Sea &amp; Air Ports</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-bolt text-warning"></i> &lt;
+                          30s Re-route Latency</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-shield-check text-success"></i>
+                          99.98% On-Time SLA</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="slideshow-slide-content">
+                    <img
+                      src="../assets/images/gallery/gallery-slideshow-slide-content-2.webp"
+                      alt="High-Throughput Container Port"
+                    />
+                    <div class="slideshow-gradient-layer"></div>
+                    <div class="slideshow-glass-card">
+                      <span class="slideshow-pill-tag">
+                        <span class="pulse-live-dot"></span> Port Logistics Node
+                      </span>
+                      <h3 class="fw-bold text-white mb-2 fs-4">
+                        Intermodal Container Marshalling Yard
+                      </h3>
+                      <p class="small text-white-50 mb-0">
+                        IoT-linked RFID gate scanning and automated electronic
+                        Bills of Lading (eBL) synced instantaneously with buyer
+                        ERP records.
+                      </p>
+                      <div class="slideshow-specs-list">
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-barcode text-accent"></i>
+                          Instant RFID Scan</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-file-invoice text-info"></i>
+                          Automated eBL Sync</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-anchor text-primary-light"></i>
+                          Deepwater Terminal</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                  <div class="slideshow-slide-content">
+                    <img
+                      src="../assets/images/gallery/gallery-slideshow-slide-content-3.webp"
+                      alt="Automated Robotic Cross-Dock"
+                    />
+                    <div class="slideshow-gradient-layer"></div>
+                    <div class="slideshow-glass-card">
+                      <span class="slideshow-pill-tag">
+                        <span class="pulse-live-dot"></span> Robotics Cross-Dock
+                      </span>
+                      <h3 class="fw-bold text-white mb-2 fs-4">
+                        Automated Robotic Fulfillment Center
+                      </h3>
+                      <p class="small text-white-50 mb-0">
+                        High-density AGV robotic sortation directing 65,000
+                        parcels per hour with sub-millimeter precision and
+                        automated pallet staging.
+                      </p>
+                      <div class="slideshow-specs-list">
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-robot text-accent"></i> 65k
+                          Parcels / Hour</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i
+                            class="fa-solid fa-cubes-stacked text-warning"
+                          ></i>
+                          AGV Pallet Staging</span
+                        >
+                        <span class="slideshow-spec-item"
+                          ><i class="fa-solid fa-circle-check text-success"></i>
+                          Zero Error Guarantee</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Controls -->
+              <button
+                class="carousel-control-prev slideshow-nav-btn"
+                type="button"
+                data-bs-target="#galleryCarousel"
+                data-bs-slide="prev"
+                aria-label="Previous Slide"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button
+                class="carousel-control-next slideshow-nav-btn"
+                type="button"
+                data-bs-target="#galleryCarousel"
+                data-bs-slide="next"
+                aria-label="Next Slide"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </section>
 
       <!-- Section 7: Platform Interface Mockups Gallery -->
-      <section id="section-gallery-mockups" class="bg-light">
+      <section id="section-gallery-mockups" class="py-5">
         <div class="container">
-          <div class="section-title text-center">
-            <span>Dashboard Mockups</span>
+          <div class="section-title text-center mb-5">
+            <span>Interactive UI Exploration</span>
             <h2>E-Procurement Interface Tour</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 620px">
+              Explore high-fidelity interface previews engineered for enterprise
+              procurement specialists, supply chain managers, and CFOs.
+            </p>
           </div>
-          <div class="row g-4 mt-2">
-            <div class="col-sm-6 col-md-3">
-              <div class="bg-white p-3 border rounded text-center">
-                <i class="fa-solid fa-list-check text-primary fs-3 mb-2"></i>
-                <h5 class="fw-bold h6 mb-0">RFQ Editor</h5>
+          <div class="row g-4">
+            <!-- Mockup 1: RFQ Editor -->
+            <div class="col-lg-3 col-md-6">
+              <div class="mockup-card">
+                <div class="mockup-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span>app.stackly.io/rfq-matrix</span>
+                </div>
+                <div class="mockup-preview-box">
+                  <img
+                    src="../assets/images/gallery/gallery-mockup-preview-img-1.webp"
+                    alt="Smart RFQ Editor Mockup"
+                  />
+                  <div class="mockup-preview-overlay">
+                    <span class="mockup-zoom-icon">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="mockup-card-body">
+                  <div class="mockup-icon-badge">
+                    <i class="fa-solid fa-list-check"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark h6 mb-1">Smart RFQ Matrix</h5>
+                  <p class="small text-slate-500 mb-2">
+                    Multi-supplier line item pricing comparisons with weighted
+                    vendor scoring.
+                  </p>
+                  <div class="mockup-feature-tags">
+                    <span class="mockup-tag">Auto-Score</span>
+                    <span class="mockup-tag">Tiered Bids</span>
+                  </div>
+                  <a href="#" class="mockup-action-link">
+                    Preview Matrix
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="bg-white p-3 border rounded text-center">
-                <i class="fa-solid fa-chart-pie text-primary fs-3 mb-2"></i>
-                <h5 class="fw-bold h6 mb-0">Spend Report</h5>
+
+            <!-- Mockup 2: Spend Analytics -->
+            <div class="col-lg-3 col-md-6">
+              <div class="mockup-card">
+                <div class="mockup-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span>app.stackly.io/analytics</span>
+                </div>
+                <div class="mockup-preview-box">
+                  <img
+                    src="../assets/images/gallery/gallery-mockup-preview-img-2.webp"
+                    alt="Spend Analytics Mockup"
+                  />
+                  <div class="mockup-preview-overlay">
+                    <span class="mockup-zoom-icon">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="mockup-card-body">
+                  <div class="mockup-icon-badge">
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark h6 mb-1">Spend BI Analytics</h5>
+                  <p class="small text-slate-500 mb-2">
+                    Predictive category spend breakdowns and AI off-contract
+                    anomaly detection.
+                  </p>
+                  <div class="mockup-feature-tags">
+                    <span class="mockup-tag">AI Radar</span>
+                    <span class="mockup-tag">KPI Forecast</span>
+                  </div>
+                  <a href="#" class="mockup-action-link">
+                    Preview BI
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="bg-white p-3 border rounded text-center">
-                <i class="fa-solid fa-address-book text-primary fs-3 mb-2"></i>
-                <h5 class="fw-bold h6 mb-0">Vendor Profile</h5>
+
+            <!-- Mockup 3: Vendor Profile -->
+            <div class="col-lg-3 col-md-6">
+              <div class="mockup-card">
+                <div class="mockup-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span>app.stackly.io/vendors</span>
+                </div>
+                <div class="mockup-preview-box">
+                  <img
+                    src="../assets/images/gallery/gallery-mockup-preview-img-3.webp"
+                    alt="Supplier Vault Mockup"
+                  />
+                  <div class="mockup-preview-overlay">
+                    <span class="mockup-zoom-icon">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="mockup-card-body">
+                  <div class="mockup-icon-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark h6 mb-1">
+                    Supplier Trust Vault
+                  </h5>
+                  <p class="small text-slate-500 mb-2">
+                    Verified certificates, ISO audit trail logs, and real-time
+                    ESG compliance ratings.
+                  </p>
+                  <div class="mockup-feature-tags">
+                    <span class="mockup-tag">ISO Audited</span>
+                    <span class="mockup-tag">ESG Score</span>
+                  </div>
+                  <a href="#" class="mockup-action-link">
+                    Preview Vault
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="bg-white p-3 border rounded text-center">
-                <i class="fa-solid fa-truck-fast text-primary fs-3 mb-2"></i>
-                <h5 class="fw-bold h6 mb-0">Freight Tracker</h5>
+
+            <!-- Mockup 4: Freight Tracker -->
+            <div class="col-lg-3 col-md-6">
+              <div class="mockup-card">
+                <div class="mockup-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span>app.stackly.io/telematics</span>
+                </div>
+                <div class="mockup-preview-box">
+                  <img
+                    src="../assets/images/gallery/gallery-mockup-preview-img-4.webp"
+                    alt="Freight Tracker Mockup"
+                  />
+                  <div class="mockup-preview-overlay">
+                    <span class="mockup-zoom-icon">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="mockup-card-body">
+                  <div class="mockup-icon-badge">
+                    <i class="fa-solid fa-truck-fast"></i>
+                  </div>
+                  <h5 class="fw-bold text-dark h6 mb-1">Carrier Telematics</h5>
+                  <p class="small text-slate-500 mb-2">
+                    Live GPS shipment map, estimated dwell time, and automated
+                    customs filing.
+                  </p>
+                  <div class="mockup-feature-tags">
+                    <span class="mockup-tag">Live GPS</span>
+                    <span class="mockup-tag">Milestone ETA</span>
+                  </div>
+                  <a href="#" class="mockup-action-link">
+                    Preview GPS
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -397,36 +888,162 @@
       </section>
 
       <!-- Section 8: Visual Platform Benefits Infographic -->
-      <section id="section-gallery-info">
+      <section id="section-gallery-info" class="py-5">
         <div class="container">
-          <div class="section-title text-center">
+          <div class="section-title text-center mb-5">
             <span>Product Blueprint</span>
-            <h2>Stackly Infrastructure Core</h2>
+            <h2>Stackly Infrastructure Architecture Core</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 620px">
+              Engineered with zero-trust enterprise security, distributed cloud
+              scalability, and high-frequency data pipelines.
+            </p>
           </div>
-          <div class="row g-4 mt-2">
-            <div class="col-md-6">
-              <div class="p-4 border rounded h-100 bg-light">
-                <h4 class="fw-bold h5 mb-3 text-primary">
-                  <i class="fa-solid fa-cloud-arrow-up me-2"></i>Scalable Cloud
-                  Ecosystem
+          <div class="row g-4">
+            <!-- Infographic Card 1 -->
+            <div class="col-lg-6">
+              <div class="blueprint-card">
+                <span class="blueprint-watermark">01</span>
+                <div class="blueprint-header">
+                  <div class="blueprint-icon-box">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <span class="blueprint-badge">
+                    <i class="fa-solid fa-bolt"></i> &lt; 15ms Latency
+                  </span>
+                </div>
+                <h4 class="fw-bold h5 mb-2 text-dark">
+                  Distributed Microservice Cloud
                 </h4>
-                <p class="small text-slate-500 mb-0">
-                  Our microservice backend architecture processes millions of
-                  transactions, automatically scaling cluster instances during
-                  high-traffic vendor auctions.
+                <p class="small text-slate-500 mb-3">
+                  Multi-region Kubernetes clusters automatically autoscale
+                  across AWS and Azure nodes, ensuring frictionless execution
+                  during massive multi-supplier bidding rounds.
                 </p>
+                <ul class="blueprint-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> 99.99% High
+                    Availability SLA uptime guaranteed
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> 10M+ daily events
+                    processed with auto-failover
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Globally
+                    distributed CDN edge endpoints
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="p-4 border rounded h-100 bg-light">
-                <h4 class="fw-bold h5 mb-3 text-success">
-                  <i class="fa-solid fa-key me-2"></i>SOC-2 Certified Vault
+
+            <!-- Infographic Card 2 -->
+            <div class="col-lg-6">
+              <div class="blueprint-card">
+                <span class="blueprint-watermark">02</span>
+                <div class="blueprint-header">
+                  <div class="blueprint-icon-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <span class="blueprint-badge">
+                    <i class="fa-solid fa-lock"></i> SOC-2 Certified
+                  </span>
+                </div>
+                <h4 class="fw-bold h5 mb-2 text-dark">
+                  Zero-Trust Encrypted Data Vault
                 </h4>
-                <p class="small text-slate-500 mb-0">
-                  Vendor tax declarations, corporate financial logs, and
-                  encrypted user credentials are secured in separate regional
-                  data vaults.
+                <p class="small text-slate-500 mb-3">
+                  Vendor financial tax declarations, proprietary price models,
+                  and authenticated user credentials remain sealed behind
+                  military-grade AES-256 bit hardware keys.
                 </p>
+                <ul class="blueprint-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Hardware Security
+                    Module (HSM) key isolation
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Granular RBAC &amp;
+                    SAML 2.0 / Okta SSO integration
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Immutable
+                    tamper-proof audit trails for all RFQ bids
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Infographic Card 3 -->
+            <div class="col-lg-6">
+              <div class="blueprint-card">
+                <span class="blueprint-watermark">03</span>
+                <div class="blueprint-header">
+                  <div class="blueprint-icon-box">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
+                  <span class="blueprint-badge">
+                    <i class="fa-solid fa-sparkles"></i> 94.8% Accuracy
+                  </span>
+                </div>
+                <h4 class="fw-bold h5 mb-2 text-dark">
+                  AI Predictive Sourcing Engine
+                </h4>
+                <p class="small text-slate-500 mb-3">
+                  Neural market indices forecast raw material commodity prices
+                  and highlight off-contract purchasing risks before budget
+                  overruns occur.
+                </p>
+                <ul class="blueprint-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Commodity price
+                    volatility predictor
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Supplier financial
+                    solvency risk scoring
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Automated RFP
+                    requirement parser &amp; auto-tagging
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Infographic Card 4 -->
+            <div class="col-lg-6">
+              <div class="blueprint-card">
+                <span class="blueprint-watermark">04</span>
+                <div class="blueprint-header">
+                  <div class="blueprint-icon-box">
+                    <i class="fa-solid fa-network-wired"></i>
+                  </div>
+                  <span class="blueprint-badge">
+                    <i class="fa-solid fa-plug"></i> 100+ Connectors
+                  </span>
+                </div>
+                <h4 class="fw-bold h5 mb-2 text-dark">
+                  Universal ERP &amp; EDI Connectors
+                </h4>
+                <p class="small text-slate-500 mb-3">
+                  Plug-and-play bi-directional connectors synchronize purchase
+                  orders, inventory counts, and invoices directly with your
+                  existing enterprise tech stack.
+                </p>
+                <ul class="blueprint-list">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Native sync with
+                    SAP S/4HANA, Oracle &amp; NetSuite
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> Real-time EDI 850,
+                    810, 856 message translation
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i> High-throughput
+                    REST &amp; GraphQL developer APIs
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
