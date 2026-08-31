@@ -5,7 +5,66 @@ document.addEventListener("DOMContentLoaded", function () {
   initConfirmPasswordMatch();
   initLoginForm();
   initRegisterForm();
+  initEmptyLinks404Redirect();
 });
+
+/* ==========================================================================
+   0. Global Empty / # Link Interceptor -> 404 Redirection
+   ========================================================================== */
+function initEmptyLinks404Redirect() {
+  document.addEventListener("click", function (e) {
+    const anchor = e.target.closest("a");
+    if (!anchor) return;
+
+    const currentPage = window.location.pathname.split("/").pop() || "";
+    if (currentPage === "404.html") return;
+
+    const rawHref = anchor.getAttribute("href");
+
+    if (
+      anchor.hasAttribute("data-bs-toggle") ||
+      anchor.hasAttribute("data-bs-target") ||
+      anchor.hasAttribute("data-toggle") ||
+      anchor.getAttribute("role") === "tab" ||
+      (anchor.getAttribute("role") === "button" &&
+        anchor.classList.contains("dropdown-toggle"))
+    ) {
+      return;
+    }
+
+    const isEmptyOrHash =
+      rawHref === null ||
+      rawHref === undefined ||
+      rawHref.trim() === "" ||
+      rawHref === "#" ||
+      rawHref === "#!" ||
+      rawHref === "javascript:void(0)" ||
+      rawHref === "javascript:void(0);" ||
+      rawHref === "javascript:;";
+
+    let isDeadAnchor = false;
+    if (rawHref && rawHref.startsWith("#") && rawHref.length > 1) {
+      try {
+        const targetEl = document.querySelector(rawHref);
+        if (!targetEl) {
+          isDeadAnchor = true;
+        }
+      } catch (err) {
+        isDeadAnchor = true;
+      }
+    }
+
+    if (isEmptyOrHash || isDeadAnchor) {
+      e.preventDefault();
+      const pathSegments = window.location.pathname.split("/");
+      const isInPagesDir =
+        pathSegments[pathSegments.length - 2] === "pages" ||
+        window.location.pathname.includes("/pages/");
+      const target404 = isInPagesDir ? "../404.html" : "404.html";
+      window.location.href = target404;
+    }
+  });
+}
 
 /* ==========================================================================
    1. Show / Hide Password Toggles

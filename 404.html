@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Stackly B2B Procurement Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6 Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Custom Theme Base Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Dedicated 404 Error Styles -->
+    <link rel="stylesheet" href="assets/css/error404.css" />
+  </head>
+  <body class="error-page-body">
+    <!-- Ambient Background Lighting & Tech Grid Overlay -->
+    <div class="error-bg-elements">
+      <div class="error-grid-overlay"></div>
+      <div class="error-orb error-orb-1"></div>
+      <div class="error-orb error-orb-2"></div>
+      <div class="error-orb error-orb-3"></div>
+    </div>
+
+    <!-- Error Navigation Header Bar -->
+    <header class="error-navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="error-brand-logo d-flex align-items-center text-decoration-none"
+          title="Stackly B2B Procurement Home"
+        >
+          <img
+            src="assets/images/logoStackly.webp"
+            alt="Stackly B2B Procurement Logo"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- Main 404 Hero Stage -->
+    <main class="error-main-content">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-xl-9 col-lg-10">
+            <div class="error-glass-container">
+              <!-- System Status Pill -->
+              <div class="error-status-pill">
+                <span class="pulse-dot"></span>
+                <span
+                  >Error 404 • Resource Unreachable in Supply Chain
+                  Registry</span
+                >
+              </div>
+
+              <!-- Visual 404 Graphic & Interactive Floating Nodes -->
+              <div class="error-visual-wrapper">
+                <span class="floating-procure-tag tag-rfq">
+                  <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                  RFQ Manifest: Missing
+                </span>
+
+                <h1 class="error-code-glitch">404</h1>
+
+                <span class="floating-procure-tag tag-node">
+                  <i class="fa-solid fa-network-wired text-warning"></i>
+                  Supplier Node: Offline
+                </span>
+              </div>
+
+              <!-- Main Heading & Explanatory Copy -->
+              <h2 class="error-heading">
+                Shipment or Resource Lost in Transit
+              </h2>
+              <p class="error-description">
+                The procurement contract, supplier registry, or platform
+                endpoint you are trying to access has been relocated,
+                decommissioned, or never existed in our enterprise supply chain
+                network.
+              </p>
+
+              <!-- Primary Action Group -->
+              <div class="error-action-btns">
+                <a
+                  href="index.html"
+                  class="btn-error-primary"
+                  id="errorPrimaryHomeBtn"
+                >
+                  <i class="fa-solid fa-house"></i>
+                  <span>Return to Home Page</span>
+                </a>
+                <button
+                  type="button"
+                  class="btn-error-secondary"
+                  id="errorPrimaryBackBtn"
+                >
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <span>Go Back to Previous Page</span>
+                </button>
+                <a href="pages/contact.html" class="btn-error-support">
+                  <i class="fa-solid fa-headset"></i>
+                  <span>Contact Support Desk</span>
+                </a>
+              </div>
+
+              <!-- Interactive Search / Quick Diagnostic Widget -->
+              <div class="error-search-box">
+                <form id="errorSearchForm" onsubmit="handleErrorSearch(event)">
+                  <input
+                    type="text"
+                    id="errorSearchInput"
+                    class="error-search-input"
+                    placeholder="Search RFQs, services, suppliers or keyword..."
+                    autocomplete="off"
+                  />
+                  <button
+                    type="submit"
+                    class="error-search-btn"
+                    title="Search platform"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Quick Hub Cards for Direct Navigation -->
+              <div class="error-quick-hub">
+                <div class="error-hub-title">
+                  <i class="fa-solid fa-compass me-1 text-primary-light"></i>
+                  Recommended Enterprise Hubs
+                </div>
+                <div class="row g-3">
+                  <!-- Hub 1: Services -->
+                  <div class="col-md-3 col-6">
+                    <a href="pages/services.html" class="hub-card-link">
+                      <div class="hub-card">
+                        <div class="hub-icon-wrap">
+                          <i class="fa-solid fa-boxes-packing"></i>
+                        </div>
+                        <div class="hub-card-text">
+                          <h4>E-Sourcing</h4>
+                          <p>RFQs & Supplier SRM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Hub 2: About -->
+                  <div class="col-md-3 col-6">
+                    <a href="pages/about.html" class="hub-card-link">
+                      <div class="hub-card">
+                        <div class="hub-icon-wrap">
+                          <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="hub-card-text">
+                          <h4>About Us</h4>
+                          <p>Compliance & Audits</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Hub 3: Events -->
+                  <div class="col-md-3 col-6">
+                    <a href="pages/events.html" class="hub-card-link">
+                      <div class="hub-card">
+                        <div class="hub-icon-wrap">
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div class="hub-card-text">
+                          <h4>B2B Events</h4>
+                          <p>Summits & Trade Fairs</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Hub 4: Blog -->
+                  <div class="col-md-3 col-6">
+                    <a href="pages/blog.html" class="hub-card-link">
+                      <div class="hub-card">
+                        <div class="hub-icon-wrap">
+                          <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <div class="hub-card-text">
+                          <h4>Insights</h4>
+                          <p>Market Trend Reports</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Error Page Footer -->
+    <footer class="error-footer text-center">
+      <div
+        class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+      >
+        <span
+          >&copy; 2026 Stackly Ltd. Enterprise B2B Procurement Platform. All
+          rights reserved.</span
+        >
+        <div class="d-flex gap-3">
+          <a href="pages/contact.html">Need Help?</a>
+          <span>•</span>
+          <a href="pages/services.html">Platform Solutions</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Theme Script -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- 404 Specific Interactive Handlers -->
+    <script>
+      // History Back Handler
+      function executeGoBack() {
+        if (window.history.length > 1 && document.referrer) {
+          window.history.back();
+        } else {
+          window.location.href = "index.html";
+        }
+      }
+
+      document
+        .getElementById("errorNavBackBtn")
+        ?.addEventListener("click", executeGoBack);
+      document
+        .getElementById("errorPrimaryBackBtn")
+        ?.addEventListener("click", executeGoBack);
+
+      // Simple keyword routing search simulation
+      function handleErrorSearch(e) {
+        e.preventDefault();
+        const input = document.getElementById("errorSearchInput");
+        const q = (input?.value || "").trim().toLowerCase();
+        if (!q) return;
+
+        if (
+          q.includes("about") ||
+          q.includes("company") ||
+          q.includes("team") ||
+          q.includes("compliance")
+        ) {
+          window.location.href = "pages/about.html";
+        } else if (
+          q.includes("event") ||
+          q.includes("summit") ||
+          q.includes("webinar")
+        ) {
+          window.location.href = "pages/events.html";
+        } else if (
+          q.includes("blog") ||
+          q.includes("news") ||
+          q.includes("insight") ||
+          q.includes("article")
+        ) {
+          window.location.href = "pages/blog.html";
+        } else if (
+          q.includes("gallery") ||
+          q.includes("photo") ||
+          q.includes("media")
+        ) {
+          window.location.href = "pages/gallery.html";
+        } else if (
+          q.includes("contact") ||
+          q.includes("support") ||
+          q.includes("help") ||
+          q.includes("desk")
+        ) {
+          window.location.href = "pages/contact.html";
+        } else if (
+          q.includes("login") ||
+          q.includes("signin") ||
+          q.includes("auth")
+        ) {
+          window.location.href = "pages/login.html";
+        } else if (
+          q.includes("register") ||
+          q.includes("signup") ||
+          q.includes("join")
+        ) {
+          window.location.href = "pages/register.html";
+        } else {
+          window.location.href = "pages/services.html";
+        }
+      }
+    </script>
+  </body>
+</html>
