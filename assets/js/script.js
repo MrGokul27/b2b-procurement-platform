@@ -213,6 +213,9 @@ function highlightActiveMenu() {
   } else if (pageName === "contact.html") {
     activeId = "nav-contact";
     mobActiveId = "mob-nav-contact";
+  } else if (pageName === "dashboard.html") {
+    activeId = "nav-dashboard";
+    mobActiveId = "mob-nav-dashboard";
   }
 
   const desktopEl = document.getElementById(activeId);

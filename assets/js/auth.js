@@ -376,6 +376,21 @@ function initLoginForm() {
   const submitBtn = document.getElementById("loginSubmitBtn");
   const alertContainer = document.getElementById("loginAlertContainer");
 
+  // Pre-fill from saved session if available
+  try {
+    const savedUser = JSON.parse(
+      localStorage.getItem("b2b_procurement_user") || "null",
+    );
+    if (savedUser) {
+      if (savedUser.role && roleSelect && !roleSelect.value) {
+        roleSelect.value = savedUser.role;
+      }
+      if (savedUser.email && emailInput && !emailInput.value) {
+        emailInput.value = savedUser.email;
+      }
+    }
+  } catch (e) {}
+
   // Real-time error clearing on change
   if (roleSelect) {
     roleSelect.addEventListener("change", () => clearFieldError(roleSelect));
@@ -456,12 +471,44 @@ function initLoginForm() {
       return;
     }
 
+    // Save authenticated user session data
+    const roleValue = roleSelect.value;
+    const emailValue = emailInput.value.trim();
+    const rememberValue = rememberCheckbox.checked;
+
+    let derivedName = emailValue.split("@")[0].replace(/[._-]/g, " ");
+    derivedName = derivedName
+      .split(" ")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(" ");
+
+    const authUserData = {
+      role: roleValue,
+      email: emailValue,
+      name: derivedName || "Enterprise Officer",
+      remember: rememberValue,
+      loggedInAt: new Date().toISOString(),
+    };
+
+    try {
+      localStorage.setItem(
+        "b2b_procurement_user",
+        JSON.stringify(authUserData),
+      );
+      sessionStorage.setItem(
+        "b2b_procurement_user",
+        JSON.stringify(authUserData),
+      );
+    } catch (err) {
+      console.warn("Storage quota or error:", err);
+    }
+
     // Process Login Submission
     const btnText = submitBtn.querySelector(".btn-text");
     const btnSpinner = submitBtn.querySelector(".btn-spinner");
 
     submitBtn.disabled = true;
-    if (btnText) btnText.textContent = "Authenticating...";
+    if (btnText) btnText.textContent = "Authenticating & Loading Dashboard...";
     if (btnSpinner) btnSpinner.style.display = "inline-block";
 
     setTimeout(() => {
@@ -479,10 +526,10 @@ function initLoginForm() {
         }
 
         setTimeout(() => {
-          window.location.href = "../index.html";
+          window.location.href = "dashboard.html";
         }, 1800);
       } else {
-        window.location.href = "../index.html";
+        window.location.href = "dashboard.html";
       }
     }, 1200);
   });
