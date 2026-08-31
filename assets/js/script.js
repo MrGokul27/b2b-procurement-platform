@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initMetricsCounters();
   initLiveRfqSimulator();
   initContactFormHandler();
+  initLettersOnlyInputs();
   initEmptyLinks404Redirect();
 });
 
@@ -382,41 +383,95 @@ function initLiveRfqSimulator() {
         `;
   }
 }
-
-// Quick AJAX validation feedback simulator for forms
+// Form submission handler with redirection to 404 page
 function initContactFormHandler() {
   const forms = document.querySelectorAll(".b2b-form");
   forms.forEach((form) => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const btn = form.querySelector("button[type='submit']");
-      const originalText = btn.innerHTML;
-      btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...`;
-      btn.disabled = true;
+      if (btn) {
+        btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...`;
+        btn.disabled = true;
+      }
 
       setTimeout(() => {
-        btn.innerHTML = `<i class="fa-solid fa-check me-2"></i>Submitted Successfully!`;
-        btn.classList.remove("btn-primary");
-        btn.classList.add("btn-success");
+        const pathSegments = window.location.pathname.split("/");
+        const isInPagesDir =
+          pathSegments[pathSegments.length - 2] === "pages" ||
+          window.location.pathname.includes("/pages/");
+        const target404 = isInPagesDir ? "../404.html" : "404.html";
+        window.location.href = target404;
+      }, 500);
+    });
+  });
+}
 
-        // Show Alert Success
-        const alertBox = form.querySelector(".form-success-alert");
-        if (alertBox) {
-          alertBox.classList.remove("d-none");
-        }
+// Strictly prevent typing numbers and special characters in specific input fields
+function initLettersOnlyInputs() {
+  const selectors = [
+    ".letters-only",
+    "[data-letters-only='true']",
+    "#section-rfq-form #companyName",
+    "#section-events-registration #regName",
+    "#section-events-registration #regCompany",
+    "#section-events-registration #regJobTitle",
+    "#section-contact-form #contactName",
+    "#section-contact-form #companyName",
+  ];
 
-        form.reset();
+  const inputs = document.querySelectorAll(selectors.join(", "));
 
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-          btn.classList.remove("btn-success");
-          btn.classList.add("btn-primary");
-          if (alertBox) {
-            alertBox.classList.add("d-none");
-          }
-        }, 4000);
-      }, 1500);
+  inputs.forEach((input) => {
+    // 1. Intercept KeyDown to physically prevent typing numbers & symbols
+    input.addEventListener("keydown", function (e) {
+      // Allow navigation, control, deletion keys
+      const allowedControlKeys = [
+        "Backspace",
+        "Delete",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowUp",
+        "ArrowDown",
+        "Tab",
+        "Home",
+        "End",
+        "Enter",
+        "Escape",
+        "PageUp",
+        "PageDown",
+      ];
+
+      if (
+        allowedControlKeys.includes(e.key) ||
+        e.ctrlKey ||
+        e.metaKey ||
+        e.altKey
+      ) {
+        return;
+      }
+
+      // If key is a printable single character, ensure it is only an alphabetic character or space
+      if (e.key.length === 1 && !/^[a-zA-Z\s]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // 2. Intercept BeforeInput (handles mobile virtual keyboards and IME composition)
+    input.addEventListener("beforeinput", function (e) {
+      if (e.data && /[^a-zA-Z\s]/.test(e.data)) {
+        e.preventDefault();
+      }
+    });
+
+    // 3. Intercept Paste / Input events to strip any numbers or special characters immediately
+    input.addEventListener("input", function () {
+      const originalValue = this.value;
+      const sanitizedValue = originalValue.replace(/[^a-zA-Z\s]/g, "");
+
+      if (originalValue !== sanitizedValue) {
+        this.value = sanitizedValue;
+      }
     });
   });
 }

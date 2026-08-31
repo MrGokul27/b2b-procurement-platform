@@ -288,10 +288,13 @@
                       <div class="form-input-group">
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control letters-only"
                           id="contactName"
                           required
                           placeholder="e.g. John Doe"
+                          maxlength="16"
+                          pattern="[a-zA-Z\s]+"
+                          title="Letters and spaces only"
                         />
                         <i class="fa-regular fa-user form-input-icon"></i>
                       </div>
@@ -307,10 +310,12 @@
                       <div class="form-input-group">
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control letters-only"
                           id="companyName"
                           required
                           placeholder="e.g. Global Supplies Ltd"
+                          pattern="[a-zA-Z\s]+"
+                          title="Letters and spaces only"
                         />
                         <i class="fa-regular fa-building form-input-icon"></i>
                       </div>
@@ -376,6 +381,7 @@
                           class="form-control"
                           id="messageText"
                           rows="4"
+                          required
                           placeholder="Briefly describe your requirements or inquiry..."
                         ></textarea>
                         <i

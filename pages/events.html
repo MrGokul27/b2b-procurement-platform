@@ -592,10 +592,13 @@
                         <i class="fa-regular fa-user custom-input-icon"></i>
                         <input
                           type="text"
-                          class="form-control custom-form-control bg-white"
+                          class="form-control custom-form-control bg-white letters-only"
                           id="regName"
                           required
                           placeholder="e.g. Jane Doe"
+                          maxlength="16"
+                          pattern="[a-zA-Z\s]+"
+                          title="Letters and spaces only"
                         />
                       </div>
                     </div>
@@ -628,10 +631,12 @@
                         <i class="fa-regular fa-building custom-input-icon"></i>
                         <input
                           type="text"
-                          class="form-control custom-form-control bg-white"
+                          class="form-control custom-form-control bg-white letters-only"
                           id="regCompany"
                           required
                           placeholder="e.g. Acme Logistics UK"
+                          pattern="[a-zA-Z\s]+"
+                          title="Letters and spaces only"
                         />
                       </div>
                     </div>
@@ -646,10 +651,12 @@
                         <i class="fa-solid fa-briefcase custom-input-icon"></i>
                         <input
                           type="text"
-                          class="form-control custom-form-control bg-white"
+                          class="form-control custom-form-control bg-white letters-only"
                           id="regJobTitle"
                           required
                           placeholder="e.g. Head of Procurement"
+                          pattern="[a-zA-Z\s]+"
+                          title="Letters and spaces only"
                         />
                       </div>
                     </div>
