@@ -1,81 +1,730 @@
-/* Feature Highlight Block */
-.service-feature-box {
+.subpage-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.subpage-banner .breadcrumb-item a {
   border-radius: 20px;
+}
+
+.subpage-banner .breadcrumb-item a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subpage-banner .breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.subpage-banner h1 {
+  transition: text-shadow 0.3s ease;
+}
+
+.subpage-banner h1:hover {
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Global Interactive Image Wrapper
+   -------------------------------------------------------------------------- */
+.service-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 31, 46, 0.08);
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--b2b-secondary);
+}
+
+.service-image-wrapper img {
+  transition:
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s ease;
+  display: block;
+}
+
+/* Diagonal Sheen / Light Reflection Overlay */
+.service-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    left 0.8s ease;
+}
+
+.service-image-wrapper:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 50px rgba(0, 71, 103, 0.18);
+}
+
+.service-image-wrapper:hover img {
+  transform: scale(1.06);
+  filter: contrast(104%) brightness(102%);
+}
+
+.service-image-wrapper:hover::after {
+  opacity: 1;
+  left: 140%;
+}
+
+/* --------------------------------------------------------------------------
+   2. E-Sourcing & RFQ Features (Section 2)
+   -------------------------------------------------------------------------- */
+.service-feature-card {
   background: #ffffff;
   border: 1px solid var(--b2b-border);
-  transition: var(--transition-base);
-}
-.service-feature-box:hover {
-  border-color: var(--b2b-primary-light);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.03);
-}
-
-/* Service Info Badge */
-.services-metric-badge {
-  background-color: var(--b2b-light);
-  border: 1px solid var(--b2b-border);
-  border-radius: 12px;
-  padding: 20px;
-  transition: var(--transition-base);
-}
-.services-metric-badge:hover {
-  background-color: #ffffff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-}
-
-/* Supplier Portal SRM Grid */
-.srm-feature-item {
-  padding-left: 25px;
-  position: relative;
-}
-.srm-feature-item::before {
-  content: "\f058";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-  top: 3px;
-  color: var(--b2b-accent);
-}
-
-/* Automated Invoicing Workflow Layout */
-.invoice-workflow-step {
   border-radius: 16px;
-  background-color: var(--b2b-light);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow: hidden;
+  height: 100%;
 }
+
+.service-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary),
+    var(--b2b-primary-light)
+  );
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease;
+}
+
+.service-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--b2b-primary-light);
+  box-shadow: 0 16px 36px rgba(0, 71, 103, 0.1);
+}
+
+.service-feature-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 71, 103, 0.08);
+  color: var(--b2b-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-feature-card:hover .service-icon-box {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 8px 18px rgba(0, 71, 103, 0.25);
+}
+
+.service-feature-card:hover h5 {
+  color: var(--b2b-primary);
+  transition: color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   3. Supplier Relationship Management (SRM) (Section 3)
+   -------------------------------------------------------------------------- */
+.srm-feature-item {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.srm-feature-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--b2b-accent);
+  opacity: 0;
+  transform: scaleY(0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.srm-feature-item:hover {
+  transform: translateX(8px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.08);
+}
+
+.srm-feature-item:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.srm-item-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--b2b-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.srm-feature-item:hover .srm-item-icon {
+  background: var(--b2b-accent);
+  color: #ffffff;
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.srm-feature-item:hover .srm-title {
+  color: var(--b2b-primary) !important;
+  transition: color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   4. Automated Invoicing Workflow Layout (Section 4)
+   -------------------------------------------------------------------------- */
+.invoice-workflow-step {
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.invoice-workflow-step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--b2b-primary),
+    var(--b2b-primary-light)
+  );
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.invoice-workflow-step:hover {
+  transform: translateY(-6px) translateX(4px);
+  border-color: var(--b2b-primary-light);
+  box-shadow: 0 14px 32px rgba(0, 71, 103, 0.1);
+}
+
+.invoice-workflow-step:hover::after {
+  opacity: 1;
+}
+
 .invoice-workflow-step .badge-step {
   position: absolute;
   top: -12px;
-  left: 20px;
-  background-color: var(--b2b-secondary);
+  left: 24px;
+  background: linear-gradient(135deg, var(--b2b-secondary), var(--b2b-primary));
   color: #ffffff;
   font-weight: 700;
   border-radius: 20px;
   font-size: 0.75rem;
-  padding: 4px 12px;
+  padding: 4px 14px;
+  box-shadow: 0 4px 10px rgba(0, 31, 46, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Pricing / Service Comparison Matrix Table */
+.invoice-workflow-step:hover .badge-step {
+  transform: scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--b2b-primary),
+    var(--b2b-primary-light)
+  );
+  box-shadow: 0 6px 14px rgba(0, 71, 103, 0.3);
+}
+
+.step-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 71, 103, 0.08);
+  color: var(--b2b-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.invoice-workflow-step:hover .step-icon {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  transform: scale(1.12) rotate(6deg);
+}
+
+/* --------------------------------------------------------------------------
+   5. Spend Analytics Badges (Section 5)
+   -------------------------------------------------------------------------- */
+.services-metric-badge {
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  border-radius: 16px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.services-metric-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--b2b-primary), var(--b2b-accent));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.services-metric-badge:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 71, 103, 0.3);
+  box-shadow: 0 18px 38px rgba(0, 71, 103, 0.12);
+}
+
+.services-metric-badge:hover::before {
+  opacity: 1;
+}
+
+.metric-icon-wrap {
+  font-size: 1.4rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.services-metric-badge:hover .metric-icon-wrap {
+  transform: scale(1.25) rotate(8deg);
+}
+
+.counter-number {
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.3s ease;
+  display: inline-block;
+}
+
+.services-metric-badge:hover .counter-number {
+  transform: scale(1.08);
+  filter: drop-shadow(0 2px 6px rgba(0, 71, 103, 0.15));
+}
+
+/* --------------------------------------------------------------------------
+   6. Contract Feature Cards (Section 6)
+   -------------------------------------------------------------------------- */
+.contract-feature-card {
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contract-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--b2b-primary);
+  opacity: 0;
+  transform: scaleY(0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contract-feature-card:hover {
+  transform: translateX(8px) translateY(-2px);
+  border-color: var(--b2b-primary-light);
+  box-shadow: 0 12px 28px rgba(0, 71, 103, 0.08);
+}
+
+.contract-feature-card:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.contract-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 71, 103, 0.08);
+  color: var(--b2b-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contract-feature-card:hover .contract-icon-box {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  transform: scale(1.15) rotate(-6deg);
+  box-shadow: 0 6px 14px rgba(0, 71, 103, 0.25);
+}
+
+.contract-feature-card:hover strong {
+  color: var(--b2b-primary) !important;
+  transition: color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   7. Logistics Feature Cards (Section 7)
+   -------------------------------------------------------------------------- */
+.logistics-feature-card {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.logistics-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--b2b-primary-light),
+    var(--b2b-accent)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logistics-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--b2b-primary-light) !important;
+  box-shadow: 0 16px 36px rgba(0, 71, 103, 0.1);
+}
+
+.logistics-feature-card:hover::before {
+  opacity: 1;
+}
+
+.logistics-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 71, 103, 0.08);
+  color: var(--b2b-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logistics-feature-card:hover .logistics-icon-box {
+  background: var(--b2b-primary);
+  color: #ffffff !important;
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 8px 18px rgba(0, 71, 103, 0.25);
+}
+
+.logistics-feature-card:hover h5 {
+  color: var(--b2b-primary);
+  transition: color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   8. ERP API Connectors (Section 8)
+   -------------------------------------------------------------------------- */
+.api-connector-box {
+  background: #ffffff !important;
+  border: 1px solid var(--b2b-border);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.api-connector-box:hover {
+  border-color: var(--b2b-primary-light);
+  box-shadow: 0 16px 36px rgba(0, 71, 103, 0.08);
+  transform: translateY(-4px);
+}
+
+.connector-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  background: var(--b2b-light);
+  color: var(--b2b-slate-800);
+  border: 1px solid var(--b2b-border);
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.connector-tag:hover {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  border-color: var(--b2b-primary);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 71, 103, 0.22);
+}
+
+.connector-tag:hover i {
+  transform: scale(1.15);
+  transition: transform 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   9. Pricing / Service Comparison Matrix Table (Section 9)
+   -------------------------------------------------------------------------- */
+.matrix-table-container {
+  border: 1px solid var(--b2b-border);
+  transition: box-shadow 0.35s ease;
+  background: #ffffff;
+}
+
+.matrix-table-container:hover {
+  box-shadow: 0 18px 42px rgba(0, 31, 46, 0.08) !important;
+}
+
 .pricing-matrix-table th {
-  background-color: var(--b2b-secondary) !important;
+  background: var(--b2b-secondary) !important;
   color: #ffffff !important;
   border: none !important;
-  padding: 15px !important;
+  padding: 18px 20px !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
+.pricing-matrix-table th.highlight-col {
+  background: linear-gradient(
+    135deg,
+    var(--b2b-primary),
+    var(--b2b-primary-light)
+  ) !important;
+  position: relative;
+}
+
 .pricing-matrix-table td {
-  padding: 15px !important;
+  padding: 16px 20px !important;
   border-bottom: 1px solid var(--b2b-border);
   vertical-align: middle;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
-.pricing-matrix-table tr:hover td {
-  background-color: var(--b2b-light);
+
+.pricing-matrix-table tbody tr {
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+.pricing-matrix-table tbody tr:hover {
+  background-color: rgba(0, 71, 103, 0.04);
+}
+
+.pricing-matrix-table tbody tr:hover td {
+  background-color: transparent;
+  color: var(--b2b-dark);
+}
+
+.pricing-matrix-table tbody tr:hover td.highlight-cell {
+  background-color: rgba(0, 71, 103, 0.08);
+}
+
 .pricing-check-icon {
   color: var(--b2b-accent);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
 }
+
 .pricing-cross-icon {
   color: var(--b2b-muted);
-  font-size: 1rem;
+  font-size: 1.15rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.pricing-matrix-table tbody tr:hover .pricing-check-icon {
+  transform: scale(1.3);
+  filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
+}
+
+.pricing-matrix-table tbody tr:hover .pricing-cross-icon {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+.matrix-val-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--b2b-light);
+  border: 1px solid var(--b2b-border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.pricing-matrix-table tbody tr:hover .matrix-val-badge {
+  background: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 71, 103, 0.1);
+}
+
+.matrix-val-badge.badge-unlimited {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border-color: rgba(16, 185, 129, 0.3);
+  font-weight: 700;
+}
+
+.pricing-matrix-table tbody tr:hover .matrix-val-badge.badge-unlimited {
+  background: var(--b2b-accent);
+  color: #ffffff;
+  border-color: var(--b2b-accent);
+}
+
+.matrix-val-badge.badge-premium {
+  background: rgba(0, 71, 103, 0.1);
+  color: var(--b2b-primary);
+  border-color: rgba(0, 71, 103, 0.25);
+  font-weight: 700;
+}
+
+.pricing-matrix-table tbody tr:hover .matrix-val-badge.badge-premium {
+  background: var(--b2b-primary);
+  color: #ffffff;
+  border-color: var(--b2b-primary);
+}
+
+/* --------------------------------------------------------------------------
+   10. Call to Action Banner & Interactive Button (Section 10)
+   -------------------------------------------------------------------------- */
+#section-services-cta {
+  background: linear-gradient(
+    135deg,
+    var(--b2b-secondary) 0%,
+    var(--b2b-primary) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#section-services-cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 108, 155, 0.4) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none;
+}
+
+#section-services-cta .cta-heading {
+  transition:
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+#section-services-cta:hover .cta-heading {
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 1;
+}
+
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    left 0.7s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 255, 255, 0.3) !important;
+  background-color: #ffffff !important;
+  color: var(--b2b-primary) !important;
+}
+
+.cta-btn:hover::after {
+  opacity: 1;
+  left: 140%;
+}
+
+.cta-btn i {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.cta-btn:hover i {
+  transform: translateX(6px);
 }
