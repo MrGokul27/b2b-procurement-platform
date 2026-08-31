@@ -12,25 +12,50 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ==========================================================================
    0. Global Empty Link & Unhandled Action Button -> 404 Redirection
    ========================================================================== */
+function redirectTo404() {
+  const pathSegments = window.location.pathname.split("/");
+  const isInPagesDir =
+    pathSegments[pathSegments.length - 2] === "pages" ||
+    window.location.pathname.includes("/pages/");
+  const target404 = isInPagesDir ? "../404.html" : "404.html";
+  window.location.href = target404;
+}
+
 function initEmptyLinks404Redirect() {
   document.addEventListener("click", function (e) {
-    // 1. Check if clicked element or parent is an anchor
+    // 1. If clicked logout button, allow standard logout navigation (do not redirect to 404)
+    const logoutBtn = e.target.closest(
+      ".btn-logout, [title='Sign Out'], a[href$='login.html'], a[href='login.html']",
+    );
+    if (logoutBtn) {
+      return;
+    }
+
+    // 2. If clicked inside sidebar or mobile sidebar toggle or role switcher, ignore 404 interception
+    const sidebar = e.target.closest("#dashboardSidebar, .dashboard-sidebar");
+    const mobileToggle = e.target.closest(
+      "#mobileSidebarToggle, .mobile-toggle-btn",
+    );
+    const roleSwitcher = e.target.closest(
+      ".role-switcher-dropdown, [data-role-switch]",
+    );
+    if (sidebar || mobileToggle || roleSwitcher) {
+      return;
+    }
+
+    // 3. Check if clicked element or parent is an anchor
     const anchor = e.target.closest("a");
     if (anchor) {
       const rawHref = anchor.getAttribute("href");
 
-      // Ignore standard UI triggers
+      // Ignore Bootstrap toggles / role switches if any outside sidebar
       if (
         anchor.hasAttribute("data-bs-toggle") ||
         anchor.hasAttribute("data-bs-target") ||
         anchor.hasAttribute("data-toggle") ||
         anchor.hasAttribute("data-role-switch") ||
         anchor.hasAttribute("data-view") ||
-        anchor.classList.contains("sidebar-nav-link") ||
-        anchor.classList.contains("dropdown-item-role") ||
-        anchor.getAttribute("role") === "tab" ||
-        (anchor.getAttribute("role") === "button" &&
-          anchor.classList.contains("dropdown-toggle"))
+        anchor.getAttribute("role") === "tab"
       ) {
         return;
       }
@@ -58,31 +83,18 @@ function initEmptyLinks404Redirect() {
       if (isEmptyOrHash || isDeadAnchor) {
         e.preventDefault();
         redirectTo404();
+        return;
       }
-      return;
     }
 
-    // 2. Check if clicked element is a button marked as unconfigured / dummy
+    // 4. Check if clicked element or parent is a button in the dashboard
     const btn = e.target.closest("button");
     if (btn) {
-      if (
-        btn.classList.contains("btn-unconfigured") ||
-        btn.getAttribute("data-action") === "dummy-404"
-      ) {
-        e.preventDefault();
-        redirectTo404();
-      }
+      e.preventDefault();
+      redirectTo404();
+      return;
     }
   });
-
-  function redirectTo404() {
-    const pathSegments = window.location.pathname.split("/");
-    const isInPagesDir =
-      pathSegments[pathSegments.length - 2] === "pages" ||
-      window.location.pathname.includes("/pages/");
-    const target404 = isInPagesDir ? "../404.html" : "404.html";
-    window.location.href = target404;
-  }
 }
 
 /* ==========================================================================
@@ -638,8 +650,16 @@ function renderActiveContentView(roleConfig, viewId) {
   const navItem =
     roleConfig.navItems.find((i) => i.id === viewId) || roleConfig.navItems[0];
 
-  // 1. Build Header Banner
-  const bannerHtml = `
+  // Determine if this is the 1st tab in the current role
+  const isFirstTab =
+    roleConfig.navItems &&
+    roleConfig.navItems.length > 0 &&
+    roleConfig.navItems[0].id === navItem.id;
+
+  // 1. Build Header Banner (only for the 1st tab in each role)
+  let bannerHtml = "";
+  if (isFirstTab) {
+    bannerHtml = `
     <div class="role-welcome-banner">
       <div class="banner-content">
         <div class="banner-pill">
@@ -670,9 +690,12 @@ function renderActiveContentView(roleConfig, viewId) {
       </div>
     </div>
   `;
+  }
 
-  // 2. Build Stat KPI Cards
-  const statsHtml = `
+  // 2. Build Stat KPI Cards (only for the 1st tab in each role)
+  let statsHtml = "";
+  if (isFirstTab && roleConfig.stats && roleConfig.stats.length > 0) {
+    statsHtml = `
     <div class="stats-grid">
       ${roleConfig.stats
         .map(
@@ -698,6 +721,7 @@ function renderActiveContentView(roleConfig, viewId) {
         .join("")}
     </div>
   `;
+  }
 
   // 3. Build Role & View Specific Tables and Data Panels
   const contentSectionHtml = getViewSpecificContent(roleConfig.key, viewId);
@@ -2622,10 +2646,7 @@ function showToastNotification(message, type = "info") {
 }
 
 function triggerMockAction(actionText) {
-  showToastNotification(
-    `<strong>Action Executed:</strong> ${actionText}`,
-    "success",
-  );
+  redirectTo404();
 }
 
 function initViewInteractions() {
