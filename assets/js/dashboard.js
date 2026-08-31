@@ -1,9 +1,3 @@
-/**
- * Stackly B2B Procurement Platform - Dedicated Role-Based Dashboard Engine
- * Handles Dynamic Role Views, Sidebar Switching, Interactive Procurement Tables,
- * Auth Session Sync, and Empty Link / Button 404 Interception.
- */
-
 document.addEventListener("DOMContentLoaded", function () {
   initDashboardApp();
   initEmptyLinks404Redirect();
@@ -807,7 +801,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search portfolio..." onkeyup="filterTable(this, 'overviewTable')">
+                <input type="text" id="overviewFilterInput" name="overviewFilter" aria-label="Search portfolio" class="table-filter-input" placeholder="Search portfolio..." onkeyup="filterTable(this, 'overviewTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Exporting Consolidated Spend Dossier...')">
                 <i class="fa-solid fa-file-export"></i>
@@ -884,7 +878,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search RFQ, category, or ID..." onkeyup="filterTable(this, 'rfqTable')">
+                <input type="text" id="rfqFilterInput" name="rfqFilter" aria-label="Search RFQ, category, or ID" class="table-filter-input" placeholder="Search RFQ, category, or ID..." onkeyup="filterTable(this, 'rfqTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Creating RFQ draft...')">
                 <i class="fa-solid fa-plus"></i>
@@ -988,7 +982,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Filter POs..." onkeyup="filterTable(this, 'poTable')">
+                <input type="text" id="poFilterInput" name="poFilter" aria-label="Filter POs" class="table-filter-input" placeholder="Filter POs..." onkeyup="filterTable(this, 'poTable')">
               </div>
             </div>
           </div>
@@ -1074,7 +1068,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search vendors..." onkeyup="filterTable(this, 'vendorTable')">
+                <input type="text" id="vendorFilterInput" name="vendorFilter" aria-label="Search vendors" class="table-filter-input" placeholder="Search vendors..." onkeyup="filterTable(this, 'vendorTable')">
               </div>
             </div>
           </div>
@@ -1152,7 +1146,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search contracts..." onkeyup="filterTable(this, 'contractsTable')">
+                <input type="text" id="contractsFilterInput" name="contractsFilter" aria-label="Search contracts" class="table-filter-input" placeholder="Search contracts..." onkeyup="filterTable(this, 'contractsTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Drafting New Vendor MSA Framework...')">
                 <i class="fa-solid fa-plus"></i>
@@ -1232,7 +1226,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search GRN, PO, or bay..." onkeyup="filterTable(this, 'grnTable')">
+                <input type="text" id="grnFilterInput" name="grnFilter" aria-label="Search GRN, PO, or bay" class="table-filter-input" placeholder="Search GRN, PO, or bay..." onkeyup="filterTable(this, 'grnTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Registering new Inbound Intake Batch...')">
                 <i class="fa-solid fa-barcode"></i>
@@ -1311,7 +1305,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search opportunities..." onkeyup="filterTable(this, 'vendorHubTable')">
+                <input type="text" id="vendorHubFilterInput" name="vendorHubFilter" aria-label="Search opportunities" class="table-filter-input" placeholder="Search opportunities..." onkeyup="filterTable(this, 'vendorHubTable')">
               </div>
             </div>
           </div>
@@ -1375,7 +1369,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search tenders..." onkeyup="filterTable(this, 'tenderTable')">
+                <input type="text" id="tenderFilterInput" name="tenderFilter" aria-label="Search tenders" class="table-filter-input" placeholder="Search tenders..." onkeyup="filterTable(this, 'tenderTable')">
               </div>
             </div>
           </div>
@@ -1439,7 +1433,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search bids..." onkeyup="filterTable(this, 'bidsTable')">
+                <input type="text" id="bidsFilterInput" name="bidsFilter" aria-label="Search bids" class="table-filter-input" placeholder="Search bids..." onkeyup="filterTable(this, 'bidsTable')">
               </div>
             </div>
           </div>
@@ -1503,7 +1497,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search orders..." onkeyup="filterTable(this, 'fulfillmentTable')">
+                <input type="text" id="fulfillmentFilterInput" name="fulfillmentFilter" aria-label="Search orders" class="table-filter-input" placeholder="Search orders..." onkeyup="filterTable(this, 'fulfillmentTable')">
               </div>
             </div>
           </div>
@@ -1558,7 +1552,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search invoices..." onkeyup="filterTable(this, 'invoiceTable')">
+                <input type="text" id="invoiceFilterInput" name="invoiceFilter" aria-label="Search invoices" class="table-filter-input" placeholder="Search invoices..." onkeyup="filterTable(this, 'invoiceTable')">
               </div>
             </div>
           </div>
@@ -1622,7 +1616,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search catalog SKUs..." onkeyup="filterTable(this, 'catalogTable')">
+                <input type="text" id="catalogFilterInput" name="catalogFilter" aria-label="Search catalog SKUs" class="table-filter-input" placeholder="Search catalog SKUs..." onkeyup="filterTable(this, 'catalogTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Adding New SKU to Enterprise Catalog...')">
                 <i class="fa-solid fa-plus"></i>
@@ -1765,7 +1759,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search users..." onkeyup="filterTable(this, 'userAccessTable')">
+                <input type="text" id="userAccessFilterInput" name="userAccessFilter" aria-label="Search users" class="table-filter-input" placeholder="Search users..." onkeyup="filterTable(this, 'userAccessTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Add User modal launched.')">
                 <i class="fa-solid fa-user-plus"></i>
@@ -1842,7 +1836,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search budgets..." onkeyup="filterTable(this, 'budgetTable')">
+                <input type="text" id="budgetFilterInput" name="budgetFilter" aria-label="Search budgets" class="table-filter-input" placeholder="Search budgets..." onkeyup="filterTable(this, 'budgetTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Adjusting Fiscal Spending Caps...')">
                 <i class="fa-solid fa-sliders"></i>
@@ -1910,7 +1904,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search KYC records..." onkeyup="filterTable(this, 'kycTable')">
+                <input type="text" id="kycFilterInput" name="kycFilter" aria-label="Search KYC records" class="table-filter-input" placeholder="Search KYC records..." onkeyup="filterTable(this, 'kycTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Onboard New Supplier KYC Wizard launched')">
                 <i class="fa-solid fa-user-check"></i>
@@ -1982,7 +1976,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search logistics hubs..." onkeyup="filterTable(this, 'logisticsTable')">
+                <input type="text" id="logisticsFilterInput" name="logisticsFilter" aria-label="Search logistics hubs" class="table-filter-input" placeholder="Search logistics hubs..." onkeyup="filterTable(this, 'logisticsTable')">
               </div>
             </div>
           </div>
@@ -2117,7 +2111,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search SOX controls..." onkeyup="filterTable(this, 'soxTable')">
+                <input type="text" id="soxFilterInput" name="soxFilter" aria-label="Search SOX controls" class="table-filter-input" placeholder="Search SOX controls..." onkeyup="filterTable(this, 'soxTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Generating Formal SOX 404 Audit Certificate...')">
                 <i class="fa-solid fa-stamp"></i>
@@ -2185,7 +2179,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search match tokens..." onkeyup="filterTable(this, 'threeWayMatchTable')">
+                <input type="text" id="threeWayMatchFilterInput" name="threeWayMatchFilter" aria-label="Search match tokens" class="table-filter-input" placeholder="Search match tokens..." onkeyup="filterTable(this, 'threeWayMatchTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Batch 3-way match reconciliation executed: 1,420 records processed.')">
                 <i class="fa-solid fa-bolt"></i>
@@ -2257,7 +2251,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search certificates..." onkeyup="filterTable(this, 'certificationsTable')">
+                <input type="text" id="certificationsFilterInput" name="certificationsFilter" aria-label="Search certificates" class="table-filter-input" placeholder="Search certificates..." onkeyup="filterTable(this, 'certificationsTable')">
               </div>
             </div>
           </div>
@@ -2377,7 +2371,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search tax filings..." onkeyup="filterTable(this, 'taxReportsTable')">
+                <input type="text" id="taxReportsFilterInput" name="taxReportsFilter" aria-label="Search tax filings" class="table-filter-input" placeholder="Search tax filings..." onkeyup="filterTable(this, 'taxReportsTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Exporting Statutory Customs Filing Dossier...')">
                 <i class="fa-solid fa-file-csv"></i>
@@ -2436,7 +2430,7 @@ function getViewSpecificContent(roleKey, viewId) {
             <div class="dash-card-controls">
               <div class="table-filter-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="table-filter-input" placeholder="Search anomaly alerts..." onkeyup="filterTable(this, 'fraudTable')">
+                <input type="text" id="fraudFilterInput" name="fraudFilter" aria-label="Search anomaly alerts" class="table-filter-input" placeholder="Search anomaly alerts..." onkeyup="filterTable(this, 'fraudTable')">
               </div>
               <button class="table-action-btn btn-primary-action" onclick="triggerMockAction('Deep Heuristic Fraud Scan Complete: 0 critical breaches.')">
                 <i class="fa-solid fa-shield-halved"></i>

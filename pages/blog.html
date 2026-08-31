@@ -299,10 +299,17 @@
                 <div class="input-group">
                   <input
                     type="text"
+                    id="blogSearchInput"
+                    name="blogSearch"
                     class="form-control"
                     placeholder="Search insights..."
+                    aria-label="Search insights"
                   />
-                  <button class="btn btn-primary" type="button">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    aria-label="Search articles"
+                  >
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </div>
@@ -354,8 +361,11 @@
                   <div class="mb-3">
                     <input
                       type="email"
+                      id="newsletterEmail"
+                      name="newsletterEmail"
                       class="form-control text-center"
                       placeholder="name@company.com"
+                      aria-label="Corporate email address for newsletter"
                       required
                     />
                   </div>

@@ -550,9 +550,9 @@
 
                 <form class="b2b-form">
                   <!-- Pass Type Selection -->
-                  <label class="form-label small fw-bold text-slate-800 mb-2"
-                    >Select Pass Category</label
-                  >
+                  <div class="form-label small fw-bold text-slate-800 mb-2"></div>
+                    Select Pass Category
+                  </div>
                   <div class="reg-pass-type-wrap">
                     <div class="reg-pass-option">
                       <input
@@ -594,6 +594,7 @@
                           type="text"
                           class="form-control custom-form-control bg-white letters-only"
                           id="regName"
+                          name="regName"
                           required
                           placeholder="e.g. Jane Doe"
                           maxlength="16"
@@ -615,6 +616,7 @@
                           type="email"
                           class="form-control custom-form-control bg-white"
                           id="regEmail"
+                          name="regEmail"
                           required
                           placeholder="jane@enterprise.com"
                         />
@@ -633,6 +635,7 @@
                           type="text"
                           class="form-control custom-form-control bg-white letters-only"
                           id="regCompany"
+                          name="regCompany"
                           required
                           placeholder="e.g. Acme Logistics UK"
                           pattern="[a-zA-Z\s]+"
@@ -653,6 +656,7 @@
                           type="text"
                           class="form-control custom-form-control bg-white letters-only"
                           id="regJobTitle"
+                          name="regJobTitle"
                           required
                           placeholder="e.g. Head of Procurement"
                           pattern="[a-zA-Z\s]+"
@@ -674,6 +678,7 @@
                         <select
                           class="form-select custom-form-control bg-white"
                           id="regEvent"
+                          name="regEvent"
                         >
                           <option value="summit-2026">
                             2026 UK Supply Chain Resilience Summit (Oct 12 -
@@ -698,6 +703,7 @@
                           class="form-check-input"
                           type="checkbox"
                           id="regWorkbook"
+                          name="regWorkbook"
                           checked
                         />
                         <label
