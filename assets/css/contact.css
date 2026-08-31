@@ -1,0 +1,59 @@
+/* Contact Cards Info */
+.contact-info-card {
+  border: 1px solid var(--b2b-border);
+  border-radius: 20px;
+  padding: 35px;
+  background: #ffffff;
+  transition: var(--transition-base);
+  height: 100%;
+}
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.04);
+  border-color: var(--b2b-primary-light);
+}
+.contact-info-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background-color: rgba(0, 71, 103, 0.05);
+  color: var(--b2b-primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* Map Wrapper */
+.map-embed-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--b2b-border);
+  height: 450px;
+}
+
+/* Support Helpdesk card */
+.helpdesk-directory-box {
+  border-radius: 16px;
+  background-color: var(--b2b-light);
+  border: 1px solid var(--b2b-border);
+}
+.helpdesk-directory-box hr {
+  border-top-color: var(--b2b-border);
+  opacity: 0.15;
+}
+
+/* Department Contacts List */
+.dept-item {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--b2b-border);
+}
+.dept-item:last-child {
+  border-bottom: none;
+}
+.dept-item h6 {
+  font-weight: 700;
+  color: var(--b2b-secondary);
+}

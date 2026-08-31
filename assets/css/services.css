@@ -1,0 +1,81 @@
+/* Feature Highlight Block */
+.service-feature-box {
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--b2b-border);
+  transition: var(--transition-base);
+}
+.service-feature-box:hover {
+  border-color: var(--b2b-primary-light);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.03);
+}
+
+/* Service Info Badge */
+.services-metric-badge {
+  background-color: var(--b2b-light);
+  border: 1px solid var(--b2b-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: var(--transition-base);
+}
+.services-metric-badge:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+/* Supplier Portal SRM Grid */
+.srm-feature-item {
+  padding-left: 25px;
+  position: relative;
+}
+.srm-feature-item::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: var(--b2b-accent);
+}
+
+/* Automated Invoicing Workflow Layout */
+.invoice-workflow-step {
+  border-radius: 16px;
+  background-color: var(--b2b-light);
+  position: relative;
+}
+.invoice-workflow-step .badge-step {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--b2b-secondary);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+}
+
+/* Pricing / Service Comparison Matrix Table */
+.pricing-matrix-table th {
+  background-color: var(--b2b-secondary) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 15px !important;
+}
+.pricing-matrix-table td {
+  padding: 15px !important;
+  border-bottom: 1px solid var(--b2b-border);
+  vertical-align: middle;
+}
+.pricing-matrix-table tr:hover td {
+  background-color: var(--b2b-light);
+}
+.pricing-check-icon {
+  color: var(--b2b-accent);
+  font-size: 1.15rem;
+}
+.pricing-cross-icon {
+  color: var(--b2b-muted);
+  font-size: 1rem;
+}

@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Stackly Platform</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome 6 Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Custom Theme Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- Header Common Component Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Section 1: Page Banner & Breadcrumbs (Standard Subpage Hero) -->
+      <section class="subpage-banner" id="section-contact-banner">
+        <div class="container text-center">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Contact Us
+              </li>
+            </ol>
+          </nav>
+          <h1 class="text-uppercase mt-3 text-white">Get in Touch with Us</h1>
+          <p class="lead mx-auto">
+            Have questions about setting up your vendor profile or integrating
+            our APIs? Let our procurement team assist you.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Contact Information Cards -->
+      <section id="section-contact-cards">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Card 1: Phone -->
+            <div class="col-lg-4 col-md-6">
+              <div class="contact-info-card text-center">
+                <div class="contact-info-icon mx-auto">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <h4 class="fw-bold text-dark h5 mb-2">Call Support</h4>
+                <p class="small text-slate-500 mb-3">
+                  Speak with our technical support or billing managers
+                  instantly.
+                </p>
+                <p class="fw-bold text-primary mb-0">+91 9876543210</p>
+              </div>
+            </div>
+            <!-- Card 2: Email -->
+            <div class="col-lg-4 col-md-6">
+              <div class="contact-info-card text-center">
+                <div
+                  class="contact-info-icon mx-auto text-success"
+                  style="background-color: rgba(16, 185, 129, 0.05)"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h4 class="fw-bold text-dark h5 mb-2">Email Inquiries</h4>
+                <p class="small text-slate-500 mb-3">
+                  Send onboarding logs or billing queries to our help desk.
+                </p>
+                <p class="fw-bold text-success mb-0">support@Stackly.co.in</p>
+              </div>
+            </div>
+            <!-- Card 3: Location -->
+            <div class="col-lg-4 col-md-6 mx-auto">
+              <div class="contact-info-card text-center">
+                <div
+                  class="contact-info-icon mx-auto text-warning"
+                  style="background-color: rgba(245, 158, 11, 0.05)"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h4 class="fw-bold text-dark h5 mb-2">Headquarters</h4>
+                <p class="small text-slate-500 mb-3">
+                  100 Wood Street, London, EC2V 7AN, United Kingdom
+                </p>
+                <p class="fw-bold text-warning mb-0">London, UK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Vendor Onboarding & RFQ Inquiry Form -->
+      <section id="section-contact-form" class="bg-light">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="section-title mb-4">
+                <span>Get Started</span>
+                <h2>Vendor Onboarding & General Support Form</h2>
+              </div>
+              <p class="text-slate-500 mb-4">
+                Whether you are a corporate buyer looking for a platform demo,
+                or a manufacturer hoping to join our vetted supplier directory,
+                fill out the form and our integration officers will guide you.
+              </p>
+              <ul class="list-unstyled text-slate-800 small">
+                <li class="mb-2">
+                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
+                  Onboarding checklists sent upon submission
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
+                  Custom integration blueprint designs
+                </li>
+                <li class="mb-2">
+                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
+                  Standard sandbox logins provided for testing
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="bg-white p-5 border rounded-4 shadow-sm">
+                <h4 class="fw-bold text-dark mb-4">Send Us a Message</h4>
+                <form class="b2b-form">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label
+                        for="contactName"
+                        class="form-label text-slate-500 small"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactName"
+                        required
+                        placeholder="e.g. John Doe"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <label
+                        for="companyName"
+                        class="form-label text-slate-500 small"
+                        >Company Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="companyName"
+                        required
+                        placeholder="e.g. Global Supplies"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label
+                        for="contactEmail"
+                        class="form-label text-slate-500 small"
+                        >Work Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="contactEmail"
+                        required
+                        placeholder="name@company.com"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label
+                        for="inquiryType"
+                        class="form-label text-slate-500 small"
+                        >Inquiry Subject</label
+                      >
+                      <select class="form-select" id="inquiryType">
+                        <option>Supplier Portal Onboarding</option>
+                        <option>Enterprise Buyer Demo</option>
+                        <option>ERP API Integration Help</option>
+                        <option>Billing & Accounts</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label
+                        for="messageText"
+                        class="form-label text-slate-500 small"
+                        >Details</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="messageText"
+                        rows="4"
+                        placeholder="Briefly describe how we can assist you..."
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Success alert box -->
+                  <div
+                    class="form-success-alert alert alert-success d-none mt-3 mb-0"
+                    role="alert"
+                  >
+                    <i class="fa-solid fa-circle-check me-2"></i>Thank you! Your
+                    message has been sent successfully.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: UK HQ Offices Map Embed Wrapper -->
+      <section id="section-contact-map" class="py-0">
+        <div class="map-embed-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.7486663246736!2d-0.09650058422960682!3d51.517823979636976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b00e84b80b7%3A0xe54e6faad1cb7c63!2s100%20Wood%20St%2C%20London%20EC2V%207AN%2C%20UK!5e0!3m2!1sen!2sin!4v1693240000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="UK Headquarters Location Map"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Section 5: Departmental Directory -->
+      <section id="section-contact-directory">
+        <div class="container">
+          <div class="section-title text-center">
+            <span>Reach Direct</span>
+            <h2>Departmental Directory</h2>
+          </div>
+          <div class="row g-4 mt-2">
+            <!-- Dept 1 -->
+            <div class="col-md-4">
+              <div class="dept-item">
+                <h6>Corporate Sales & Demos</h6>
+                <p class="small text-slate-500 mb-2">
+                  Connect to schedule enterprise trials, custom billing plans,
+                  and pricing reviews.
+                </p>
+                <span class="small fw-semibold text-primary"
+                  ><i class="fa-solid fa-envelope me-2"></i
+                  >sales@Stackly.co.in</span
+                >
+              </div>
+            </div>
+            <!-- Dept 2 -->
+            <div class="col-md-4">
+              <div class="dept-item">
+                <h6>Supplier Onboarding</h6>
+                <p class="small text-slate-500 mb-2">
+                  Ask questions regarding KYC document approvals, tax entries,
+                  or carbon audits.
+                </p>
+                <span class="small fw-semibold text-primary"
+                  ><i class="fa-solid fa-envelope me-2"></i
+                  >vendors@Stackly.co.in</span
+                >
+              </div>
+            </div>
+            <!-- Dept 3 -->
+            <div class="col-md-4">
+              <div class="dept-item">
+                <h6>Technical Integration Help</h6>
+                <p class="small text-slate-500 mb-2">
+                  Dedicated support for developer webhooks, REST API calls, and
+                  SAP connections.
+                </p>
+                <span class="small fw-semibold text-primary"
+                  ><i class="fa-solid fa-envelope me-2"></i
+                  >api-support@Stackly.co.in</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Support Ticket Helpdesk SLA -->
+      <section id="section-contact-sla" class="bg-light">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+              <img
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600&auto=format&fit=crop"
+                alt="Customer Support Center"
+                class="img-fluid rounded-4 shadow-lg w-100"
+              />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="section-title mb-4">
+                <span>Service Response SLAs</span>
+                <h2>Support Desk Guarantees</h2>
+              </div>
+              <p class="text-slate-500 mb-4">
+                We understand that procurement delays hurt manufacturing
+                outputs. Our support team enforces strict response time
+                guarantees based on ticket priority levels.
+              </p>
+              <div class="helpdesk-directory-box p-4 bg-white border">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="fw-bold small">Priority 1 (Platform Down)</span>
+                  <span class="badge bg-danger rounded-pill py-1 px-3"
+                    >Under 1 Hour</span
+                  >
+                </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="fw-bold small"
+                    >Priority 2 (RFQ / Bidding Delays)</span
+                  >
+                  <span
+                    class="badge bg-warning text-dark rounded-pill py-1 px-3"
+                    >Under 4 Hours</span
+                  >
+                </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-between">
+                  <span class="fw-bold small"
+                    >Priority 3 (General Settings / Inquiries)</span
+                  >
+                  <span class="badge bg-secondary rounded-pill py-1 px-3"
+                    >Under 24 Hours</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Frequently Asked Questions (FAQ short) -->
+      <section id="section-contact-faq">
+        <div class="container">
+          <div class="section-title text-center">
+            <span>FAQ</span>
+            <h2>Contact Related Inquiries</h2>
+          </div>
+          <div class="row justify-content-center mt-2">
+            <div class="col-lg-8">
+              <div class="accordion" id="contactFaqAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseOne"
+                      aria-expanded="false"
+                      aria-controls="cCollapseOne"
+                    >
+                      Where do I upload my supplier tax records?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingOne"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body text-slate-500 small">
+                      Log in to the Supplier Portal, navigate to "Company
+                      Settings", and open the "Compliance Logs" tab. You can
+                      drag and drop your VAT documents, corporate
+                      certifications, and insurance policies directly into the
+                      uploader.
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="cCollapseTwo"
+                    >
+                      Can I change my registered company currency?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingTwo"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body text-slate-500 small">
+                      Yes. Registered corporate buyers can change default
+                      transaction currencies under "Billing Preferences". The
+                      platform automatically updates and displays converted
+                      rates on active bidding boards.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Social Media Directory -->
+      <section id="section-contact-social" class="bg-light">
+        <div class="container text-center">
+          <div class="section-title mb-4">
+            <span>Stay Connected</span>
+            <h2>Our Social Channels</h2>
+          </div>
+          <p class="text-slate-500 mb-4">
+            Follow us on social media for corporate updates, integration
+            reports, and upcoming seminar announcements.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a
+              href="#"
+              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
+              ><i class="fa-brands fa-x-twitter me-2"></i>Twitter X</a
+            >
+            <a
+              href="#"
+              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
+              ><i class="fa-brands fa-linkedin-in me-2"></i>LinkedIn</a
+            >
+            <a
+              href="#"
+              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
+              ><i class="fa-brands fa-youtube me-2"></i>YouTube</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Emergency Sourcing Hotline -->
+      <section
+        class="contact-banner-section py-5 text-white"
+        id="section-contact-hotline"
+      >
+        <div class="container text-center">
+          <h3 class="fw-bold mb-2">Fulfillment Emergency?</h3>
+          <p class="mb-3 text-white-50">
+            Speak with our critical logistics dispatch teams immediately.
+            Available 24/7/365.
+          </p>
+          <span class="fs-4 fw-bold text-primary-light"
+            ><i class="fa-solid fa-phone me-2"></i>+91 9876543210</span
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Common Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5 JS Bundle CDN (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Theme Script -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+/* Spotlight Post */
+.blog-spotlight-card {
+  border: 1px solid var(--b2b-border);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: var(--transition-base);
+}
+.blog-spotlight-card:hover {
+  box-shadow: 0 2rem 4rem rgba(15, 23, 42, 0.08);
+}
+.spotlight-img-wrap {
+  height: 400px;
+  overflow: hidden;
+}
+.spotlight-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-base);
+}
+.blog-spotlight-card:hover .spotlight-img-wrap img {
+  transform: scale(1.02);
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+  border: 1px solid var(--b2b-border);
+  border-radius: 16px;
+  padding: 25px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+.widget-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.widget-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--b2b-primary);
+}
+.widget-list-categories a {
+  color: var(--b2b-slate-800);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--b2b-border);
+}
+.widget-list-categories a:hover {
+  color: var(--b2b-primary);
+  padding-left: 5px;
+}
+.widget-list-categories li:last-child a {
+  border-bottom: none;
+}
+
+/* Popular tags */
+.widget-tags-list a {
+  background-color: var(--b2b-light);
+  color: var(--b2b-slate-800);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 4px;
+  text-decoration: none;
+}
+.widget-tags-list a:hover {
+  background-color: var(--b2b-primary);
+  color: #ffffff;
+}
+
+/* Newsletter block */
+.newsletter-sidebar-card {
+  background: linear-gradient(
+    135deg,
+    var(--b2b-slate-800) 0%,
+    var(--b2b-dark) 100%
+  );
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Pagination Styles */
+.pagination-wrap .page-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 4px;
+  color: var(--b2b-slate-800);
+  border-color: var(--b2b-border);
+}
+.pagination-wrap .page-item.active .page-link {
+  background-color: var(--b2b-primary);
+  border-color: var(--b2b-primary);
+  color: white;
+}
+.pagination-wrap .page-link:hover {
+  background-color: rgba(0, 71, 103, 0.05);
+  color: var(--b2b-primary);
+}
