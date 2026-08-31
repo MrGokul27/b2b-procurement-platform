@@ -56,25 +56,62 @@
       <section id="section-events-featured">
         <div class="container">
           <div class="event-featured-card">
-            <div class="row g-0">
+            <div class="row g-0 align-items-stretch">
               <div class="col-lg-6">
-                <div
-                  style="
-                    height: 100%;
-                    min-height: 350px;
-                    background-image: url(&quot;https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop&quot;);
-                    background-size: cover;
-                    background-position: center;
-                  "
-                ></div>
+                <div class="event-featured-img-wrap">
+                  <img
+                    src="../assets/images/events/event-featured-img.webp"
+                    alt="2026 UK Supply Chain Resilience Summit"
+                    class="event-featured-img"
+                  />
+                  <div class="event-featured-overlay"></div>
+                  <div class="event-featured-tag-floating">
+                    <i class="fa-solid fa-bolt text-warning me-1"></i> Keynote
+                    Global Summit
+                  </div>
+                  <div class="event-featured-attendees">
+                    <div class="attendee-avatars">
+                      <img
+                        src="../assets/images/events/event-attendee-avatar-1.webp"
+                        alt="Attendee 1"
+                        class="attendee-avatar"
+                      />
+                      <img
+                        src="../assets/images/events/event-attendee-avatar-2.webp"
+                        alt="Attendee 2"
+                        class="attendee-avatar"
+                      />
+                      <img
+                        src="../assets/images/events/event-attendee-avatar-3.webp"
+                        alt="Attendee 3"
+                        class="attendee-avatar"
+                      />
+                      <img
+                        src="../assets/images/events/event-attendee-avatar-4.webp"
+                        alt="Attendee 4"
+                        class="attendee-avatar"
+                      />
+                    </div>
+                    <div class="small text-white fw-semibold">
+                      <span class="text-info fw-bold">450+</span> Procurement
+                      Leaders Registered
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <span class="event-badge-live d-inline-block mb-3"
-                    ><i class="fa-solid fa-signal me-2"></i>Upcoming Live
-                    Webcast</span
-                  >
-                  <h2 class="fw-bold mb-3">
+              <div class="col-lg-6 d-flex align-items-center">
+                <div class="p-4 p-md-5 w-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="event-badge-live">
+                      <span class="live-pulse-dot"></span>Upcoming Live
+                      Broadcast
+                    </span>
+                    <span
+                      class="badge bg-light text-primary border fw-bold px-3 py-2 rounded-pill"
+                      >CPD 4.5 Credits</span
+                    >
+                  </div>
+                  <h2 class="fw-bold mb-3 text-dark">
                     2026 UK Supply Chain Resilience Summit
                   </h2>
                   <p class="text-slate-500 mb-4">
@@ -83,25 +120,68 @@
                     tariff updates, and carbon offset reporting compliance
                     benchmarks.
                   </p>
-                  <div class="row g-3 mb-4 small text-slate-800">
-                    <div class="col-6">
-                      <i class="fa-solid fa-calendar text-primary me-2"></i
-                      >October 12, 2026
+                  <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                      <div class="featured-meta-pill">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div>
+                          <small class="text-slate-500 d-block">Date</small>
+                          <strong class="text-dark small"
+                            >October 12, 2026</strong
+                          >
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-6">
-                      <i class="fa-solid fa-clock text-primary me-2"></i>10:00
-                      AM - 04:00 PM (GMT)
+                    <div class="col-sm-6">
+                      <div class="featured-meta-pill">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                          <small class="text-slate-500 d-block">Schedule</small>
+                          <strong class="text-dark small"
+                            >10:00 AM - 04:00 PM GMT</strong
+                          >
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-12">
-                      <i class="fa-solid fa-location-dot text-primary me-2"></i
-                      >Virtual Broadcast &amp; 100 Wood St, London, UK
+                    <div class="col-sm-6">
+                      <div class="featured-meta-pill">
+                        <i class="fa-solid fa-video"></i>
+                        <div>
+                          <small class="text-slate-500 d-block">Format</small>
+                          <strong class="text-dark small"
+                            >Hybrid &amp; 4K Stream</strong
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="featured-meta-pill">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                          <small class="text-slate-500 d-block"
+                            >Physical Venue</small
+                          >
+                          <strong class="text-dark small"
+                            >100 Wood St, London</strong
+                          >
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-pill px-4 py-3 shadow"
-                    >Register For Summit</a
-                  >
+                  <div class="d-flex flex-wrap align-items-center gap-3">
+                    <a
+                      href="#"
+                      class="btn btn-primary rounded-pill px-4 py-3 shadow btn-shine fw-bold"
+                    >
+                      <i class="fa-solid fa-ticket me-2"></i>Register For Summit
+                    </a>
+                    <a
+                      href="#"
+                      class="btn btn-outline-primary rounded-pill px-4 py-3 fw-bold"
+                    >
+                      <i class="fa-regular fa-file-pdf me-2"></i>View Schedule
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,84 +195,241 @@
           <div class="section-title text-center">
             <span>Calendar Schedule</span>
             <h2>More Upcoming Sessions</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 620px">
+              Explore interactive webinars, closed-door executive roundtables,
+              and premier supplier matchmaking expos designed for
+              high-performing procurement teams.
+            </p>
           </div>
+
           <div class="row g-4 mt-2">
             <!-- Event 1 -->
             <div class="col-lg-4 col-md-6">
               <div class="event-grid-card">
-                <div class="event-card-img-wrap position-relative">
+                <div class="event-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop"
-                    alt="Webinar Image"
+                    src="../assets/images/events/event-card-img-wrap-1.webp"
+                    alt="SAP Integration Best Practices"
                   />
-                  <span class="event-date-badge">Nov 18</span>
+                  <div class="event-card-img-overlay"></div>
+                  <div class="event-date-badge">
+                    <span class="day">18</span>
+                    <span>NOV</span>
+                  </div>
+                  <button
+                    class="event-bookmark-btn"
+                    title="Add to Calendar"
+                    type="button"
+                  >
+                    <i class="fa-regular fa-calendar-plus"></i>
+                  </button>
                 </div>
-                <div class="p-4">
-                  <span class="badge bg-primary mb-2">Webinar</span>
-                  <h4 class="fw-bold h5 mb-3">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="badge bg-primary px-3 py-2 rounded-pill"
+                      >Developer Webinar</span
+                    >
+                    <small class="text-slate-500"
+                      ><i class="fa-regular fa-clock me-1"></i>90 Mins</small
+                    >
+                  </div>
+                  <h4 class="fw-bold h5 mb-2 text-dark">
                     SAP Integration Best Practices
                   </h4>
-                  <p class="small text-slate-500 mb-4">
+                  <p class="small text-slate-500 mb-3 flex-grow-1">
                     A developer-led walkthrough showing how to map API webhooks
-                    with corporate accounting tables.
+                    with corporate accounting tables and ERP purchase orders.
                   </p>
-                  <a
-                    href="#"
-                    class="text-primary text-decoration-none fw-bold small"
-                    >Reserve Seat <i class="fa-solid fa-arrow-right ms-1"></i
-                  ></a>
+                  <div class="mb-3">
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-code me-1"></i>REST APIs</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-server me-1"></i>SAP ERP</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-shield-halved me-1"></i>OAuth
+                      2.0</span
+                    >
+                  </div>
+                  <div
+                    class="border-top pt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="../assets/images/events/event-card-img-wrap-person-1.webp"
+                        alt="Elena Rostova"
+                        class="rounded-circle"
+                        width="30"
+                        height="30"
+                        style="object-fit: cover"
+                      />
+                      <span class="small fw-semibold text-slate-800"
+                        >Elena Rostova</span
+                      >
+                    </div>
+                    <a href="#" class="event-card-action-link"
+                      >Reserve Seat <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
+
             <!-- Event 2 -->
             <div class="col-lg-4 col-md-6">
               <div class="event-grid-card">
-                <div class="event-card-img-wrap position-relative">
+                <div class="event-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=600&auto=format&fit=crop"
-                    alt="Roundtable Image"
+                    src="../assets/images/events/event-card-img-wrap-2.webp"
+                    alt="ESG Compliance & Sourcing"
                   />
-                  <span class="event-date-badge">Dec 05</span>
+                  <div class="event-card-img-overlay"></div>
+                  <div class="event-date-badge">
+                    <span class="day">05</span>
+                    <span>DEC</span>
+                  </div>
+                  <button
+                    class="event-bookmark-btn"
+                    title="Add to Calendar"
+                    type="button"
+                  >
+                    <i class="fa-regular fa-calendar-plus"></i>
+                  </button>
                 </div>
-                <div class="p-4">
-                  <span class="badge bg-success mb-2">Roundtable</span>
-                  <h4 class="fw-bold h5 mb-3">ESG Compliance &amp; Sourcing</h4>
-                  <p class="small text-slate-500 mb-4">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span class="badge bg-success px-3 py-2 rounded-pill"
+                      >Executive Roundtable</span
+                    >
+                    <small class="text-slate-500"
+                      ><i class="fa-regular fa-clock me-1"></i>60 Mins</small
+                    >
+                  </div>
+                  <h4 class="fw-bold h5 mb-2 text-dark">
+                    ESG Compliance &amp; Sourcing
+                  </h4>
+                  <p class="small text-slate-500 mb-3 flex-grow-1">
                     A panel discussion outlining carbon metrics verification
-                    guidelines for EU and UK import operators.
+                    guidelines, CBAM regulations, and Scope 3 reporting for EU
+                    &amp; UK buyers.
                   </p>
-                  <a
-                    href="#"
-                    class="text-primary text-decoration-none fw-bold small"
-                    >Reserve Seat <i class="fa-solid fa-arrow-right ms-1"></i
-                  ></a>
+                  <div class="mb-3">
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-leaf me-1"></i>Scope 3 GHG</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-scale-balanced me-1"></i>CBAM
+                      Law</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-chart-pie me-1"></i>ESG
+                      Audits</span
+                    >
+                  </div>
+                  <div
+                    class="border-top pt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="../assets/images/events/event-card-img-wrap-person-2.webp"
+                        alt="Sarah Jenkins"
+                        class="rounded-circle"
+                        width="30"
+                        height="30"
+                        style="object-fit: cover"
+                      />
+                      <span class="small fw-semibold text-slate-800"
+                        >Sarah Jenkins</span
+                      >
+                    </div>
+                    <a href="#" class="event-card-action-link"
+                      >Reserve Seat <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
+
             <!-- Event 3 -->
             <div class="col-lg-4 col-md-6 mx-auto">
               <div class="event-grid-card">
-                <div class="event-card-img-wrap position-relative">
+                <div class="event-card-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop"
-                    alt="Expo Image"
+                    src="../assets/images/events/event-card-img-wrap-3.webp"
+                    alt="Supplier Portal Network Day"
                   />
-                  <span class="event-date-badge">Jan 22</span>
-                </div>
-                <div class="p-4">
-                  <span class="badge bg-warning text-dark mb-2"
-                    >Supplier Expo</span
+                  <div class="event-card-img-overlay"></div>
+                  <div class="event-date-badge">
+                    <span class="day">22</span>
+                    <span>JAN</span>
+                  </div>
+                  <button
+                    class="event-bookmark-btn"
+                    title="Add to Calendar"
+                    type="button"
                   >
-                  <h4 class="fw-bold h5 mb-3">Supplier Portal Network Day</h4>
-                  <p class="small text-slate-500 mb-4">
-                    Register to match with corporate buyers looking for verified
-                    raw material suppliers in the UK.
+                    <i class="fa-regular fa-calendar-plus"></i>
+                  </button>
+                </div>
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <span
+                      class="badge bg-warning text-dark px-3 py-2 rounded-pill"
+                      >Supplier Expo</span
+                    >
+                    <small class="text-slate-500"
+                      ><i class="fa-regular fa-clock me-1"></i>Full Day</small
+                    >
+                  </div>
+                  <h4 class="fw-bold h5 mb-2 text-dark">
+                    Supplier Portal Network Day
+                  </h4>
+                  <p class="small text-slate-500 mb-3 flex-grow-1">
+                    Direct virtual matchmaking connecting enterprise procurement
+                    heads with 300+ pre-vetted raw material and logistics
+                    suppliers.
                   </p>
-                  <a
-                    href="#"
-                    class="text-primary text-decoration-none fw-bold small"
-                    >Reserve Seat <i class="fa-solid fa-arrow-right ms-1"></i
-                  ></a>
+                  <div class="mb-3">
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-handshake me-1"></i
+                      >Matchmaking</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-certificate me-1"></i>ISO
+                      Vetting</span
+                    >
+                    <span class="event-topic-tag"
+                      ><i class="fa-solid fa-truck-fast me-1"></i>Freight
+                      3PL</span
+                    >
+                  </div>
+                  <div
+                    class="border-top pt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <img
+                        src="../assets/images/events/event-card-img-wrap-person-3.webp"
+                        alt="Thomas Vance"
+                        class="rounded-circle"
+                        width="30"
+                        height="30"
+                        style="object-fit: cover"
+                      />
+                      <span class="small fw-semibold text-slate-800"
+                        >Thomas Vance</span
+                      >
+                    </div>
+                    <a href="#" class="event-card-action-link"
+                      >Reserve Seat <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -206,89 +443,291 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
               <div class="section-title mb-4">
-                <span>Register Free</span>
-                <h2>Secure Event Pass</h2>
+                <span>Free Delegate Registration</span>
+                <h2>Secure Your Event Pass</h2>
               </div>
               <p class="text-slate-500 mb-4">
-                All webinars and virtual panel discussions are hosted live and
-                recorded. Provide details below to receive calendar credentials
-                and workbook links via email.
+                All webinars, keynote summits, and virtual panel discussions are
+                hosted live with interactive polling and real-time audience
+                Q&amp;A. Register below to receive calendar credentials and
+                workbook links.
               </p>
-              <div class="d-flex align-items-center gap-3">
-                <i class="fa-solid fa-circle-info text-primary fs-3"></i>
-                <p class="small text-slate-500 mb-0">
-                  Recordings and whitepapers are emailed automatically to all
-                  registered delegates 24h after the event closes.
-                </p>
+
+              <!-- Benefit Highlights -->
+              <div class="d-flex flex-column gap-3 mb-4">
+                <div class="event-reg-benefit-item">
+                  <div class="benefit-icon-box">
+                    <i class="fa-solid fa-calendar-check"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">
+                      Instant 1-Click Calendar Sync
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Automatic .ics invite generation for Microsoft Outlook,
+                      Google Calendar, and Apple iCal.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="event-reg-benefit-item">
+                  <div class="benefit-icon-box">
+                    <i class="fa-solid fa-comments"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">
+                      Direct Panelist Q&amp;A Access
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Submit live questions to keynote speakers and join
+                      post-session breakout roundtables.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="event-reg-benefit-item">
+                  <div class="benefit-icon-box">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">
+                      4K Recording &amp; Benchmark Slides
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Receive high-definition on-demand video access and
+                      downloadable presentation PDFs within 24h.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="event-reg-benefit-item">
+                  <div class="benefit-icon-box">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-dark mb-1">
+                      Verified CPD / CPE Attendance Certificate
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Earn accredited continuous professional development hours
+                      for each completed summit session.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 bg-light rounded-4 border d-flex align-items-center gap-3"
+              >
+                <i class="fa-solid fa-shield-check text-success fs-3"></i>
+                <div class="small text-slate-500">
+                  <strong class="text-dark d-block"
+                    >Enterprise Privacy Standard</strong
+                  >
+                  Your corporate details are protected under GDPR &amp; ISO
+                  27001 data security compliance.
+                </div>
               </div>
             </div>
+
             <div class="col-lg-6">
-              <div class="bg-light p-5 border rounded-4">
-                <h4 class="fw-bold text-dark mb-4">Register For Session</h4>
+              <div class="reg-form-card">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <div>
+                    <h4 class="fw-bold text-dark mb-1">Register For Session</h4>
+                    <p class="small text-slate-500 mb-0">
+                      Instant confirmation sent to your corporate email
+                    </p>
+                  </div>
+                  <span
+                    class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill fw-bold small"
+                  >
+                    <i class="fa-solid fa-bolt me-1"></i>Instant Pass
+                  </span>
+                </div>
+
                 <form class="b2b-form">
+                  <!-- Pass Type Selection -->
+                  <label class="form-label small fw-bold text-slate-800 mb-2"
+                    >Select Pass Category</label
+                  >
+                  <div class="reg-pass-type-wrap">
+                    <div class="reg-pass-option">
+                      <input
+                        type="radio"
+                        id="passStandard"
+                        name="passType"
+                        value="standard"
+                        checked
+                      />
+                      <label for="passStandard" class="reg-pass-label">
+                        <strong>Virtual Stream</strong>
+                        <small>Free Access</small>
+                      </label>
+                    </div>
+                    <div class="reg-pass-option">
+                      <input
+                        type="radio"
+                        id="passExecutive"
+                        name="passType"
+                        value="executive"
+                      />
+                      <label for="passExecutive" class="reg-pass-label">
+                        <strong>VIP Interactive</strong>
+                        <small>Includes Breakouts</small>
+                      </label>
+                    </div>
+                  </div>
+
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <label
                         for="regName"
-                        class="form-label small text-slate-500"
-                        >Name</label
+                        class="form-label small fw-bold text-slate-800"
+                        >Full Name</label
                       >
-                      <input
-                        type="text"
-                        class="form-control bg-white"
-                        id="regName"
-                        required
-                        placeholder="e.g. Jane Doe"
-                      />
+                      <div class="custom-input-group">
+                        <i class="fa-regular fa-user custom-input-icon"></i>
+                        <input
+                          type="text"
+                          class="form-control custom-form-control bg-white"
+                          id="regName"
+                          required
+                          placeholder="e.g. Jane Doe"
+                        />
+                      </div>
                     </div>
+
                     <div class="col-sm-6">
                       <label
                         for="regEmail"
-                        class="form-label small text-slate-500"
-                        >Work Email</label
+                        class="form-label small fw-bold text-slate-800"
+                        >Corporate Work Email</label
                       >
-                      <input
-                        type="email"
-                        class="form-control bg-white"
-                        id="regEmail"
-                        required
-                        placeholder="name@company.com"
-                      />
+                      <div class="custom-input-group">
+                        <i class="fa-regular fa-envelope custom-input-icon"></i>
+                        <input
+                          type="email"
+                          class="form-control custom-form-control bg-white"
+                          id="regEmail"
+                          required
+                          placeholder="jane@enterprise.com"
+                        />
+                      </div>
                     </div>
+
+                    <div class="col-sm-6">
+                      <label
+                        for="regCompany"
+                        class="form-label small fw-bold text-slate-800"
+                        >Company Name</label
+                      >
+                      <div class="custom-input-group">
+                        <i class="fa-regular fa-building custom-input-icon"></i>
+                        <input
+                          type="text"
+                          class="form-control custom-form-control bg-white"
+                          id="regCompany"
+                          required
+                          placeholder="e.g. Acme Logistics UK"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label
+                        for="regJobTitle"
+                        class="form-label small fw-bold text-slate-800"
+                        >Job Title / Role</label
+                      >
+                      <div class="custom-input-group">
+                        <i class="fa-solid fa-briefcase custom-input-icon"></i>
+                        <input
+                          type="text"
+                          class="form-control custom-form-control bg-white"
+                          id="regJobTitle"
+                          required
+                          placeholder="e.g. Head of Procurement"
+                        />
+                      </div>
+                    </div>
+
                     <div class="col-12">
                       <label
                         for="regEvent"
-                        class="form-label small text-slate-500"
-                        >Select Event</label
+                        class="form-label small fw-bold text-slate-800"
+                        >Select Event Session</label
                       >
-                      <select class="form-select bg-white" id="regEvent">
-                        <option>
-                          2026 UK Supply Resiliance Summit (London)
-                        </option>
-                        <option>
-                          SAP Integration Best Practices (Webinar)
-                        </option>
-                        <option>
-                          ESG Compliance &amp; Sourcing (Roundtable)
-                        </option>
-                        <option>Supplier Portal Network Day (London)</option>
-                      </select>
+                      <div class="custom-input-group">
+                        <i
+                          class="fa-regular fa-calendar-check custom-input-icon"
+                        ></i>
+                        <select
+                          class="form-select custom-form-control bg-white"
+                          id="regEvent"
+                        >
+                          <option value="summit-2026">
+                            2026 UK Supply Chain Resilience Summit (Oct 12 -
+                            Hybrid)
+                          </option>
+                          <option value="sap-webinar">
+                            SAP Integration Best Practices (Nov 18 - Webinar)
+                          </option>
+                          <option value="esg-roundtable">
+                            ESG Compliance &amp; Sourcing (Dec 05 - Roundtable)
+                          </option>
+                          <option value="supplier-expo">
+                            Supplier Portal Network Day (Jan 22 - Expo)
+                          </option>
+                        </select>
+                      </div>
                     </div>
+
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="regWorkbook"
+                          checked
+                        />
+                        <label
+                          class="form-check-label small text-slate-500"
+                          for="regWorkbook"
+                        >
+                          Email me summit slide decks, whitepapers, and future
+                          calendar announcements.
+                        </label>
+                      </div>
+                    </div>
+
                     <div class="col-12">
                       <button
                         type="submit"
-                        class="btn btn-primary w-100 py-3 fw-bold rounded-pill"
+                        class="btn btn-primary w-100 py-3 fw-bold rounded-pill btn-shine shadow-sm"
                       >
-                        Submit Registration
+                        <i class="fa-solid fa-paper-plane me-2"></i>Complete
+                        Free Registration
                       </button>
                     </div>
                   </div>
+
                   <div
                     class="form-success-alert alert alert-success d-none mt-3 mb-0"
                     role="alert"
                   >
-                    <i class="fa-solid fa-circle-check me-2"></i>Registration
-                    Confirmed! Calendar invitation sent.
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-circle-check fs-4"></i>
+                      <div>
+                        <strong>Registration Confirmed!</strong>
+                        <div class="small">
+                          We've dispatched your digital pass and calendar invite
+                          to your inbox.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -301,68 +740,140 @@
       <section id="section-events-speakers" class="bg-light">
         <div class="container">
           <div class="section-title text-center">
-            <span>Sourcing Experts</span>
+            <span>Sourcing Experts &amp; Thought Leaders</span>
             <h2>Featured Guest Panelists</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 600px">
+              Hear practical insights from supply chain executives, ERP
+              integration leads, and regulatory compliance specialists.
+            </p>
           </div>
+
           <div class="row g-4 mt-2">
             <!-- Speaker 1 -->
-            <div class="col-md-3 col-6">
-              <div class="speaker-profile-box">
+            <div class="col-lg-3 col-sm-6">
+              <div class="speaker-card">
                 <div class="speaker-avatar-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop"
-                    alt="Speaker Sarah"
+                    src="../assets/images/events/event-speaker-avatar-wrap-1.webp"
+                    alt="Sarah Jenkins"
                   />
                 </div>
+                <span class="speaker-role-badge">Keynote Speaker</span>
                 <h5 class="fw-bold h6 mb-1 text-dark">Sarah Jenkins</h5>
                 <p class="small text-slate-500 mb-0">
                   Senior Supply Analyst, Stackly
                 </p>
+                <div class="speaker-topic-pill">
+                  <i class="fa-solid fa-leaf text-success me-1"></i> ESG &amp;
+                  Scope 3 Auditing
+                </div>
+                <div class="speaker-social-links">
+                  <a href="#" class="speaker-social-btn" title="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Twitter / X"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Email"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
+
             <!-- Speaker 2 -->
-            <div class="col-md-3 col-6">
-              <div class="speaker-profile-box">
+            <div class="col-lg-3 col-sm-6">
+              <div class="speaker-card">
                 <div class="speaker-avatar-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&auto=format&fit=crop"
-                    alt="Speaker Thomas"
+                    src="../assets/images/events/event-speaker-avatar-wrap-2.webp"
+                    alt="Thomas Vance"
                   />
                 </div>
+                <span class="speaker-role-badge">Summit Host</span>
                 <h5 class="fw-bold h6 mb-1 text-dark">Thomas Vance</h5>
                 <p class="small text-slate-500 mb-0">
                   Founder &amp; CEO, Stackly
                 </p>
+                <div class="speaker-topic-pill">
+                  <i class="fa-solid fa-chart-line text-primary me-1"></i>
+                  E-Procurement Future
+                </div>
+                <div class="speaker-social-links">
+                  <a href="#" class="speaker-social-btn" title="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Twitter / X"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Email"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
+
             <!-- Speaker 3 -->
-            <div class="col-md-3 col-6">
-              <div class="speaker-profile-box">
+            <div class="col-lg-3 col-sm-6">
+              <div class="speaker-card">
                 <div class="speaker-avatar-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop"
-                    alt="Speaker Elena"
+                    src="../assets/images/events/event-speaker-avatar-wrap-3.webp"
+                    alt="Elena Rostova"
                   />
                 </div>
+                <span class="speaker-role-badge">Tech Architect</span>
                 <h5 class="fw-bold h6 mb-1 text-dark">Elena Rostova</h5>
                 <p class="small text-slate-500 mb-0">
                   CTO &amp; Integration Lead
                 </p>
+                <div class="speaker-topic-pill">
+                  <i class="fa-solid fa-network-wired text-info me-1"></i> SAP
+                  &amp; Webhook APIs
+                </div>
+                <div class="speaker-social-links">
+                  <a href="#" class="speaker-social-btn" title="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Twitter / X"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Email"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
+
             <!-- Speaker 4 -->
-            <div class="col-md-3 col-6">
-              <div class="speaker-profile-box">
+            <div class="col-lg-3 col-sm-6">
+              <div class="speaker-card">
                 <div class="speaker-avatar-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=300&auto=format&fit=crop"
-                    alt="Speaker Jonathan"
+                    src="../assets/images/events/event-speaker-avatar-wrap-4.webp"
+                    alt="Jonathan Fletcher"
                   />
                 </div>
+                <span class="speaker-role-badge">Panel Moderator</span>
                 <h5 class="fw-bold h6 mb-1 text-dark">Jonathan Fletcher</h5>
                 <p class="small text-slate-500 mb-0">
-                  COO &amp; Logistics Expert
+                  COO &amp; Logistics Director
                 </p>
+                <div class="speaker-topic-pill">
+                  <i class="fa-solid fa-truck-ramp-box text-warning me-1"></i>
+                  Freight &amp; Port Delays
+                </div>
+                <div class="speaker-social-links">
+                  <a href="#" class="speaker-social-btn" title="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Twitter / X"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" class="speaker-social-btn" title="Email"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
@@ -430,34 +941,94 @@
       <!-- Section 7: Event Sponsors & Partners Logo Grid -->
       <section id="section-events-sponsors" class="bg-light py-5">
         <div class="container text-center">
-          <p
-            class="text-uppercase text-slate-500 small fw-bold tracking-widest mb-4"
-          >
-            Official Seminar Hosts &amp; Sponsors
-          </p>
-          <div
-            class="row align-items-center justify-content-center g-4 partner-logo-grid"
-          >
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=200&auto=format&fit=crop"
-                alt="Sponsor Logo 1"
-                class="img-fluid grayscale"
-              />
+          <div class="sponsor-tier-heading">
+            Official Summit Partners &amp; Industry Alliances
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Sponsor 1 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-brands fa-microsoft"></i>
+                  <span>Azure Cloud</span>
+                </div>
+                <span class="sponsor-type-label">Strategic Cloud Sponsor</span>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1614036417651-efe5912149d8?q=80&w=200&auto=format&fit=crop"
-                alt="Sponsor Logo 2"
-                class="img-fluid grayscale"
-              />
+
+            <!-- Sponsor 2 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-solid fa-server"></i>
+                  <span>SAP Connect</span>
+                </div>
+                <span class="sponsor-type-label">ERP Integration Lead</span>
+              </div>
             </div>
-            <div class="col-md-2 col-4">
-              <img
-                src="https://images.unsplash.com/photo-1618005198143-e5283b519a7f?q=80&w=200&auto=format&fit=crop"
-                alt="Sponsor Logo 3"
-                class="img-fluid grayscale"
-              />
+
+            <!-- Sponsor 3 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-solid fa-ship"></i>
+                  <span>Logistics UK</span>
+                </div>
+                <span class="sponsor-type-label">Freight Transport Ally</span>
+              </div>
+            </div>
+
+            <!-- Sponsor 4 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-solid fa-leaf"></i>
+                  <span>EcoVadis</span>
+                </div>
+                <span class="sponsor-type-label">ESG Benchmark Sponsor</span>
+              </div>
+            </div>
+
+            <!-- Sponsor 5 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>ProcureSafe</span>
+                </div>
+                <span class="sponsor-type-label">ISO Security Partner</span>
+              </div>
+            </div>
+
+            <!-- Sponsor 6 -->
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="sponsor-partner-card">
+                <div class="sponsor-logo-box">
+                  <i class="fa-brands fa-oracle"></i>
+                  <span>Oracle SCM</span>
+                </div>
+                <span class="sponsor-type-label">Global Tech Sponsor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sponsor Mini CTA -->
+          <div class="mt-4 pt-2">
+            <div
+              class="sponsor-cta-banner d-inline-flex flex-wrap align-items-center justify-content-center gap-3"
+            >
+              <span class="small fw-semibold text-slate-800">
+                <i class="fa-solid fa-bullhorn text-primary me-2"></i>Interested
+                in showcasing your solution to 1,000+ sourcing decision-makers?
+              </span>
+              <a
+                href="#"
+                class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold"
+              >
+                Become an Event Sponsor
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -467,38 +1038,245 @@
       <section id="section-events-faq">
         <div class="container">
           <div class="section-title text-center">
-            <span>FAQ</span>
-            <h2>Seminar Event Inquiries</h2>
+            <span>Frequently Asked Questions</span>
+            <h2>Seminar &amp; Summit Inquiries</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 600px">
+              Find quick answers regarding registration credentials, virtual
+              broadcast access, slide downloads, and CPD certifications.
+            </p>
           </div>
-          <div class="row justify-content-center mt-2">
+
+          <div class="row g-4 align-items-start mt-2">
             <div class="col-lg-8">
               <div class="accordion" id="eventFaqAccordion">
-                <div class="accordion-item shadow-sm">
+                <!-- FAQ 1 -->
+                <div class="accordion-item event-faq-item">
                   <h2 class="accordion-header" id="eHeadingOne">
                     <button
-                      class="accordion-button collapsed"
+                      class="accordion-button event-faq-button"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#eCollapseOne"
-                      aria-expanded="false"
+                      aria-expanded="true"
                       aria-controls="eCollapseOne"
                     >
-                      Are virtual passes free?
+                      <span
+                        >Are virtual summit passes and webinar sessions
+                        completely free to attend?</span
+                      >
                     </button>
                   </h2>
                   <div
                     id="eCollapseOne"
-                    class="accordion-collapse collapse"
+                    class="accordion-collapse collapse show"
                     aria-labelledby="eHeadingOne"
                     data-bs-parent="#eventFaqAccordion"
                   >
-                    <div class="accordion-body text-slate-500 small">
-                      Yes. All virtual broadcast keys, webinars, and live
-                      roundtable streams are completely free of charge to
-                      registered buyers and suppliers on the Stackly platform.
+                    <div class="accordion-body event-faq-body">
+                      Yes. All virtual broadcast keys, developer webinars, and
+                      live roundtable streams are completely free of charge for
+                      registered buyers, procurement directors, and verified
+                      suppliers on the Stackly platform.
                     </div>
                   </div>
                 </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item event-faq-item">
+                  <h2 class="accordion-header" id="eHeadingTwo">
+                    <button
+                      class="accordion-button event-faq-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#eCollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="eCollapseTwo"
+                    >
+                      <span
+                        >How and when do I receive my virtual broadcast join
+                        credentials?</span
+                      >
+                    </button>
+                  </h2>
+                  <div
+                    id="eCollapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="eHeadingTwo"
+                    data-bs-parent="#eventFaqAccordion"
+                  >
+                    <div class="accordion-body event-faq-body">
+                      Immediately upon submitting the registration form, an
+                      automated confirmation email with a unique join URL and a
+                      calendar attachment (.ics) will be dispatched to your
+                      corporate inbox. A reminder with the direct room access
+                      token is also emailed 1 hour prior to broadcast.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item event-faq-item">
+                  <h2 class="accordion-header" id="eHeadingThree">
+                    <button
+                      class="accordion-button event-faq-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#eCollapseThree"
+                      aria-expanded="false"
+                      aria-controls="eCollapseThree"
+                    >
+                      <span
+                        >Will recorded sessions and presentation slide decks be
+                        shared afterward?</span
+                      >
+                    </button>
+                  </h2>
+                  <div
+                    id="eCollapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="eHeadingThree"
+                    data-bs-parent="#eventFaqAccordion"
+                  >
+                    <div class="accordion-body event-faq-body">
+                      Yes! Every registered delegate receives full on-demand
+                      access to the 4K recording, speaker slidedecks (PDF), and
+                      whitepaper executive summaries within 24 hours following
+                      session completion.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item event-faq-item">
+                  <h2 class="accordion-header" id="eHeadingFour">
+                    <button
+                      class="accordion-button event-faq-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#eCollapseFour"
+                      aria-expanded="false"
+                      aria-controls="eCollapseFour"
+                    >
+                      <span
+                        >Can multiple colleagues from our organization register
+                        simultaneously?</span
+                      >
+                    </button>
+                  </h2>
+                  <div
+                    id="eCollapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="eHeadingFour"
+                    data-bs-parent="#eventFaqAccordion"
+                  >
+                    <div class="accordion-body event-faq-body">
+                      Yes, there is no limit on team attendees. Colleagues can
+                      register individually using their corporate email
+                      addresses, or enterprise teams can contact our events
+                      concierge team for bulk departmental pass provisioning.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item event-faq-item">
+                  <h2 class="accordion-header" id="eHeadingFive">
+                    <button
+                      class="accordion-button event-faq-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#eCollapseFive"
+                      aria-expanded="false"
+                      aria-controls="eCollapseFive"
+                    >
+                      <span
+                        >How can attendees ask questions during the live keynote
+                        and panel sessions?</span
+                      >
+                    </button>
+                  </h2>
+                  <div
+                    id="eCollapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="eHeadingFive"
+                    data-bs-parent="#eventFaqAccordion"
+                  >
+                    <div class="accordion-body event-faq-body">
+                      During the live stream, our interactive auditorium
+                      interface features a dedicated Q&amp;A tab with upvoting.
+                      The session moderator presents the most voted questions to
+                      the panelists in real-time.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="accordion-item event-faq-item">
+                  <h2 class="accordion-header" id="eHeadingSix">
+                    <button
+                      class="accordion-button event-faq-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#eCollapseSix"
+                      aria-expanded="false"
+                      aria-controls="eCollapseSix"
+                    >
+                      <span
+                        >Do Stackly summits provide CPD / CPE accreditation
+                        certificates?</span
+                      >
+                    </button>
+                  </h2>
+                  <div
+                    id="eCollapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="eHeadingSix"
+                    data-bs-parent="#eventFaqAccordion"
+                  >
+                    <div class="accordion-body event-faq-body">
+                      Yes, verified attendees who participate in our major
+                      summits receive a digital Certificate of Attendance with
+                      verified CPD/CPE credit hours suitable for professional
+                      procurement credentials.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Sidebar Support Box -->
+            <div class="col-lg-4">
+              <div class="faq-support-card">
+                <span
+                  class="badge bg-primary text-white px-3 py-2 rounded-pill mb-3"
+                >
+                  <i class="fa-solid fa-headset me-1"></i> Events Concierge
+                </span>
+                <h4 class="fw-bold mb-3">Need Custom Assistance?</h4>
+                <p class="text-white-50 small mb-4">
+                  Have questions regarding physical venue directions, dietary
+                  preferences for London summits, or group registrations?
+                </p>
+                <div class="d-flex flex-column gap-3 mb-4 small">
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-envelope text-info fs-5"></i>
+                    <span>events@stackly.co.in</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-phone text-info fs-5"></i>
+                    <span>+91 9876543210</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-info fs-5"></i>
+                    <span>100 Wood St, London, EC2V 7AN</span>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="btn btn-light text-primary fw-bold w-100 rounded-pill py-2"
+                >
+                  Contact Events Team
+                </a>
               </div>
             </div>
           </div>
