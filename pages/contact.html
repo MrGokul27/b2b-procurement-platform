@@ -58,48 +58,109 @@
           <div class="row g-4">
             <!-- Card 1: Phone -->
             <div class="col-lg-4 col-md-6">
-              <div class="contact-info-card text-center">
-                <div class="contact-info-icon mx-auto">
-                  <i class="fa-solid fa-phone"></i>
+              <div class="contact-info-card card-phone">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div class="contact-info-icon-wrapper">
+                      <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <span
+                      class="contact-info-badge bg-primary-subtle text-primary"
+                      >Toll-Free 24/7</span
+                    >
+                  </div>
+                  <h4 class="fw-bold text-dark h5 mb-2">Direct Call Support</h4>
+                  <p class="small text-slate-500 mb-3">
+                    Speak directly with our senior procurement engineers or
+                    enterprise billing managers.
+                  </p>
+                  <p class="fw-bold fs-5 text-primary mb-1">+91 9876543210</p>
+                  <span class="small text-muted d-block">
+                    <i class="fa-regular fa-clock me-1 text-primary"></i> Mon -
+                    Sat: 8:00 AM - 8:00 PM EST
+                  </span>
                 </div>
-                <h4 class="fw-bold text-dark h5 mb-2">Call Support</h4>
-                <p class="small text-slate-500 mb-3">
-                  Speak with our technical support or billing managers
-                  instantly.
-                </p>
-                <p class="fw-bold text-primary mb-0">+91 9876543210</p>
+                <div>
+                  <a href="#" class="contact-link-action text-primary">
+                    Call Support Now
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
               </div>
             </div>
+
             <!-- Card 2: Email -->
             <div class="col-lg-4 col-md-6">
-              <div class="contact-info-card text-center">
-                <div
-                  class="contact-info-icon mx-auto text-success"
-                  style="background-color: rgba(16, 185, 129, 0.05)"
-                >
-                  <i class="fa-solid fa-envelope"></i>
+              <div class="contact-info-card card-email">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div class="contact-info-icon-wrapper">
+                      <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <span
+                      class="contact-info-badge bg-success-subtle text-success"
+                      >Avg Reply &lt; 15m</span
+                    >
+                  </div>
+                  <h4 class="fw-bold text-dark h5 mb-2">
+                    Priority Email Inquiries
+                  </h4>
+                  <p class="small text-slate-500 mb-3">
+                    Send vendor KYC dossiers, RFQ documentation, or API webhook
+                    logs to our help desk.
+                  </p>
+                  <p class="fw-bold fs-5 text-success mb-1">
+                    support@Stackly.co.in
+                  </p>
+                  <span class="small text-muted d-block">
+                    <i class="fa-solid fa-circle-check me-1 text-success"></i>
+                    Dedicated 24/7 Queue Monitoring
+                  </span>
                 </div>
-                <h4 class="fw-bold text-dark h5 mb-2">Email Inquiries</h4>
-                <p class="small text-slate-500 mb-3">
-                  Send onboarding logs or billing queries to our help desk.
-                </p>
-                <p class="fw-bold text-success mb-0">support@Stackly.co.in</p>
+                <div>
+                  <a href="#" class="contact-link-action text-success">
+                    Draft Message <i class="fa-solid fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
               </div>
             </div>
+
             <!-- Card 3: Location -->
             <div class="col-lg-4 col-md-6 mx-auto">
-              <div class="contact-info-card text-center">
-                <div
-                  class="contact-info-icon mx-auto text-warning"
-                  style="background-color: rgba(245, 158, 11, 0.05)"
-                >
-                  <i class="fa-solid fa-location-dot"></i>
+              <div class="contact-info-card card-hq">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <div class="contact-info-icon-wrapper">
+                      <i class="fa-solid fa-building-circle-check"></i>
+                    </div>
+                    <span
+                      class="contact-info-badge bg-warning-subtle text-warning-emphasis"
+                      >Global HQ</span
+                    >
+                  </div>
+                  <h4 class="fw-bold text-dark h5 mb-2">London Headquarters</h4>
+                  <p class="small text-slate-500 mb-3">
+                    100 Wood Street, London, EC2V 7AN, United Kingdom
+                  </p>
+                  <p class="fw-bold fs-5 text-warning-emphasis mb-1">
+                    London, UK
+                  </p>
+                  <span class="small text-muted d-block">
+                    <i class="fa-solid fa-location-arrow me-1 text-warning"></i>
+                    In-Person Briefings (Mon - Fri)
+                  </span>
                 </div>
-                <h4 class="fw-bold text-dark h5 mb-2">Headquarters</h4>
-                <p class="small text-slate-500 mb-3">
-                  100 Wood Street, London, EC2V 7AN, United Kingdom
-                </p>
-                <p class="fw-bold text-warning mb-0">London, UK</p>
+                <div>
+                  <a href="#" class="contact-link-action text-warning-emphasis">
+                    View On Map <i class="fa-solid fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -110,120 +171,246 @@
       <section id="section-contact-form" class="bg-light">
         <div class="container">
           <div class="row align-items-center g-5">
+            <!-- Left Info Column -->
             <div class="col-lg-6">
               <div class="section-title mb-4">
-                <span>Get Started</span>
-                <h2>Vendor Onboarding & General Support Form</h2>
+                <span
+                  class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill mb-2"
+                >
+                  <i class="fa-solid fa-bolt me-1"></i> Fast-Track Onboarding
+                </span>
+                <h2 class="mt-2">
+                  Vendor Onboarding &amp; General Support Form
+                </h2>
               </div>
               <p class="text-slate-500 mb-4">
-                Whether you are a corporate buyer looking for a platform demo,
-                or a manufacturer hoping to join our vetted supplier directory,
-                fill out the form and our integration officers will guide you.
+                Whether you are a corporate buyer looking for an enterprise
+                platform demo, or a manufacturer hoping to join our vetted
+                global supplier directory, fill out the form and our integration
+                officers will guide you every step.
               </p>
-              <ul class="list-unstyled text-slate-800 small">
-                <li class="mb-2">
-                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
-                  Onboarding checklists sent upon submission
-                </li>
-                <li class="mb-2">
-                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
-                  Custom integration blueprint designs
-                </li>
-                <li class="mb-2">
-                  <i class="fa-solid fa-circle-check text-primary me-2"></i>
-                  Standard sandbox logins provided for testing
-                </li>
-              </ul>
+
+              <!-- Feature Cards -->
+              <div class="d-flex flex-column gap-3 mb-4">
+                <div
+                  class="contact-feature-card d-flex align-items-start gap-3"
+                >
+                  <div class="feature-icon-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1 text-dark">
+                      Express KYC Verification
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Complete tax, VAT, and factory audit validation in under
+                      48 hours.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="contact-feature-card d-flex align-items-start gap-3"
+                >
+                  <div class="feature-icon-box">
+                    <i class="fa-solid fa-network-wired"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1 text-dark">
+                      Custom Integration Blueprints
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Pre-configured connectors for SAP S/4HANA, Oracle
+                      NetSuite, and Microsoft Dynamics.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="contact-feature-card d-flex align-items-start gap-3"
+                >
+                  <div class="feature-icon-box">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1 text-dark">
+                      Sandbox API Credentials
+                    </h6>
+                    <p class="small text-slate-500 mb-0">
+                      Instant developer sandbox logins with full documentation
+                      and live webhook testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trust Stats Bar -->
+              <div
+                class="p-3 bg-white border rounded-3 d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-2">
+                  <div class="text-warning small">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="small fw-bold text-dark">4.9/5 CSAT Score</span>
+                </div>
+                <div class="small text-slate-500">
+                  <i class="fa-solid fa-users me-1 text-primary"></i>
+                  <strong>12,000+</strong> Active Enterprises
+                </div>
+              </div>
             </div>
+
+            <!-- Right Form Column -->
             <div class="col-lg-6">
-              <div class="bg-white p-5 border rounded-4 shadow-sm">
-                <h4 class="fw-bold text-dark mb-4">Send Us a Message</h4>
+              <div class="form-container-card p-4 p-md-5">
+                <div class="mb-4">
+                  <h4 class="fw-bold text-dark mb-1">Send Us a Message</h4>
+                  <p class="small text-slate-500 mb-0">
+                    Fill in your details below for instant ticket routing to our
+                    specialist desk.
+                  </p>
+                </div>
+
                 <form class="b2b-form">
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <label
                         for="contactName"
-                        class="form-label text-slate-500 small"
-                        >Full Name</label
+                        class="form-label text-slate-500 small fw-semibold"
                       >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="contactName"
-                        required
-                        placeholder="e.g. John Doe"
-                      />
+                        Full Name <span class="text-danger">*</span>
+                      </label>
+                      <div class="form-input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="contactName"
+                          required
+                          placeholder="e.g. John Doe"
+                        />
+                        <i class="fa-regular fa-user form-input-icon"></i>
+                      </div>
                     </div>
+
                     <div class="col-sm-6">
                       <label
                         for="companyName"
-                        class="form-label text-slate-500 small"
-                        >Company Name</label
+                        class="form-label text-slate-500 small fw-semibold"
                       >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="companyName"
-                        required
-                        placeholder="e.g. Global Supplies"
-                      />
+                        Company Name <span class="text-danger">*</span>
+                      </label>
+                      <div class="form-input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="companyName"
+                          required
+                          placeholder="e.g. Global Supplies Ltd"
+                        />
+                        <i class="fa-regular fa-building form-input-icon"></i>
+                      </div>
                     </div>
+
                     <div class="col-12">
                       <label
                         for="contactEmail"
-                        class="form-label text-slate-500 small"
-                        >Work Email</label
+                        class="form-label text-slate-500 small fw-semibold"
                       >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="contactEmail"
-                        required
-                        placeholder="name@company.com"
-                      />
+                        Work Email <span class="text-danger">*</span>
+                      </label>
+                      <div class="form-input-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="contactEmail"
+                          required
+                          placeholder="name@company.com"
+                        />
+                        <i class="fa-regular fa-envelope form-input-icon"></i>
+                      </div>
                     </div>
+
                     <div class="col-12">
                       <label
                         for="inquiryType"
-                        class="form-label text-slate-500 small"
-                        >Inquiry Subject</label
+                        class="form-label text-slate-500 small fw-semibold"
                       >
-                      <select class="form-select" id="inquiryType">
-                        <option>Supplier Portal Onboarding</option>
-                        <option>Enterprise Buyer Demo</option>
-                        <option>ERP API Integration Help</option>
-                        <option>Billing & Accounts</option>
-                      </select>
+                        Inquiry Subject <span class="text-danger">*</span>
+                      </label>
+                      <div class="form-input-group">
+                        <select class="form-select" id="inquiryType">
+                          <option value="Supplier Portal Onboarding">
+                            🚀 Supplier Portal Onboarding
+                          </option>
+                          <option value="Enterprise Buyer Demo">
+                            💼 Enterprise Buyer Demo &amp; Pricing
+                          </option>
+                          <option value="ERP API Integration Help">
+                            🔌 ERP &amp; REST API Integration Help
+                          </option>
+                          <option value="Billing & Accounts">
+                            💳 Billing, Escrow &amp; Accounts
+                          </option>
+                          <option value="Compliance & KYC Verification">
+                            🛡️ Compliance &amp; KYC Verification
+                          </option>
+                        </select>
+                        <i class="fa-solid fa-list-check form-input-icon"></i>
+                      </div>
                     </div>
+
                     <div class="col-12">
                       <label
                         for="messageText"
-                        class="form-label text-slate-500 small"
-                        >Details</label
+                        class="form-label text-slate-500 small fw-semibold"
                       >
-                      <textarea
-                        class="form-control"
-                        id="messageText"
-                        rows="4"
-                        placeholder="Briefly describe how we can assist you..."
-                      ></textarea>
+                        Inquiry Details
+                      </label>
+                      <div class="form-input-group textarea-group">
+                        <textarea
+                          class="form-control"
+                          id="messageText"
+                          rows="4"
+                          placeholder="Briefly describe your requirements or inquiry..."
+                        ></textarea>
+                        <i
+                          class="fa-regular fa-comment-dots form-input-icon"
+                        ></i>
+                      </div>
                     </div>
-                    <div class="col-12">
+
+                    <div class="col-12 mt-4">
                       <button
                         type="submit"
-                        class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm"
+                        class="btn btn-primary btn-submit-glow w-100 py-3 fw-bold rounded-pill shadow-sm"
                       >
-                        Send Message
+                        <i class="fa-solid fa-paper-plane me-2"></i>Send Message
                       </button>
+                      <div class="text-center mt-2">
+                        <span
+                          class="small text-muted"
+                          style="font-size: 0.78rem"
+                        >
+                          <i class="fa-solid fa-lock me-1"></i> Your information
+                          is protected by 256-bit SSL encryption.
+                        </span>
+                      </div>
                     </div>
                   </div>
+
                   <!-- Success alert box -->
                   <div
                     class="form-success-alert alert alert-success d-none mt-3 mb-0"
                     role="alert"
                   >
                     <i class="fa-solid fa-circle-check me-2"></i>Thank you! Your
-                    message has been sent successfully.
+                    message has been routed successfully. Our integration
+                    specialist will reach out within 15 minutes.
                   </div>
                 </form>
               </div>
@@ -252,50 +439,269 @@
       <section id="section-contact-directory">
         <div class="container">
           <div class="section-title text-center">
-            <span>Reach Direct</span>
+            <span>Direct Line Routing</span>
             <h2>Departmental Directory</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 650px">
+              Direct your questions to our dedicated operational teams for swift
+              response times and tailored guidance.
+            </p>
           </div>
           <div class="row g-4 mt-2">
             <!-- Dept 1 -->
-            <div class="col-md-4">
-              <div class="dept-item">
-                <h6>Corporate Sales & Demos</h6>
-                <p class="small text-slate-500 mb-2">
-                  Connect to schedule enterprise trials, custom billing plans,
-                  and pricing reviews.
-                </p>
-                <span class="small fw-semibold text-primary"
-                  ><i class="fa-solid fa-envelope me-2"></i
-                  >sales@Stackly.co.in</span
-                >
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div class="dept-icon-wrapper">
+                      <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="dept-sla-badge">⚡ Avg: &lt; 2 hrs</span>
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Corporate Sales &amp; Demos
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Connect to schedule enterprise product walkthroughs, volume
+                    discount tiers, and customized billing contracts.
+                  </p>
+                </div>
+                <div>
+                  <a href="#" class="dept-email-link">
+                    <i class="fa-solid fa-envelope me-2"></i>sales@Stackly.co.in
+                  </a>
+                </div>
               </div>
             </div>
+
             <!-- Dept 2 -->
-            <div class="col-md-4">
-              <div class="dept-item">
-                <h6>Supplier Onboarding</h6>
-                <p class="small text-slate-500 mb-2">
-                  Ask questions regarding KYC document approvals, tax entries,
-                  or carbon audits.
-                </p>
-                <span class="small fw-semibold text-primary"
-                  ><i class="fa-solid fa-envelope me-2"></i
-                  >vendors@Stackly.co.in</span
-                >
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="dept-icon-wrapper"
+                      style="
+                        background: rgba(16, 185, 129, 0.08);
+                        color: #10b981;
+                      "
+                    >
+                      <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <span
+                      class="dept-sla-badge"
+                      style="
+                        background: rgba(16, 185, 129, 0.08);
+                        color: #10b981;
+                      "
+                      >🛡️ Avg: &lt; 4 hrs</span
+                    >
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Supplier Onboarding &amp; KYC
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Assistance regarding VAT/tax registrations, manufacturing
+                    plant audits, carbon credits, and catalog publishing.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="dept-email-link"
+                    style="color: #10b981; background: rgba(16, 185, 129, 0.06)"
+                  >
+                    <i class="fa-solid fa-envelope me-2"></i
+                    >vendors@Stackly.co.in
+                  </a>
+                </div>
               </div>
             </div>
+
             <!-- Dept 3 -->
-            <div class="col-md-4">
-              <div class="dept-item">
-                <h6>Technical Integration Help</h6>
-                <p class="small text-slate-500 mb-2">
-                  Dedicated support for developer webhooks, REST API calls, and
-                  SAP connections.
-                </p>
-                <span class="small fw-semibold text-primary"
-                  ><i class="fa-solid fa-envelope me-2"></i
-                  >api-support@Stackly.co.in</span
-                >
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="dept-icon-wrapper"
+                      style="
+                        background: rgba(14, 165, 233, 0.08);
+                        color: #0ea5e9;
+                      "
+                    >
+                      <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <span
+                      class="dept-sla-badge"
+                      style="
+                        background: rgba(14, 165, 233, 0.08);
+                        color: #0ea5e9;
+                      "
+                      >💻 24/7 Tech Desk</span
+                    >
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Technical &amp; REST API Support
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Dedicated support engineers for webhook endpoints, sandbox
+                    credentials, EDI 850 formats, and ERP connectors.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="dept-email-link"
+                    style="color: #0ea5e9; background: rgba(14, 165, 233, 0.06)"
+                  >
+                    <i class="fa-solid fa-envelope me-2"></i
+                    >api-support@Stackly.co.in
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dept 4 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="dept-icon-wrapper"
+                      style="
+                        background: rgba(245, 158, 11, 0.08);
+                        color: #f59e0b;
+                      "
+                    >
+                      <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <span
+                      class="dept-sla-badge"
+                      style="
+                        background: rgba(245, 158, 11, 0.08);
+                        color: #f59e0b;
+                      "
+                      >💳 Avg: &lt; 3 hrs</span
+                    >
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Billing, Invoicing &amp; Escrow
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Queries concerning milestone escrow locks, multi-currency
+                    payouts, credit lines, and GST/VAT invoice downloads.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="dept-email-link"
+                    style="color: #d97706; background: rgba(245, 158, 11, 0.06)"
+                  >
+                    <i class="fa-solid fa-envelope me-2"></i
+                    >billing@Stackly.co.in
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dept 5 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="dept-icon-wrapper"
+                      style="
+                        background: rgba(139, 92, 246, 0.08);
+                        color: #8b5cf6;
+                      "
+                    >
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <span
+                      class="dept-sla-badge"
+                      style="
+                        background: rgba(139, 92, 246, 0.08);
+                        color: #8b5cf6;
+                      "
+                      >⚖️ Avg: &lt; 6 hrs</span
+                    >
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Compliance &amp; Legal Governance
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Review bilateral non-disclosure agreements (NDAs), trade
+                    export classifications, GDPR, and ISO standards compliance.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="dept-email-link"
+                    style="color: #8b5cf6; background: rgba(139, 92, 246, 0.06)"
+                  >
+                    <i class="fa-solid fa-envelope me-2"></i
+                    >compliance@Stackly.co.in
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dept 6 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="dept-card">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="dept-icon-wrapper"
+                      style="
+                        background: rgba(239, 68, 68, 0.08);
+                        color: #ef4444;
+                      "
+                    >
+                      <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <span
+                      class="dept-sla-badge"
+                      style="
+                        background: rgba(239, 68, 68, 0.08);
+                        color: #ef4444;
+                      "
+                      >🚢 Real-Time</span
+                    >
+                  </div>
+                  <h5 class="fw-bold text-dark mb-2">
+                    Global Logistics &amp; Freight Ops
+                  </h5>
+                  <p class="small text-slate-500 mb-4">
+                    Urgent customs clearance assistance, freight forwarder
+                    telemetry, and cross-border maritime/air dispatch updates.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="dept-email-link"
+                    style="color: #ef4444; background: rgba(239, 68, 68, 0.06)"
+                  >
+                    <i class="fa-solid fa-envelope me-2"></i
+                    >logistics@Stackly.co.in
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -307,46 +713,150 @@
         <div class="container">
           <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
-              <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600&auto=format&fit=crop"
-                alt="Customer Support Center"
-                class="img-fluid rounded-4 shadow-lg w-100"
-              />
+              <div class="sla-image-wrapper">
+                <img
+                  src="../assets/images/contact/contact-sla-image-wrapper.webp"
+                  alt="Customer Support Center"
+                  class="img-fluid rounded-4 shadow-lg w-100"
+                />
+                <!-- Floating Card 1: Top Right -->
+                <div class="sla-floating-pill sla-floating-top">
+                  <div class="text-success fs-4">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div>
+                    <strong class="d-block text-dark small"
+                      >99.98% SLA Adherence</strong
+                    >
+                    <span class="text-muted" style="font-size: 0.75rem"
+                      >Verified Last 30 Days</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Floating Card 2: Bottom Left -->
+                <div class="sla-floating-pill sla-floating-bottom">
+                  <div class="text-primary fs-4">
+                    <i class="fa-solid fa-headset"></i>
+                  </div>
+                  <div>
+                    <strong class="d-block text-dark small"
+                      >24/7/365 Global Dispatch</strong
+                    >
+                    <span class="text-muted" style="font-size: 0.75rem"
+                      >Multilingual Procurement Help</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="col-lg-6 order-lg-1">
               <div class="section-title mb-4">
-                <span>Service Response SLAs</span>
-                <h2>Support Desk Guarantees</h2>
+                <span
+                  class="badge bg-primary-subtle text-primary fw-semibold px-3 py-2 rounded-pill mb-2"
+                >
+                  <i class="fa-solid fa-clock-rotate-left me-1"></i> Guaranteed
+                  Response Times
+                </span>
+                <h2 class="mt-2">Support Desk Guarantees</h2>
               </div>
               <p class="text-slate-500 mb-4">
-                We understand that procurement delays hurt manufacturing
-                outputs. Our support team enforces strict response time
-                guarantees based on ticket priority levels.
+                We understand that procurement delays stall manufacturing
+                operations. Our global support team operates under strict,
+                contractually bound SLAs according to ticket severity levels.
               </p>
-              <div class="helpdesk-directory-box p-4 bg-white border">
-                <div class="d-flex justify-content-between mb-2">
-                  <span class="fw-bold small">Priority 1 (Platform Down)</span>
-                  <span class="badge bg-danger rounded-pill py-1 px-3"
-                    >Under 1 Hour</span
+
+              <!-- Interactive SLA Box -->
+              <div class="sla-interactive-container">
+                <!-- SLA Tier 1 -->
+                <div class="sla-interactive-item">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="live-pulse-dot pulse-dot-red"></span>
+                      <span class="fw-bold text-dark small"
+                        >Priority 1 (Platform &amp; Outage Critical)</span
+                      >
+                    </div>
+                    <span class="badge bg-danger rounded-pill py-1 px-3"
+                      >Under 1 Hour</span
+                    >
+                  </div>
+                  <p class="small text-slate-500 mb-0 ps-3">
+                    Immediate escalation to senior DevOps &amp; procurement
+                    engineers with 30-min MTTA.
+                  </p>
+                </div>
+
+                <!-- SLA Tier 2 -->
+                <div class="sla-interactive-item">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="live-pulse-dot pulse-dot-amber"></span>
+                      <span class="fw-bold text-dark small"
+                        >Priority 2 (RFQ, Bidding &amp; Integration)</span
+                      >
+                    </div>
+                    <span
+                      class="badge bg-warning text-dark rounded-pill py-1 px-3"
+                      >Under 4 Hours</span
+                    >
+                  </div>
+                  <p class="small text-slate-500 mb-0 ps-3">
+                    Specialist analysis and direct resolution for bidding or
+                    supplier quotation bottlenecks.
+                  </p>
+                </div>
+
+                <!-- SLA Tier 3 -->
+                <div class="sla-interactive-item">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="live-pulse-dot pulse-dot-blue"></span>
+                      <span class="fw-bold text-dark small"
+                        >Priority 3 (General Inquiries &amp; Settings)</span
+                      >
+                    </div>
+                    <span
+                      class="badge bg-primary-subtle text-primary rounded-pill py-1 px-3"
+                      >Under 24 Hours</span
+                    >
+                  </div>
+                  <p class="small text-slate-500 mb-0 ps-3">
+                    Account management guidance for portal configuration, tax
+                    updates, and profile optimization.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Guarantee Score Pill -->
+              <div
+                class="mt-4 p-3 bg-white border rounded-3 d-flex align-items-center justify-content-around text-center"
+              >
+                <div>
+                  <div class="fw-bold text-primary fs-5">99.98%</div>
+                  <span class="small text-muted" style="font-size: 0.78rem"
+                    >SLA Target Met</span
                   >
                 </div>
-                <hr class="my-2" />
-                <div class="d-flex justify-content-between mb-2">
-                  <span class="fw-bold small"
-                    >Priority 2 (RFQ / Bidding Delays)</span
-                  >
-                  <span
-                    class="badge bg-warning text-dark rounded-pill py-1 px-3"
-                    >Under 4 Hours</span
+                <div class="vr"></div>
+                <div>
+                  <div class="fw-bold text-success fs-5">&lt; 15 Mins</div>
+                  <span class="small text-muted" style="font-size: 0.78rem"
+                    >First Response Avg</span
                   >
                 </div>
-                <hr class="my-2" />
-                <div class="d-flex justify-content-between">
-                  <span class="fw-bold small"
-                    >Priority 3 (General Settings / Inquiries)</span
-                  >
-                  <span class="badge bg-secondary rounded-pill py-1 px-3"
-                    >Under 24 Hours</span
+                <div class="vr"></div>
+                <div>
+                  <div class="fw-bold text-warning-emphasis fs-5">24/7/365</div>
+                  <span class="small text-muted" style="font-size: 0.78rem"
+                    >Live Desk Active</span
                   >
                 </div>
               </div>
@@ -359,41 +869,53 @@
       <section id="section-contact-faq">
         <div class="container">
           <div class="section-title text-center">
-            <span>FAQ</span>
-            <h2>Contact Related Inquiries</h2>
+            <span>Got Questions?</span>
+            <h2>Frequently Asked Questions</h2>
+            <p class="text-slate-500 mx-auto mt-2" style="max-width: 650px">
+              Quick answers to the most common questions regarding vendor
+              onboarding, ERP synchronization, billing, and SLA protocols.
+            </p>
           </div>
           <div class="row justify-content-center mt-2">
-            <div class="col-lg-8">
-              <div class="accordion" id="contactFaqAccordion">
+            <div class="col-lg-9">
+              <div
+                class="accordion custom-faq-accordion"
+                id="contactFaqAccordion"
+              >
                 <!-- Item 1 -->
                 <div class="accordion-item shadow-sm">
                   <h2 class="accordion-header" id="cHeadingOne">
                     <button
-                      class="accordion-button collapsed"
+                      class="accordion-button"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#cCollapseOne"
-                      aria-expanded="false"
+                      aria-expanded="true"
                       aria-controls="cCollapseOne"
                     >
-                      Where do I upload my supplier tax records?
+                      <i class="fa-solid fa-file-shield text-primary me-3"></i>
+                      Where do I upload my supplier tax records and ISO
+                      certificates?
                     </button>
                   </h2>
                   <div
                     id="cCollapseOne"
-                    class="accordion-collapse collapse"
+                    class="accordion-collapse collapse show"
                     aria-labelledby="cHeadingOne"
                     data-bs-parent="#contactFaqAccordion"
                   >
-                    <div class="accordion-body text-slate-500 small">
-                      Log in to the Supplier Portal, navigate to "Company
-                      Settings", and open the "Compliance Logs" tab. You can
-                      drag and drop your VAT documents, corporate
-                      certifications, and insurance policies directly into the
-                      uploader.
+                    <div class="accordion-body">
+                      Log in to the Supplier Portal, navigate to
+                      <strong>"Company Settings"</strong>, and select the
+                      <strong>"Compliance &amp; Verification"</strong> tab. You
+                      can drag and drop your VAT/GST certificates, ISO
+                      registration forms, factory audit reports, and liability
+                      insurance policies directly into the uploader for
+                      automatic OCR validation.
                     </div>
                   </div>
                 </div>
+
                 <!-- Item 2 -->
                 <div class="accordion-item shadow-sm">
                   <h2 class="accordion-header" id="cHeadingTwo">
@@ -405,7 +927,9 @@
                       aria-expanded="false"
                       aria-controls="cCollapseTwo"
                     >
-                      Can I change my registered company currency?
+                      <i class="fa-solid fa-coins text-warning me-3"></i>
+                      Can I change my registered company currency and
+                      multi-currency billing?
                     </button>
                   </h2>
                   <div
@@ -414,11 +938,145 @@
                     aria-labelledby="cHeadingTwo"
                     data-bs-parent="#contactFaqAccordion"
                   >
-                    <div class="accordion-body text-slate-500 small">
-                      Yes. Registered corporate buyers can change default
-                      transaction currencies under "Billing Preferences". The
-                      platform automatically updates and displays converted
-                      rates on active bidding boards.
+                    <div class="accordion-body">
+                      Yes. Registered corporate buyers and global vendors can
+                      configure default transaction currencies (USD, EUR, GBP,
+                      INR, JPY, etc.) under
+                      <strong>"Billing Preferences"</strong>. The platform
+                      automatically converts active bidding boards and generates
+                      synchronized multi-currency invoices with live spot FX
+                      rates.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseThree"
+                      aria-expanded="false"
+                      aria-controls="cCollapseThree"
+                    >
+                      <i class="fa-solid fa-stopwatch text-success me-3"></i>
+                      What is the typical turnaround time for RFQ approvals and
+                      vendor quotes?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingThree"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Standard RFQs published on our marketplace receive
+                      preliminary quotes from verified suppliers within
+                      <strong>24 to 48 business hours</strong>. For emergency
+                      production lines or expedited procurement, our Critical
+                      Dispatch Hotline accelerates quotation turnarounds to
+                      under 4 hours.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseFour"
+                      aria-expanded="false"
+                      aria-controls="cCollapseFour"
+                    >
+                      <i class="fa-solid fa-plug text-info me-3"></i>
+                      How do I integrate Stackly with SAP, Oracle NetSuite, or
+                      custom ERP systems?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingFour"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body">
+                      We offer production-ready REST APIs, EDI 850/855 purchase
+                      order exchange pipelines, and certified connectors for SAP
+                      S/4HANA, Oracle NetSuite, and Microsoft Dynamics 365.
+                      Request developer sandbox credentials through our contact
+                      form for complete documentation and sandbox access.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseFive"
+                      aria-expanded="false"
+                      aria-controls="cCollapseFive"
+                    >
+                      <i class="fa-solid fa-certificate text-danger me-3"></i>
+                      Is there an onboarding fee for verified suppliers?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingFive"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Standard registration, catalog creation, and basic bidding
+                      directory listings are <strong>100% free</strong>. Premium
+                      tiers featuring verified trust badges, priority RFQ
+                      routing, automated inventory syndication, and dedicated
+                      account managers are available under transparent monthly
+                      or annual plans.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="cHeadingSix">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#cCollapseSix"
+                      aria-expanded="false"
+                      aria-controls="cCollapseSix"
+                    >
+                      <i
+                        class="fa-solid fa-handshake-angle text-primary me-3"
+                      ></i>
+                      How are dispute resolutions and escrow disbursements
+                      handled?
+                    </button>
+                  </h2>
+                  <div
+                    id="cCollapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="cHeadingSix"
+                    data-bs-parent="#contactFaqAccordion"
+                  >
+                    <div class="accordion-body">
+                      All purchase orders execute through milestone-based escrow
+                      locks. Funds are disbursed upon buyer verification of
+                      shipment receipts and quality conformity. If an issue
+                      arises, our neutral arbitration desk steps in within 12
+                      hours with transparent dispute mediation.
                     </div>
                   </div>
                 </div>
@@ -431,30 +1089,108 @@
       <!-- Section 8: Social Media Directory -->
       <section id="section-contact-social" class="bg-light">
         <div class="container text-center">
-          <div class="section-title mb-4">
+          <div class="section-title mb-3">
             <span>Stay Connected</span>
-            <h2>Our Social Channels</h2>
+            <h2>Our Social &amp; Community Channels</h2>
           </div>
-          <p class="text-slate-500 mb-4">
-            Follow us on social media for corporate updates, integration
-            reports, and upcoming seminar announcements.
+          <p class="text-slate-500 mb-5 mx-auto" style="max-width: 650px">
+            Follow our verified channels for live supply chain briefings,
+            executive webinars, developer release notes, and industry benchmark
+            reports.
           </p>
-          <div class="d-flex justify-content-center gap-3">
-            <a
-              href="#"
-              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
-              ><i class="fa-brands fa-x-twitter me-2"></i>Twitter X</a
-            >
-            <a
-              href="#"
-              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
-              ><i class="fa-brands fa-linkedin-in me-2"></i>LinkedIn</a
-            >
-            <a
-              href="#"
-              class="btn btn-outline-dark px-4 py-3 rounded-pill fw-semibold"
-              ><i class="fa-brands fa-youtube me-2"></i>YouTube</a
-            >
+
+          <div class="row g-4 justify-content-center">
+            <!-- LinkedIn -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <a href="#" class="social-network-card card-linkedin">
+                <div class="social-icon-sphere">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-1">LinkedIn</h5>
+                <span
+                  class="badge bg-primary-subtle text-primary rounded-pill mb-3"
+                  style="font-size: 0.75rem"
+                >
+                  45,000+ Followers
+                </span>
+                <p class="small text-slate-500 mb-3">
+                  Enterprise supply chain insights, procurement trends, and
+                  executive briefings.
+                </p>
+                <span class="social-card-action text-primary">
+                  Follow @Stackly <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Twitter / X -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <a href="#" class="social-network-card card-twitter">
+                <div class="social-icon-sphere">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-1">Twitter / X</h5>
+                <span
+                  class="badge bg-dark-subtle text-dark rounded-pill mb-3"
+                  style="font-size: 0.75rem"
+                >
+                  @StacklyProcure
+                </span>
+                <p class="small text-slate-500 mb-3">
+                  Real-time platform status alerts, quick feature tips, and
+                  marketplace announcements.
+                </p>
+                <span class="social-card-action text-dark">
+                  Follow Updates <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- YouTube -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <a href="#" class="social-network-card card-youtube">
+                <div class="social-icon-sphere">
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-1">YouTube</h5>
+                <span
+                  class="badge bg-danger-subtle text-danger rounded-pill mb-3"
+                  style="font-size: 0.75rem"
+                >
+                  Video Masterclasses
+                </span>
+                <p class="small text-slate-500 mb-3">
+                  Platform demos, REST API code walkthroughs, and supplier
+                  onboarding tutorials.
+                </p>
+                <span class="social-card-action text-danger">
+                  Subscribe Channel <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- Discord Community -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <a href="#" class="social-network-card card-discord">
+                <div class="social-icon-sphere">
+                  <i class="fa-brands fa-discord"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-1">Developer Hub</h5>
+                <span
+                  class="badge bg-info-subtle text-info-emphasis rounded-pill mb-3"
+                  style="font-size: 0.75rem"
+                >
+                  12,000+ Engineers
+                </span>
+                <p class="small text-slate-500 mb-3">
+                  Direct developer discussions, webhook debugging, and custom
+                  connector share.
+                </p>
+                <span class="social-card-action text-info-emphasis">
+                  Join Community <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -464,15 +1200,63 @@
         class="contact-banner-section py-5 text-white"
         id="section-contact-hotline"
       >
-        <div class="container text-center">
-          <h3 class="fw-bold mb-2">Fulfillment Emergency?</h3>
-          <p class="mb-3 text-white-50">
-            Speak with our critical logistics dispatch teams immediately.
-            Available 24/7/365.
+        <div class="container text-center py-3">
+          <div class="emergency-status-badge">
+            <span class="live-pulse-dot pulse-dot-red me-1"></span>
+            ACTIVE 24/7/365 • CRITICAL DISPATCH
+          </div>
+          <h2 class="fw-bold mb-3 text-white">
+            Facing an Urgent Sourcing or Supply Bottleneck?
+          </h2>
+          <p class="mb-4 text-white-50 mx-auto" style="max-width: 700px">
+            Our rapid-response emergency fulfillment squad is on standby around
+            the clock to reroute shipments, source critical substitute
+            components, and resolve manufacturing halts.
           </p>
-          <span class="fs-4 fw-bold text-primary-light"
-            ><i class="fa-solid fa-phone me-2"></i>+91 9876543210</span
+
+          <div
+            class="d-flex flex-wrap justify-content-center align-items-center gap-4 mb-4"
           >
+            <a href="#" class="hotline-action-box">
+              <div class="hotline-radar-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="text-start">
+                <span
+                  class="text-white-50 small d-block text-uppercase fw-semibold"
+                  style="letter-spacing: 1px"
+                >
+                  Direct Critical Line (Toll-Free)
+                </span>
+                <span class="fs-3 fw-bold text-white">+91 9876543210</span>
+              </div>
+            </a>
+
+            <div>
+              <a
+                href="#"
+                class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold shadow-sm"
+              >
+                <i class="fa-solid fa-bolt me-2 text-warning"></i>Trigger SOS
+                Ticket
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-center gap-4 pt-2">
+            <div class="hotline-trust-chip">
+              <i class="fa-solid fa-bolt text-warning"></i> 15-Minute SLA
+              Guarantee
+            </div>
+            <div class="hotline-trust-chip">
+              <i class="fa-solid fa-globe text-info"></i> Global Inventory
+              Network
+            </div>
+            <div class="hotline-trust-chip">
+              <i class="fa-solid fa-shield-halved text-success"></i> Vetted
+              Tier-1 Alternate Suppliers
+            </div>
+          </div>
         </div>
       </section>
     </main>
