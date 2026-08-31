@@ -23,23 +23,104 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- B2B Procurement Theme Preloader (2 Seconds Duration) -->
+    <div id="b2b-preloader" class="b2b-preloader">
+      <div class="preloader-backdrop">
+        <div class="preloader-glow-orb orb-1"></div>
+        <div class="preloader-glow-orb orb-2"></div>
+        <div class="preloader-grid-mesh"></div>
+      </div>
+      <div class="preloader-container">
+        <!-- Animated Brand Hub / Radar -->
+        <div class="preloader-brand-hub">
+          <div class="orbital-ring orbital-ring-outer"></div>
+          <div class="orbital-ring orbital-ring-inner"></div>
+          <div class="preloader-logo-core">
+            <img
+              src="assets/images/logoStackly.webp"
+              alt="Stackly B2B Procure"
+              class="preloader-logo"
+            />
+            <span class="core-radar-ping"></span>
+          </div>
+        </div>
+
+        <!-- Brand Identity -->
+        <div class="preloader-brand-info">
+          <h2 class="preloader-title">
+            <span class="brand-highlight">B2B PROCURE</span>
+          </h2>
+          <p class="preloader-tagline">
+            ENTERPRISE SOURCING &amp; SUPPLY CHAIN NETWORK
+          </p>
+        </div>
+
+        <!-- Dynamic Progress Bar -->
+        <div class="preloader-progress-wrapper">
+          <div class="preloader-track">
+            <div class="preloader-fill" id="preloaderProgressBar">
+              <span class="fill-light-glow"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Status Ticker -->
+        <div class="preloader-status-bar">
+          <div class="status-feed">
+            <span class="live-status-dot"></span>
+            <span id="preloaderStatusText" class="live-status-message"
+              >Initializing Secure Enterprise Gateway...</span
+            >
+          </div>
+          <div class="status-percentage">
+            <span id="preloaderPercentText" class="percent-value">0%</span>
+          </div>
+        </div>
+
+        <!-- Enterprise Compliance Badges -->
+        <div class="preloader-trust-strip">
+          <div class="trust-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>ISO 27001 Certified</span>
+          </div>
+          <div class="trust-dot"></div>
+          <div class="trust-item">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>12,500+ Suppliers</span>
+          </div>
+          <div class="trust-dot"></div>
+          <div class="trust-item">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Instant RFQ Sync</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Header Common Component Placeholder -->
     <div id="header-placeholder"></div>
 
     <main>
       <!-- Section 1: Hero Section -->
       <section class="hero-section-new" id="section-hero">
+        <div class="hero-ambient-orb hero-orb-1"></div>
+        <div class="hero-ambient-orb hero-orb-2"></div>
+        <div class="hero-grid-pattern"></div>
         <div class="container position-relative z-3">
           <div class="row align-items-center g-5">
             <!-- Left Column: Key Copy & CTA Buttons -->
             <div class="col-lg-7 text-white">
-              <span class="badge bg-primary px-3 py-2 text-uppercase mb-3"
-                >Enterprise-Grade B2B Procurement Suite</span
+              <div
+                class="hero-status-pill mb-3 d-inline-flex align-items-center"
               >
+                <span class="live-beacon me-2"></span>
+                <span>Enterprise B2B Procurement Suite 2.0</span>
+              </div>
               <h1 class="text-uppercase mb-3 hero-title">
-                Accelerate & Optimize Your Supply Chain Journey
+                Accelerate &amp; Optimize Your
+                <span class="text-gradient-accent">Supply Chain</span> Journey
               </h1>
-              <p class="fs-5 mb-4 text-white-50">
+              <p class="fs-5 mb-4 text-white-50 hero-lead">
                 Automate RFQs, run secure digital vendor audits, analyze spend,
                 and manage multi-million pound contracts with our fully
                 integrated B2B procurement suite.
@@ -47,13 +128,15 @@
               <div class="d-flex flex-wrap gap-3 mb-4">
                 <a
                   href="#"
-                  class="btn btn-primary btn-lg rounded-pill px-4 py-3 shadow"
-                  >Get Started Now</a
-                >
+                  class="btn btn-primary btn-lg rounded-pill px-4 py-3 shadow-lg btn-hero-primary"
+                  ><span>Get Started Now</span>
+                  <i class="fa-solid fa-arrow-right ms-2"></i
+                ></a>
                 <a
                   href="#"
-                  class="btn btn-outline-light btn-lg rounded-pill px-4 py-3"
-                  >Explore Solutions</a
+                  class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 btn-hero-secondary"
+                  ><i class="fa-regular fa-compass me-2"></i>Explore
+                  Solutions</a
                 >
               </div>
 

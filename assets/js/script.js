@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 0. Initialize 2-Second Theme Preloader
+  initPreloader();
+
   // 1. Dynamic Header & Footer Loading
   const pathSegments = window.location.pathname.split("/");
   const isInPagesDir = pathSegments[pathSegments.length - 2] === "pages";
@@ -76,6 +79,71 @@ document.addEventListener("DOMContentLoaded", function () {
   initLettersOnlyInputs();
   initEmptyLinks404Redirect();
 });
+
+/* ==========================================================================
+   Preloader Sequence (2.0s Duration for B2B Procurement Theme)
+   ========================================================================== */
+function initPreloader() {
+  const preloader = document.getElementById("b2b-preloader");
+  if (!preloader) return;
+
+  const progressBar = document.getElementById("preloaderProgressBar");
+  const percentText = document.getElementById("preloaderPercentText");
+  const statusText = document.getElementById("preloaderStatusText");
+
+  // Lock body scrolling during preloader
+  document.body.classList.add("loader-locked");
+
+  const duration = 2000; // Exactly 2 seconds
+  const startTime = performance.now();
+
+  const statusPhases = [
+    { threshold: 0, text: "Initializing Secure Enterprise Gateway..." },
+    { threshold: 25, text: "Connecting to Global Supplier Network..." },
+    { threshold: 55, text: "Verifying ISO 27001 Security Credentials..." },
+    { threshold: 80, text: "Synchronizing Live RFQ Matrices..." },
+    { threshold: 98, text: "Enterprise Platform Ready" },
+  ];
+
+  function updateLoader(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(Math.max(elapsed / duration, 0), 1);
+    const percent = Math.floor(progress * 100);
+
+    if (progressBar) {
+      progressBar.style.width = `${percent}%`;
+    }
+
+    if (percentText) {
+      percentText.textContent = `${percent}%`;
+    }
+
+    if (statusText) {
+      for (let i = statusPhases.length - 1; i >= 0; i--) {
+        if (percent >= statusPhases[i].threshold) {
+          if (statusText.textContent !== statusPhases[i].text) {
+            statusText.textContent = statusPhases[i].text;
+          }
+          break;
+        }
+      }
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(updateLoader);
+    } else {
+      setTimeout(() => {
+        preloader.classList.add("loader-fade-out");
+        document.body.classList.remove("loader-locked");
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      }, 100);
+    }
+  }
+
+  requestAnimationFrame(updateLoader);
+}
 
 /* ==========================================================================
    0. Global Empty / # Link Interceptor -> 404 Redirection
