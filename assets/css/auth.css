@@ -510,6 +510,11 @@ select.form-control-auth {
   transform: rotate(180deg);
 }
 
+/* Hide Edge's native password reveal button to prevent duplicate eye icons */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
 /* Password Toggle & Match Indicator */
 .password-toggle-btn {
   position: absolute;

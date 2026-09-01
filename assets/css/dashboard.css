@@ -62,7 +62,7 @@ body.dashboard-body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -286,10 +286,17 @@ body.dashboard-body {
 
 .sidebar-nav-badge {
   margin-left: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
   font-size: 0.68rem;
   font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 12px;
+  white-space: nowrap;
   background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
 }

@@ -19,6 +19,10 @@
   --shadow-hover: 0 20px 40px -12px rgba(0, 71, 103, 0.18);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* ==========================================================================
    B2B Procurement Theme Preloader
    ========================================================================== */
@@ -185,6 +189,7 @@
 
 .brand-highlight {
   background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -389,7 +394,6 @@
    ========================================================================== */
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -397,7 +401,7 @@ body {
   font-family: var(--font-main);
   color: var(--b2b-slate-800);
   background-color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   padding-top: 120px; /* Space for fixed navbar + top bar */
 }
 
@@ -811,6 +815,7 @@ footer .social-links a:hover {
 
 .text-gradient-accent {
   background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -967,6 +972,7 @@ footer .social-links a:hover {
   font-size: 2.6rem;
   font-weight: 800;
   background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2149,6 +2155,18 @@ footer .social-links a:hover {
   font-weight: 800;
   font-size: 3rem;
   margin-bottom: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .subpage-banner h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .subpage-banner h1 {
+    font-size: 2.25rem;
+  }
 }
 
 .subpage-banner p {
