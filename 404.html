@@ -65,9 +65,9 @@
       <div class="container text-center">
         <div class="row justify-content-center">
           <div class="col-xl-9 col-lg-10">
-            <div class="error-glass-container">
+            <div class="error-glass-container reveal reveal-zoom">
               <!-- System Status Pill -->
-              <div class="error-status-pill">
+              <div class="error-status-pill reveal reveal-down reveal-delay-1">
                 <span class="pulse-dot"></span>
                 <span
                   >Error 404 • Resource Unreachable in Supply Chain
@@ -76,7 +76,7 @@
               </div>
 
               <!-- Visual 404 Graphic & Interactive Floating Nodes -->
-              <div class="error-visual-wrapper">
+              <div class="error-visual-wrapper reveal reveal-up reveal-delay-2">
                 <span class="floating-procure-tag tag-rfq">
                   <i class="fa-solid fa-triangle-exclamation text-danger"></i>
                   RFQ Manifest: Missing
@@ -91,10 +91,10 @@
               </div>
 
               <!-- Main Heading & Explanatory Copy -->
-              <h2 class="error-heading">
+              <h2 class="error-heading reveal reveal-up reveal-delay-2">
                 Shipment or Resource Lost in Transit
               </h2>
-              <p class="error-description">
+              <p class="error-description reveal reveal-up reveal-delay-3">
                 The procurement contract, supplier registry, or platform
                 endpoint you are trying to access has been relocated,
                 decommissioned, or never existed in our enterprise supply chain
@@ -102,7 +102,7 @@
               </p>
 
               <!-- Primary Action Group -->
-              <div class="error-action-btns">
+              <div class="error-action-btns reveal reveal-up reveal-delay-3">
                 <a
                   href="index.html"
                   class="btn-error-primary"
@@ -126,7 +126,7 @@
               </div>
 
               <!-- Interactive Search / Quick Diagnostic Widget -->
-              <div class="error-search-box">
+              <div class="error-search-box reveal reveal-up reveal-delay-4">
                 <form id="errorSearchForm" onsubmit="handleErrorSearch(event)">
                   <input
                     type="text"
@@ -146,7 +146,7 @@
               </div>
 
               <!-- Quick Hub Cards for Direct Navigation -->
-              <div class="error-quick-hub">
+              <div class="error-quick-hub reveal reveal-up reveal-delay-4">
                 <div class="error-hub-title">
                   <i class="fa-solid fa-compass me-1 text-primary-light"></i>
                   Recommended Enterprise Hubs
@@ -316,6 +316,29 @@
           window.location.href = "pages/services.html";
         }
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(
+          ".reveal, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-fade, [data-reveal]",
+        );
+        if (revealElements.length === 0) return;
+        if (!("IntersectionObserver" in window)) {
+          revealElements.forEach((el) => el.classList.add("is-revealed"));
+          return;
+        }
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-revealed");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -40px 0px", threshold: 0.08 },
+        );
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
     </script>
   </body>
 </html>

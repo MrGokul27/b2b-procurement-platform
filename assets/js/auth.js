@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initLoginForm();
   initRegisterForm();
   initEmptyLinks404Redirect();
+  initScrollReveal();
 });
 
 /* ==========================================================================
@@ -699,5 +700,41 @@ function initRegisterForm() {
         window.location.href = "login.html";
       }
     }, 1400);
+  });
+}
+
+/* ==========================================================================
+   Scroll Reveal Animation System
+   ========================================================================== */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-fade, [data-reveal]",
+  );
+
+  if (revealElements.length === 0) return;
+
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((el) => el.classList.add("is-revealed"));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.08,
+    },
+  );
+
+  revealElements.forEach((el) => {
+    revealObserver.observe(el);
   });
 }

@@ -65,10 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         footerPlaceholder.innerHTML = adjustPaths(html, isInPagesDir);
         // Initialize footer interactive functions
         initScrollToTop();
+        initScrollReveal();
       })
       .catch((err) => {
         console.error("Error loading footer:", err);
         setupFallbackFooter(footerPlaceholder, isInPagesDir);
+        initScrollReveal();
       });
   }
 
@@ -78,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactFormHandler();
   initLettersOnlyInputs();
   initEmptyLinks404Redirect();
+  initScrollReveal();
 });
 
 /* ==========================================================================
@@ -637,10 +640,10 @@ function setupFallbackFooter(container, isInPages) {
   const imgPath = `${rootRel}assets/images/logoStackly.webp`;
 
   container.innerHTML = `
-        <footer class="bg-dark text-white pt-5 pb-3">
+        <footer class="bg-dark text-white pt-5 pb-3 reveal reveal-up">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-1">
                         <div class="d-flex align-items-center mb-3">
                             <img src="${imgPath}" alt="B2B Procurement Platform Logo" height="35" class="me-2 logo-img">
                             <span class="fw-bold tracking-tight text-white h5 mb-0">B2B<span class="text-primary">Procure</span></span>
@@ -655,7 +658,7 @@ function setupFallbackFooter(container, isInPages) {
                             <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
+                    <div class="col-lg-2 col-md-6 reveal reveal-up reveal-delay-2">
                         <h5 class="fw-bold text-white mb-3 position-relative pb-2 footer-heading">Solutions</h5>
                         <ul class="list-unstyled small">
                             <li class="mb-2"><a href="${pagesRel}services.html" class="text-white-50 text-decoration-none hover-white">E-Sourcing & RFQs</a></li>
@@ -665,7 +668,7 @@ function setupFallbackFooter(container, isInPages) {
                             <li class="mb-2"><a href="${pagesRel}services.html" class="text-white-50 text-decoration-none hover-white">Contract Compliance</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-2 col-md-6">
+                    <div class="col-lg-2 col-md-6 reveal reveal-up reveal-delay-3">
                         <h5 class="fw-bold text-white mb-3 position-relative pb-2 footer-heading">Quick Links</h5>
                         <ul class="list-unstyled small">
                             <li class="mb-2"><a href="${pagesRel}about.html" class="text-white-50 text-decoration-none hover-white">About Company</a></li>
@@ -675,7 +678,7 @@ function setupFallbackFooter(container, isInPages) {
                             <li class="mb-2"><a href="${pagesRel}contact.html" class="text-white-50 text-decoration-none hover-white">Contact & Support</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-4">
                         <h5 class="fw-bold text-white mb-3 position-relative pb-2 footer-heading">Headquarters</h5>
                         <ul class="list-unstyled text-white-50 small">
                             <li class="mb-3 d-flex align-items-start">
@@ -710,4 +713,40 @@ function setupFallbackFooter(container, isInPages) {
     `;
 
   initScrollToTop();
+}
+
+/* ==========================================================================
+   Scroll Reveal Animation System
+   ========================================================================== */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-fade, [data-reveal]",
+  );
+
+  if (revealElements.length === 0) return;
+
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((el) => el.classList.add("is-revealed"));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -40px 0px",
+      threshold: 0.08,
+    },
+  );
+
+  revealElements.forEach((el) => {
+    revealObserver.observe(el);
+  });
 }
